@@ -1,2 +1,2 @@
-# ProjectRepositoryTemplate
-This is a template fort all the KGE projects repository. In general the structure of this repository has to be applied to every iTelos project.
+# KGE 2024 - HealthRoute Trentino
+The **HealthRoute Trentino** Project aims to develop a Knowledge Graph (KG) that provides seamless access to up-to-date information about Healthcare Facilities across the Trentino Province, along with their integration into the public transportation network. The KG will empower users—whether healthcare professionals or patients—to easily locate medical services (e.g., hospitals, pharmacies, medical centers) and discover the most efficient transit routes to access them. The system aims to streamline healthcare access and improve overall coordination between health services and transportation options.
