@@ -1,0 +1,89 @@
+---
+title: "Trentino Transport Data: An Overview"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+suppressPackageStartupMessages({
+  library(here)
+  library(tidyverse)
+})
+
+main_folder <- here()
+```
+
+```{r, warning=FALSE}
+file_list <- list.files(path = file.path(main_folder,"data/transport"), pattern = ".txt", full.names = TRUE, recursive = TRUE)
+
+# Read each file and store them in a list
+data_list <- lapply(file_list, read.table, header = TRUE, sep = ",", colClasses = "character", quote = "")
+
+# Use the base names as names for the elements in the list
+# Files from urban and extraurban data have the same name -> Add a prefix to each file name based on the folder it’s in
+names(data_list) <- sapply(file_list, function(file) {
+  folder_name <- basename(dirname(file))
+  file_name <- basename(file)
+  paste(folder_name, file_name, sep = "_")
+})
+
+```
+
+```{r}
+DT::datatable(
+  head(data_list[["extraurban_calendar_dates.txt"]],25),
+  class = "cell-border stripe",
+  options = list(scrollX = TRUE))
+```
+
+```{r}
+DT::datatable(
+  head(data_list[["extraurban_calendar.txt"]],25),
+  class = "cell-border stripe",
+  options = list(scrollX = TRUE))
+```
+```{r}
+DT::datatable(
+  head(data_list[["extraurban_routes.txt"]],25),
+  class = "cell-border stripe",
+  options = list(scrollX = TRUE))
+```
+
+
+```{r}
+DT::datatable(
+  head(data_list[["extraurban_stop_times.txt"]],25),
+  class = "cell-border stripe",
+  options = list(scrollX = TRUE))
+```
+
+```{r}
+DT::datatable(
+  head(data_list[["extraurban_stops.txt"]],25),
+  class = "cell-border stripe",
+  options = list(scrollX = TRUE))
+```
+
+```{r}
+DT::datatable(
+  head(data_list[["extraurban_stopslevel.txt"]],25),
+  class = "cell-border stripe",
+  options = list(scrollX = TRUE))
+```
+
+```{r}
+DT::datatable(
+  head(data_list[["extraurban_transfers.txt"]],25),
+  class = "cell-border stripe",
+  options = list(scrollX = TRUE))
+```
+
+```{r}
+DT::datatable(
+  head(data_list[["extraurban_trips.txt"]],25),
+  class = "cell-border stripe",
+  options = list(scrollX = TRUE))
+```
