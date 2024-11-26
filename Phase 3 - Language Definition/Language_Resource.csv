@@ -1,0 +1,66 @@
+Concept ID,Language Concept Word,Gloss,
+UKC-49456,end user,The ultimate user for which something is intended.,
+UKC-20121,health facility,Building where medicine is practiced.,
+UKC-XXXXX*,health appointment,"A scheduled meeting with a healthcare provider for consultation, treatment, or check-up.",
+UKC-27518,position,The spatial property of a place where or way in which something is situated.,
+UKC-45117,bus route,The route regularly followed by a passenger bus.,
+UKC-XXXXX*,train route,The route regularly followed by a passenger train.,
+UKC-1484,trip,A journey for some purpose (usually including the return).,
+UKC-45118,bus stop,A place on a bus route where buses stop to discharge and take on passengers.,
+UKC-XXXXX*,train stop,A place on a train route where trains stop to discharge and take on passengers.,
+UKC-XXXXX*,weekly schedule,An ordered timetable outlining activities or operations for each day of the week.,
+UKC-XXXXX*,schedule exception,An instance that does not conform to a schedule.,
+UKC-38423,identifier,A symbol that establishes the identity of the one bearing it.,
+UKC-33531,"first name, given name, forename",The name that precedes the surname.,
+UKC-33528,"surname, family name, cognomen, last name",The name used to identify the members of a family (as distinguished from each member's given name).,
+UKC-31362,type,A subdivision of a particular kind of thing.,
+Schema.org,legalName,"The official name of the organization, e.g. the registered company name.",https://schema.org/legalName
+UKC-31362,type,A subdivision of a particular kind of thing.,
+Schema.org,openingHours,"The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'. Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. Times are specified using 24:00 format. For example, 3pm is specified as 15:00, 10am as 10:00.",https://schema.org/openingHours
+UKC-53492,user,A person who makes use of a thing; someone who uses or employs something.,
+UKC-66454,place,Proper or appropriate position or location.,
+UKC-73013,date,The specified day of the month.,
+UKC-38632,time,An instance or single occasion for some event.,
+UKC-45004,address,The place where a person or organization can be found or communicated with.,
+UKC-45423,latitude,The angular distance between an imaginary line around a heavenly body parallel to its equator and the equator itself.,
+UKC-45429,longitude,The angular distance between a point on any meridian and the prime meridian at Greenwich.,
+General Transit Feed Specification Reference,route_id,Identifies a route.,"https://gtfs.org/documentation/schedule/reference/#:~:text=Description-,route_id,-Unique%20ID"
+General Transit Feed Specification Reference,route_type,"Indicates the type of transportation used on a route. Valid options are:
+
+0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area.
+1 - Subway, Metro. Any underground rail system within a metropolitan area.
+2 - Rail. Used for intercity or long-distance travel.
+3 - Bus. Used for short- and long-distance bus routes.
+4 - Ferry. Used for short- and long-distance boat service.
+5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco).
+6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables.
+7 - Funicular. Any rail system designed for steep inclines.
+11 - Trolleybus. Electric buses that draw power from overhead wires using poles.
+12 - Monorail. Railway in which the track consists of a single rail or a beam.","https://gtfs.org/documentation/schedule/reference/#:~:text=and%20Far%20Rockaway).-,route_type,-Enum"
+General Transit Feed Specification Reference,route_short_name,"Short name of a route. Often a short, abstract identifier (e.g., ""32"", ""100X"", ""Green"") that riders use to identify a route.","https://gtfs.org/documentation/schedule/reference/#:~:text=%2D%20Recommended%20otherwise.-,route_short_name,-Text"
+General Transit Feed Specification Reference,route_long_name,Full name of a route. This name is generally more descriptive than the route_short_name and often includes the route's destination or stop.,"https://gtfs.org/documentation/schedule/reference/#:~:text=than%2012%20characters.-,route_long_name,-Text"
+General Transit Feed Specification Reference,trip_id,Identifies a trip.,"https://gtfs.org/documentation/schedule/reference/#:~:text=or%20more%20routes.-,trip_id,-Unique%20ID"
+General Transit Feed Specification Reference,trip_headsign,Text that appears on signage identifying the trip's destination to riders.,"https://gtfs.org/documentation/schedule/reference/#:~:text=Identifies%20a%20trip.-,trip_headsign,-Text"
+UKC-73119,arrival_time,The time at which a public conveyance is scheduled to arrive at a given destination.,
+UKC-73120,departure_time,The time at which a public conveyance is scheduled to depart from a given point of origin.,
+General Transit Feed Specification Reference,stop_id,"Identifies the serviced stop. A stop may be serviced multiple times in the same trip, and multiple trips and routes may service the same stop.","https://gtfs.org/documentation/schedule/reference/#:~:text=Description-,stop_id,-Unique%20ID"
+General Transit Feed Specification Reference,stop_name,"Name of the location. The stop_name should match the agency's rider-facing name for the location as printed on a timetable, published online, or represented on signage.","https://gtfs.org/documentation/schedule/reference/#:~:text=presented%20to%20riders.-,stop_name,-Text"
+General Transit Feed Specification Reference,stop_lat,Latitude of the location.,"https://gtfs.org/documentation/schedule/reference/#:~:text=of%20stop_name.-,stop_lat,-Latitude"
+General Transit Feed Specification Reference,stop_lon,Longitude of the location.,"https://gtfs.org/documentation/schedule/reference/#:~:text=location_type%3D4).-,stop_lon,-Longitude"
+General Transit Feed Specification Reference,start_date,Start service day for the service interval.,"https://gtfs.org/documentation/schedule/reference/#:~:text=applies%20to%20Sundays.-,start_date,-Date"
+General Transit Feed Specification Reference,end_date,End service day for the service interval. This service day is included in the interval.,"https://gtfs.org/documentation/schedule/reference/#:~:text=the%20service%20interval.-,end_date,-Date"
+UKC-34204,schedule,An ordered list of times at which things are planned to occur.,
+UKC-31362,type,A subdivision of a particular kind of thing.,
+UKC-73013,date,The specified day of the month.,
+UKC-87477,scheduled,Planned or scheduled for some certain time or times.,
+UKC-81950,localized,Confined or restricted to a particular location.,
+UKC-96049,plan,Make plans for something.,
+UKC-94276,"happen, hap, go on, pass off, occur, pass, fall out, come about, take place",Come to pass.,
+UKC-102467,"follow, travel along",Travel along a certain course.,
+UKC-105576,include,"Have as a part, be made up out of.",
+UKC-109080,"nearest, nighest, closest",(superlative of `near' or `close') within the shortest distance.,
+UKC-104222,"adopt, follow, espouse","Choose and follow; as of theories, ideas, policies, strategies or plans.",
+UKC-1088,override,The act of nullifying; making null and void; counteracting or overriding the effect or force of something.,
+UKC-100755,"cause, do, make","Give rise to; cause to happen or occur, not always intentionally.",
+UKC-94853,"delay, detain, hold up",Cause to be slowed down or delayed.,
+UKC-102843,deviate,Cause to turn away from a previous or expected course.,
