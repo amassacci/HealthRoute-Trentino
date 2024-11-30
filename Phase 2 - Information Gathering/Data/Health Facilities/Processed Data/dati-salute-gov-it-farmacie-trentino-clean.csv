@@ -1,186 +1,186 @@
-legal_name,addr_street,addr_housenumber,addr_postcode,municipality,health_facility_type,pharmacy_type,opening_hours,longitude,latitude
-Silvestri Luciana,Via J. A. Maffei,8,38028,Revo',pharmacy,Ordinaria,NA,11.0520541954953,46.4123540693265
-Lafarmacia.Dellaroggia S.R.L.,Via Della Roggia,9,38061,Ala,pharmacy,Ordinaria,NA,11.0026564100186,45.7590051426327
-Franzellin Vittorio E C. Snc,Via Segantini,1,38061,Ala,pharmacy,Ordinaria,NA,11.0414606774668,45.7479086521251
-Bettinazzi - R. & T. Pharma Snc,Via Galas,49,38062,Arco,pharmacy,Ordinaria,NA,10.9070021739945,45.9304227931688
-Famiglia Cooperativa Vallagarina,Piazza Roma,6,38063,Avio,pharmacy,Ordinaria,NA,10.9198632803229,45.7321595956525
-Farmacia Bailo,Piazzale Dante Alighieri,3A,38051,Borgo Valsugana,pharmacy,Ordinaria,Mo-Sa 08:30-12:15,15:30-19:00; PH closed,11.4548786528763,46.0537032663744
-Farmacia Rigoni,Via Brennero,15,38060,Calliano,pharmacy,Ordinaria,NA,11.092814945964,45.92929890554
-Franzellin Giancarlo,Via Fratelli Bronzetti,28,38033,Cavalese,pharmacy,Ordinaria,NA,11.4621468378048,46.2908054279005
-Farmacia All'Angelo,Via Guglielmo Marconi,10,38010,Denno,pharmacy,Ordinaria,NA,11.0479741341762,46.2744402673537
-Farmacia Girardi,Via E. Colpi,181,38064,Folgaria,pharmacy,Ordinaria,PH,Su 10:00-12:00; Mo-Sa 08:30-12:30,15:45-19:15,11.173685990304,45.9150520622353
-Farmacia Girardi,Via Emilio Colpi,179,38064,Folgaria,pharmacy,Ordinaria,PH,Su 10:00-12:00; Mo-Sa 08:30-12:30,15:45-19:15,11.1736862532487,45.9150464713168
-Farmacia Romani,Via Giuseppe Segantini,1,38015,Lavis,pharmacy,Ordinaria,Mo-Sa 08:00-12:15,15:00-19:15,11.1071423239541,46.1413450326899
-Farmacia Romanese S.A.S. Del Dott. Giancarlo Tognoli & C.,Via Regia,16,38056,Levico Terme,pharmacy,Ordinaria,NA,11.3005470633363,46.0113979272623
-Farmacia Rigoni,Strada Cerilio Dellantonio Bora,2,38035,Moena,pharmacy,Ordinaria,NA,11.6587751530946,46.3767863225875
-Farmacia Crescini,Piazza Giovanni Serra,8,38057,Pergine Valsugana,pharmacy,Ordinaria,Mo-Sa 08:30-12:00, Mo-Sa 15:00-19:00,11.2383046917462,46.0598822377558
-Scaglia S.A.S. Di Scaglia Anna & C.,Piazza S. Giacomo,1,38086,Pinzolo,pharmacy,Ordinaria,NA,10.7963137713744,46.2220374200605
-Farmacia Covi Di Mabellini Dott.Ssa Fabiana &Amp; Mabellini Elena S.N.C.,Via Nazionale,3,38087,Sella Giudicarie,pharmacy,Ordinaria,NA,10.6370184064172,45.9985303442461
-Farmacia Vinotti Snc,Via Roma,1/A,38012,Predaia,pharmacy,Ordinaria,NA,11.0867023825133,46.2645612724544
-Farmacia Vinotti Snc,Via Roma,1A,38012,Predaia,pharmacy,Ordinaria,NA,11.0867023825133,46.2645612724544
-Farmacia Dall'Armi,Piazza Del Duomo,10,38122,Trento,pharmacy,Ordinaria,NA,11.1219135842788,46.0676743902221
-Parafarmacia E' Qui,Via Padova,5,38122,Trento,pharmacy,Ordinaria,NA,10.8541456407738,45.8826227552707
-Farmacia Santoni,Piazza Mario Pasi,20,38122,Trento,pharmacy,Ordinaria,NA,11.1223980582822,46.0677921559617
-Farmacia Giupponi Srl,Via Catoni,69,38123,Trento,pharmacy,Ordinaria,NA,10.9749001,45.9933102
-Baldrachi Lukas,Via E. Leonardi,29,38019,Tuenno,pharmacy,Ordinaria,NA,10.9487329392243,46.2651735914533
-Farmacia Gagliardi,Via De Gasperi,1,38075,Fiave',pharmacy,Ordinaria,NA,10.8423482796951,46.004623367618
-Farmacia Brancaleoni,Via Trento,11/B,38097,Zambana,pharmacy,Ordinaria,NA,11.097483018737,46.1522370644068
-Farmacia Brancaleoni,Via Trento,11B,38097,Zambana,pharmacy,Ordinaria,NA,11.097483018737,46.1522370644068
-Teso Francesco,Via Paradiso,2,38050,Telve,pharmacy,Ordinaria,NA,11.4642967434695,46.1396954319267
-Farmacia Bolghera,Largo Medaglie D'Oro,8,38122,Trento,pharmacy,Ordinaria,NA,11.1327619462801,46.0580396439812
-Nardelli Dr. Gabriele,Strada Gardesana Occ.,9/B,38074,Dro,pharmacy,Ordinaria,NA,10.9247729886099,45.9913596636596
-Farmacia San Giovanni,Strada Neva,24,38036,Pozza Di Fassa,pharmacy,Ordinaria,Mo-Sa 08:30-12:30, 15:30-19:30; Su 09:00-12:00, 16:00-19:00,11.6754116383324,46.4200600770156
-Farmacia Trintinaglia,Via Vittorio Emanuele,91,38055,Grigno,pharmacy,Ordinaria,NA,11.635857,46.016929
-Comunale 1,Via Paoli,19,38068,Rovereto,pharmacy,Ordinaria,NA,11.0402015076214,45.8937085302942
-Darma Il Farmastore,Via Tamarisi,2,38123,Trento,pharmacy,Ordinaria,Mo 14:30-20:00; Tu-Su 09:00-20:00,11.223444918524,46.068035985525
-Cremonesi,Via Roma,17A,38041,Albiano,pharmacy,Ordinaria,NA,11.2000600793698,46.1449671070267
-Farmacia Pizzo Dr. Paolo Srl,Via Bellini,17,38057,Pergine Valsugana,pharmacy,Ordinaria,NA,11.2398474,46.0616404
-Rigon Luciana,-,-,38060,Vallarsa,pharmacy,Ordinaria,NA,11.1199162694893,45.7836839764063
-Farmacia Pavani,Viale Della Vittoria,42/L,38068,Rovereto,pharmacy,Ordinaria,NA,11.0317654771857,45.8874533935421
-Farmacia Cima D'Asta,Via Brigata Abruzzi,10/A,38050,Pieve Tesino,pharmacy,Ordinaria,NA,11.6097662126501,46.0686047625162
-Farmacia D'Andrea Dott.Ssa Valentina,Via Trento,5/A,38010,Spormaggiore,pharmacy,Ordinaria,NA,11.0092429435392,46.204401180197
-Di Segonzano Di Dr. Pierangelo Villaci,Fraz. Scancio,26,38047,Segonzano,pharmacy,Ordinaria,NA,11.2831916275084,46.1927490800325
-Ceschi Luca,Via G. Marconi,86,38020,Livo,pharmacy,Ordinaria,NA,11.0070611985411,46.4223636612322
-Val Di Rabbi,Via San Bernardo,127,38020,Rabbi,pharmacy,Ordinaria,NA,10.8486303,46.3992056
-Farmacia San Michele,Via Brennero,20/A,38010,San Michele All'Adige,pharmacy,Ordinaria,Mo-Fr 08:30-12:00,15:00-19:00; Sa 08:30-12:00,11.1299107580966,46.1907029591745
-Farmacia San Michele,Via Brennero,20A,38010,San Michele All'Adige,pharmacy,Ordinaria,Mo-Fr 08:30-12:00,15:00-19:00; Sa 08:30-12:00,11.1299107580966,46.1907029591745
-Serena Di Montagnin Elena,Via Di Mezzo,3,38080,Bondone,pharmacy,Ordinaria,NA,10.5404626934837,45.8080332177553
-Farmacia Valle Dei Mocheni,Località Pintarei,75,38050,Sant'Orsola Terme,pharmacy,Ordinaria,Mo-Fr 08:30-12:00,15:00-19:00; Sa 08:30-12:00; Su off,11.3021323814983,46.1091823291086
-Farmacia Dott. Barbacovi Giorgio,Piazza Cesare Battisti,4,38060,Aldeno,pharmacy,Ordinaria,Mo-Fr 08:30-12:00, 15:30-19:00,11.0910786579792,45.9772355828176
-Farmacia Redi,Via Nas,3,38062,Arco,pharmacy,Ordinaria,Mo-Fr 08:15-19:30; Sa 08:30-19:00,10.8798826935632,45.9175235751617
-Farmacia Morelli S.R.L.,Via Cesare Battisti,15,38042,Baselga Di Pine',pharmacy,Ordinaria,NA,11.2468391450306,46.1321200575374
-Farmacia Centrale,Corso Ausugum,40,38051,Borgo Valsugana,pharmacy,Ordinaria,NA,11.4577616922919,46.0539271470082
-Ottaviani Franco,Via Giuseppe Garibaldi,9,38060,Brentonico,pharmacy,Ordinaria,NA,10.9390077325141,45.8020613409721
-Farmacia Maistri Elvio E Girardi Claudio & C. S.A.S.,Via Trozo Dei Cavai,8,38052,Caldonazzo,pharmacy,Ordinaria,NA,11.2725313859021,45.9839520661247
-Rigoni Cristiano,Via Dante Alighieri,12/A,38053,Castello Tesino,pharmacy,Ordinaria,NA,11.6469032548419,46.1219023022185
-Sartori & C. Snc,Via De Campi,3,38011,Cavareno,pharmacy,Ordinaria,NA,11.1365971,46.4079192
-Farmacia Paolo Folgaresi & C. S.N.C.,Via Don Negri,22,38073,Cavedine,pharmacy,Ordinaria,NA,10.989954412224,45.9868409301662
-Martini Giorgio,Via Iv Novembre,44,38034,Cembra,pharmacy,Ordinaria,NA,11.2209905,46.1747528
-Farmacia Betti S.A.S. Dihippo 156 Farma S.R.L.,Piazza Santa Maria,4,38045,Civezzano,pharmacy,Ordinaria,NA,11.1823868,46.0899632
-Farmacia De Maffei,Via Alcide Degasperi,30,38023,Cles,pharmacy,Ordinaria,Mo-Sa 08:15-19:15,11.0330405163871,46.3630656500066
-Farmacia Dott.Ssa Barbara Zontini & C. S.N.C.,Via Roma,43,38083,Condino,pharmacy,Ordinaria,NA,10.5939868704181,45.8817539883688
-Ceschinelli Dino,Via Roma,9,38085,Pieve Di Bono,pharmacy,Ordinaria,NA,10.6651430913003,45.9415635716799
-Farmacia Alla Madonna Sas Di Trotter Damiano, Lorenza &Amp; C.,Via Guadagnini,28,38054,Primiero San Martino Di Castrozza,pharmacy,Ordinaria,NA,11.8292505,46.1765516
-Diemme Farma Sas Di Carlo De Maffei & C.,Via Cesare Battisti,20,38013,Fondo,pharmacy,Ordinaria,NA,11.1402654172457,46.4171162798013
-Fanzago D.Ri Roberto E Diego Snc,Via Gionghi,99,38046,Lavarone,pharmacy,Ordinaria,NA,11.2867907271599,45.9420649936859
-De Prez,Via Dante,31,38056,Levico Terme,pharmacy,Ordinaria,NA,11.3305984683628,45.9975203025033
-Comano Terme Snc Di Betta Paola,Via Battisti,49,38070,Comano Terme,pharmacy,Ordinaria,NA,10.8659923,46.024138
-Tomasi Nicoletta,Piazza Dante,1,38027,Male',pharmacy,Ordinaria,Mo-Sa 08:30-12:30,15:30-19:30,10.9121688625783,46.3520986840754
-Zanini,Piazza San Gottardo,13,38016,Mezzocorona,pharmacy,Ordinaria,Mo-Fr 08:30-12:15,15:30-19:15;Sa 08:30-12:15,11.1188739709119,46.2146885294768
-Campagnola,Via Alcide De Gasperi,19,38017,Mezzolombardo,pharmacy,Ordinaria,NA,11.0913848489021,46.2129566606431
-Montalbano Snc Di Dr. Kostner Francesco E Candioli Roberto,Via Malfatti,6,38065,Mori,pharmacy,Ordinaria,NA,10.9517733419702,45.8566608968003
-Gallina,Via Nazionale,48,38020,Pellizzano,pharmacy,Ordinaria,NA,10.7572485769741,46.3113251675449
-Farmacia Bottura,Via Cesare Battisti,26,38057,Pergine Valsugana,pharmacy,Ordinaria,NA,11.2398474,46.0616404
-A. Foletto Di Foletto A. & C.  Snc,Via Cassoni,3,38060,Ledro,pharmacy,Ordinaria,NA,10.7313102,45.8896543
-Farmacia,Via Molini,1,38030,Giovo,pharmacy,Ordinaria,NA,11.1512536245166,46.1572920341694
-Pasi Snc  Di Pasi Luisa & C.,Via Roma,1/C,38037,Predazzo,pharmacy,Ordinaria,NA,11.602528688639,46.3116641911769
-Farmasolis S.N.C. Di Tomasi Monica & C.,Via Brescia,82,38025,Dimaro Folgarida,pharmacy,Ordinaria,NA,10.878091480855,46.3310783796587
-Farmacia Molina Di Ledro,Via Maffei,3,38066,Riva Del Garda,pharmacy,Ordinaria,Mo-Sa 08:00-12:00 15:00-19:00,10.7758557314671,45.8718746408313
-Mutalipassi,Via Lutti,12,38066,Riva Del Garda,pharmacy,Ordinaria,NA,10.8451645991614,45.8868603940582
-S. Lucia Di Genem Dr. Kamal,Via Don Guetti,1,38050,Roncegno,pharmacy,Ordinaria,NA,11.4093559,46.0510607
-Santoni Dr. Giorgio & C. Snc,Piazza F. Filzi,21,38068,Rovereto,pharmacy,Ordinaria,NA,11.0384953,45.8915375
-Cobelli,Via Giuseppe Mazzini,8,38068,Rovereto,pharmacy,Ordinaria,NA,11.0432392808925,45.8900994967206
-Soave,Piazza Delle Erbe,17,38068,Rovereto,pharmacy,Ordinaria,NA,11.0444616976513,45.8883663706013
-Farmacia Barbacovi,Via Benacense,11/B,38068,Rovereto,pharmacy,Ordinaria,Mo-Fr 08:00-12:30; 14:45-19:15; Sa 08:00-12:30,11.0397547561052,45.8830078199025
-Farmacia Thaler,Via Dante,1/Bis,38068,Rovereto,pharmacy,Ordinaria,NA,11.04034,45.88942
-Cattani Paolo,Via S. Vigilio,83,38088,Spiazzo,pharmacy,Ordinaria,NA,10.7373486216062,46.1014148698208
-Farmacia Di Stenico E San Lorenzo Snc,Piazza Dante Alighieri,13,38070,Stenico,pharmacy,Ordinaria,NA,10.8413250782721,46.0981455715646
-Farmacia Fusi Srl,Via G. Garibaldi,125,38089,Storo,pharmacy,Ordinaria,NA,10.5594192760137,45.8487404217364
-Farmacia Borsato,Via Roma,29,38059,Castel Ivano,pharmacy,Ordinaria,NA,11.5239853490662,46.0637580297833
-Donati Bruno,Via Roma,21,38038,Tesero,pharmacy,Ordinaria,NA,11.4636325431318,46.2891041386364
-Boni Giulio & C. Snc,Viale Dante,42,38079,Tione Di Trento,pharmacy,Ordinaria,NA,10.7245,46.03341
-S. Bartolameo Dott. C. Bertolini & C. Snc,Viale Verona,92,38123,Trento,pharmacy,Ordinaria,NA,11.1314631169961,46.0427575586414
-Farmacia Grandi,Via Alessandro Manzoni,7/A,38122,Trento,pharmacy,Ordinaria,Mo-Fr 08:00-13:00,15:00-19:00; Sa 08:30-12:30,11.1251915789719,46.0738198339908
-Farmacia Grandi,Via Alessandro Manzoni,7A,38122,Trento,pharmacy,Ordinaria,Mo-Fr 08:00-13:00,15:00-19:00; Sa 08:30-12:30,11.1251915789719,46.0738198339908
-Farmacia Alla Madonna,Via Giannantonio Manci,42,38122,Trento,pharmacy,Ordinaria,Mo-Sa 08:30-12:30,15:00-19:00,11.1230744778683,46.0698068302084
-Farmacia Alla Madonna,Via Giannantonio Manci,42,38122,Trento,pharmacy,Ordinaria,Mo-Sa 08:30-12:30,15:00-19:00,11.1230744778683,46.0698068302084
-Farmacia Ai Solteri,Via Renato Lunelli,40,38121,Trento,pharmacy,Ordinaria,NA,11.1176349579848,46.0923858333392
-Santa Chiara Snc Dei Dott. Alessia Ed Edoardo Abbondi,Via Santa Croce,57,38122,Trento,pharmacy,Ordinaria,NA,11.2950495625519,46.0125447976514
-Farmacia Bretta Dott. Giorgio &Amp; C. Snc,Via Cima Tosa,49,38086,Pinzolo,pharmacy,Ordinaria,NA,10.7963137713744,46.2220374200605
-Farmacia Delle Dolomiti,Via Ponte Lambin,27A,38010,Andalo,pharmacy,Ordinaria,NA,11.0014942179652,46.1634505421104
-Farmacia San Rocco S.N.C. Di Dott. Alessandro Meo E Dott. Davide Schirru,Via Roma,1,38070,Vezzano,pharmacy,Ordinaria,NA,10.9991219054545,46.0779043256191
-De Probizer Paolo & C. Snc,Via Xxv Aprile,46,38060,Villa Lagarina,pharmacy,Ordinaria,NA,11.0600981,45.9191875
-Farmacia Ladina,Strèda Dolomites,77,38032,Canazei,pharmacy,Ordinaria,NA,11.7687123627565,46.4776387226757
-Chinaglia,Via Giacomo Matteotti,62,38069,Nago-Torbole,pharmacy,Ordinaria,Mo-Sa 08:00-19:00,10.876517359439,45.87068793098
-Fontana Marcella E C. Snc,Via Marco Pola,2,38121,Trento,pharmacy,Ordinaria,NA,11.1128169933321,46.1077103208361
-Farmacia San Lorenzo,Piazza General Antonio Cantore,1,38121,Trento,pharmacy,Ordinaria,Mo-Sa 08:30-12:30,15:00-19:00,11.1191069878201,46.0769969943887
-Farmacia Zonta Adriana & C. S.N.C.,Via Roma,72/A,38050,Mezzano,pharmacy,Ordinaria,NA,11.805873,46.1545569
-Farmacia Dr. Carla Bourlot,Via Delle Roge,9,38024,Peio,pharmacy,Ordinaria,NA,10.6935362222096,46.3510071926441
-Farmacia Ravina Srl,Via Herrsching,1,38123,Trento,pharmacy,Ordinaria,NA,11.1117645926563,46.0622059167663
-Diemme Farma Sas Di Carlo De Maffei & C.,Piazza Santa Croce,1,38010,Predaia,pharmacy,Ordinaria,NA,11.1328072982685,46.349715476156
-Manfredi Cristina,Via Della Fricca,12,38049,Vigolo Vattaro,pharmacy,Ordinaria,NA,11.195213,46.004407
-Zanella Claudia Domiziana,Piazza Vittorio Emanuele Iii,1,38050,Canal San Bovo,pharmacy,Ordinaria,NA,11.7002338696905,46.1991541767805
-Farmacia Ferri,Via Alla Formigheta,1,38121,Trento,pharmacy,Ordinaria,NA,11.1316024776141,46.0893458846962
-Trentini Angelo,Via Passo Rolle,161,38054,Siror,pharmacy,Ordinaria,NA,11.789688409407,46.2492896751533
-De Gerloni Dr. Pier Francesco,Localitã  Sopramonte,16,38123,Trento,pharmacy,Ordinaria,NA,11.1117645926563,46.0622059167663
-Farmacia San Giovanni,Strada Neva,24,38039,Vigo Di Fassa,pharmacy,Ordinaria,Mo-Sa 08:30-12:30, 15:30-19:30; Su 09:00-12:00, 16:00-19:00,11.6754116383324,46.4200600770156
-Dott. Elena Accorsi,Viale Degli Oleandri,15,38066,Riva Del Garda,pharmacy,Ordinaria,NA,10.8442146780748,45.8997376795417
-Vinante Giorgio E C. Snc,Via Latemar,1/A,38030,Castello-Molina Di Fiemme,pharmacy,Ordinaria,NA,11.4320162612705,46.2817897601343
-Vermiglio,Piazza Papa Giovanni Xxiii,-,38029,Vermiglio,pharmacy,Ordinaria,NA,10.6463787491706,46.2696160884184
-Val Di Gresta,Via A. Manzoni,5,38060,Ronzo-Chienis,pharmacy,Ordinaria,NA,10.9525689,45.8916597
-Farmacia Di Gardolo,Via Soprasasso,32/4,38121,Trento,pharmacy,Ordinaria,Mo 15:00-19:00; Tu-Sa 09:00-12:00,15:00-19:00,11.1086199696646,46.1063999563501
-Farmacia Margonari Ada,Piazza Guglielmo Marconi,24B,38018,Molveno,pharmacy,Ordinaria,08:30-12:30,15:30-19:30,10.9662346526184,46.1425619173926
-Farmacia,Piazza Guglielmo Marconi,24B,38018,Molveno,pharmacy,Ordinaria,NA,10.9662346526184,46.1425619173926
-Farmacia Monte Albano Sas Dott.Sse A. E V. Candioli & C.,Via Terra Nera,45/1B,38065,Mori,pharmacy,Ordinaria,NA,10.9517733419702,45.8566608968003
-Catanzaro Maria Grazia,Via Villa,27,38010,Fai Della Paganella,pharmacy,Ordinaria,NA,11.0689304,46.1793313
-Comunale San Giuseppe,Via Vittorio Veneto,39,38122,Trento,pharmacy,Ordinaria,NA,11.1247846,46.05885165
-Farmacia Barbacovi,Via Benacense,11/B,38068,Rovereto,pharmacy,Ordinaria,Mo-Fr 08:00-12:30; 14:45-19:15; Sa 08:00-12:30,11.0397547561052,45.8830078199025
-Comunale N.4 Clarina,Via Degasperi,-,38123,Trento,pharmacy,Ordinaria,NA,11.184660339868,46.0908623121858
-Comunale N.5 S. Dona',Loc. San Donã,50,38122,Trento,pharmacy,Ordinaria,NA,11.1117645926563,46.0622059167663
-Farmacia Comunale Pio X,Via San Pio X,77,38122,Trento,pharmacy,Ordinaria,NA,11.1206211786284,46.0535017654221
-Comunale N.6 Povo,Piazza Manci,5,38123,Trento,pharmacy,Ordinaria,NA,11.1140450714852,46.1385683241641
-Farmacia Comunale,Via Delle Sugarine,30,38121,Trento,pharmacy,Ordinaria,Mo-Fr 08:00-12:15, 15:00-19:00; Sa 08:00-12:15,11.1165085978363,46.1264000993315
-Comunale N.8 Madonna Bianca,Piazzale Europa,8,38123,Trento,pharmacy,Ordinaria,NA,11.1117645926563,46.0622059167663
-Farmacia Comunale,Viale Trento,33/2,38068,Rovereto,pharmacy,Ordinaria,NA,11.0419025349744,45.9013785209069
-Farmacia Chinaglia,Via Stazione,6,38062,Arco,pharmacy,Ordinaria,NA,10.8923289621385,45.8787400587364
-Farmacia Comunale,Via Brescia,19/A,38122,Trento,pharmacy,Ordinaria,Mo-Fr 08:30-19:00; Sa 08:30-12:00,11.1123089290703,46.0705723494253
-Farmacia Comunale,Via Brescia,19A,38122,Trento,pharmacy,Ordinaria,Mo-Fr 08:30-19:00; Sa 08:30-12:00,11.1124074164326,46.0706347946039
-Comunale San Rocco,Via 3 Novembre,7,38060,Volano,pharmacy,Ordinaria,NA,11.0940766642749,45.9331674745026
-Farmacia Comunale San Giuseppe,Viale Trento,98,38066,Riva Del Garda,pharmacy,Ordinaria,NA,10.8498633264424,45.8947927757645
-Farmacia Comunale San Cristoforo,Viale Europa,10,38057,Pergine Valsugana,pharmacy,Ordinaria,NA,11.2398474,46.0616404
-Comunale N.2 Al S. Camillo,Via Giovannelli,5,38122,Trento,pharmacy,Ordinaria,NA,11.4387214382326,46.2905400810553
-Comunale Pietramurata,Via Borgo Nuovo,39,38070,Dro,pharmacy,Ordinaria,NA,10.9416918996483,46.0166250533252
-Farmacia Comunale S. Udalrico,Piazza Cesare Battisti,28,38015,Lavis,pharmacy,Ordinaria,NA,11.1042541241409,46.1512831931641
-Comunale G.P. Adami,Via 3 Novembre,10,38060,Pomarolo,pharmacy,Ordinaria,NA,11.0636538484615,45.9293739971436
-Dispensario Di Stenico Snc,-,-,38078,San Lorenzo In Banale,pharmacy,Dispensario,NA,10.9092711,46.0767045
-Farmacia Dott.Ssa Venezian,Via Luigi Negrelli,20/D,38062,Arco,pharmacy,Ordinaria,NA,10.8653245850363,45.9186855583987
-Farmacia Dott.Ssa Venezian,Via Luigi Negrelli,20D,38062,Arco,pharmacy,Ordinaria,NA,10.8653245850363,45.9186855583987
-Comunale N.4 Di Isera,Via C. Cavalieri,4/A,38060,Isera,pharmacy,Ordinaria,NA,10.9979685227439,45.8939300176161
-Farmacia Gallina,Via Quattro Novembre,48,38020,Mezzana,pharmacy,Succursale,NA,10.8016005794264,46.3159015190396
-Dispensario Dr.Ssa Gallina Franca,-,-,38020,Mezzana,pharmacy,Dispensario Stagionale,NA,10.8013158403302,46.3237313532266
-Dispensario Dr. Foletto Snc,Via Vittorio Emanuele,13,38060,Ledro,pharmacy,Dispensario,NA,10.684473,45.894495
-Dispensario Dr.Ssa Covi,Piazza Cesare Battisti,-,38081,Breguzzo,pharmacy,Dispensario,NA,10.699332,46.0079083
-Succursale Tomasi Monica,Piazzale Folgarida,-,38064,Dimaro,pharmacy,Succursale,NA,10.8785019243833,46.2905812296433
-Dispensario Dr. Cattani Paolo,Via Armando Diaz,1,83081,Caderzone,pharmacy,Dispensario,NA,10.758036,46.13004
-Farmacia Borsato,Via Roma,29,38052,Ospedaletto,pharmacy,Dispensario,NA,11.5239853490662,46.0637580297833
-Ladina (Succursale),Via Dolomiti,44,38031,Campitello Di Fassa,pharmacy,Succursale,NA,11.7109587382254,46.4904115339574
-Dispensario Vinante Giorgio E C. Snc,Via Segherie,74,38030,Castello-Molina Di Fiemme,pharmacy,Dispensario,NA,11.4210023943257,46.2723420099138
-Dispensario Pasi,Piazza Iv Novembre,2,38030,Ziano Di Fiemme,pharmacy,Dispensario,NA,11.5827165518511,46.2696363876654
-Dispensario Rigoni S.R.L.,Via Paissan,25,38060,Nomi,pharmacy,Dispensario,NA,11.071881,45.928599
-Dispensario Stagionale,-,-,38010,Cavedago,pharmacy,Dispensario Stagionale,NA,11.010115588658,46.1849438268682
-Dispensario Dr. Zanini Snc,Piazza Unitã  D'Italia,10A,38030,Rovere' Della Luna,pharmacy,Dispensario,NA,11.170036999747,46.2497503568464
-Succursale Ascanio Gianluca,Via Nazionale,-,38020,Vermiglio,pharmacy,Succursale,NA,10.585872,46.259867
-Dispensario Dott.Ssa Trintinaglia Lucy,Via Nazionale,32,38055,Grigno,pharmacy,Dispensario,NA,11.6331029084974,45.9942077675575
-Dispensario Farmacia Cima D'Asta,Piazza Maggiore,3,38050,Bieno,pharmacy,Dispensario,NA,11.5638552571326,46.0989757301504
-Dispensario Farmacia Morelli S.R.L.,Via Verdi,35,38043,Bedollo,pharmacy,Dispensario,NA,11.3034198,46.1618911
-Dispensario Farmacia All'Angelo,Piazza Centrale,Snc,38010,Campodenno,pharmacy,Dispensario,NA,11.0042197966811,46.248332022495
-Dispensario Dr. Kostner Francesco,Via Vecchio Alveo,8,38060,Rovereto,pharmacy,Dispensario,NA,11.0018249355173,45.8393356853709
-Farmacie Comunali Spa,Via Asilo Pedrotti,18,38100,Trento,pharmacy,Ordinaria,NA,11.1257667774255,46.0589218431499
-Farmacia Comunale Cognola,Piazza Dell'Argentario,10,38121,Trento,pharmacy,Ordinaria,NA,11.1419880747412,46.0767325453436
-Farmacia Chinaglia,Via Stazione,6,38060,Nago-Torbole,pharmacy,Dispensario,NA,10.8923289621385,45.8787400587364
-Dispensario Farmaceutico Di Fornace,Via Del Borgolet,12/A,38040,Fornace,pharmacy,Dispensario,NA,11.2064208000268,46.1231874045505
-Dispensario Farmaceutico Farmacia Gagliardi,Via Roma,7,38071,Bleggio Superiore,pharmacy,Dispensario,NA,10.8392640746034,46.0246451359095
-Farmacia San Rocco,Via Iv Novembre,-,38010,Nave San Rocco,pharmacy,Ordinaria,NA,11.110436,46.167287
-La Farmacia Di Roncafort,Via Luigi Caneppele,31,38121,Trento,pharmacy,Ordinaria,Mo, We, Fr 08:00-12:30, 15:00-19:15; Tu, Th 08:00-12:30, 14:00-19:15; Sa 08:30-12:30, 15:00-19:00,11.1020824204654,46.0984635513303
-Ruperti Salvatore,Via D'Oltrefersina,133,38057,Pergine Valsugana,pharmacy,Ordinaria,NA,11.21914735,46.08323575
-Sarche,Via Garda,3,38076,Madruzzo,pharmacy,Ordinaria,NA,10.9758140551811,46.0485028276484
-Farmacia Comunale Castelnuovo,Piazza Municipio,13/B,38050,Castelnuovo,pharmacy,Ordinaria,NA,11.494495,46.05225
-Farmacia Di Carano Snc,Via Nazionale,22/A,38033,Carano,pharmacy,Ordinaria,NA,11.406864080696,46.2983914049297
-Comunale Tenno,Via Dei Laghi,4,38060,Tenno,pharmacy,Ordinaria,NA,10.830151590822,45.9227632007897
-Farmacie Comunali Spa,Via Roma,6/A,38060,Besenello,pharmacy,Ordinaria,NA,11.1103068808492,45.9385840088118
-Farmacia San Giorgio,Via Unione,82,38068,Rovereto,pharmacy,Ordinaria,NA,11.0281745701378,45.8941620375507
-Farmacia San Giorgio,Via Unione,82,38068,Rovereto,pharmacy,Ordinaria,Sep-Apr Mo-Sa 08:00-20:00; May-Aug Mo-Fr 08:00-20:00; May-Aug Sa 08:00-13:00,11.0281745701378,45.8941620375507
-Farmacia Campagnolo,Via Alle Sette Fontane,14,38123,Trento,pharmacy,Ordinaria,NA,11.1055827870497,46.0167580164804
-Comunale N. 5,Via Del Garda,175,38068,Rovereto,pharmacy,Ordinaria,NA,11.024704,45.8727833
-Igea,Via Milano,68,38122,Trento,pharmacy,Ordinaria,Mo-Fr 08:30-12:30,15:00-19:00, Sa 08:30-12:30,11.1280487183066,46.0608377747176
-Dispensario Di Nogaredo,Via San Biagio,4,38060,Trento,pharmacy,Dispensario,NA,11.1217486,46.0747793
+"legal_name","addr_street","addr_housenumber","addr_postcode","municipality","health_facility_type","pharmacy_type","opening_hours","longitude","latitude"
+"Silvestri Luciana","Via J. A. Maffei","8",38028,"Revo'","pharmacy","Ordinaria",NA,11.0520541954953,46.4123540693265
+"Lafarmacia.Dellaroggia S.R.L.","Via Della Roggia","9",38061,"Ala","pharmacy","Ordinaria",NA,11.0026564100186,45.7590051426327
+"Franzellin Vittorio E C. Snc","Via Segantini","1",38061,"Ala","pharmacy","Ordinaria",NA,11.0414606774668,45.7479086521251
+"Bettinazzi - R. & T. Pharma Snc","Via Galas","49",38062,"Arco","pharmacy","Ordinaria",NA,10.9070021739945,45.9304227931688
+"Famiglia Cooperativa Vallagarina","Piazza Roma","6",38063,"Avio","pharmacy","Ordinaria",NA,10.9198632803229,45.7321595956525
+"Farmacia Bailo","Piazzale Dante Alighieri","3A",38051,"Borgo Valsugana","pharmacy","Ordinaria","Mo-Sa 08:30-12:15,15:30-19:00; PH closed",11.4548786528763,46.0537032663744
+"Farmacia Rigoni","Via Brennero","15",38060,"Calliano","pharmacy","Ordinaria",NA,11.092814945964,45.92929890554
+"Franzellin Giancarlo","Via Fratelli Bronzetti","28",38033,"Cavalese","pharmacy","Ordinaria",NA,11.4621468378048,46.2908054279005
+"Farmacia All'Angelo","Via Guglielmo Marconi","10",38010,"Denno","pharmacy","Ordinaria",NA,11.0479741341762,46.2744402673537
+"Farmacia Girardi","Via E. Colpi","181",38064,"Folgaria","pharmacy","Ordinaria","PH,Su 10:00-12:00; Mo-Sa 08:30-12:30,15:45-19:15",11.173685990304,45.9150520622353
+"Farmacia Girardi","Via Emilio Colpi","179",38064,"Folgaria","pharmacy","Ordinaria","PH,Su 10:00-12:00; Mo-Sa 08:30-12:30,15:45-19:15",11.1736862532487,45.9150464713168
+"Farmacia Romani","Via Giuseppe Segantini","1",38015,"Lavis","pharmacy","Ordinaria","Mo-Sa 08:00-12:15,15:00-19:15",11.1071423239541,46.1413450326899
+"Farmacia Romanese S.A.S. Del Dott. Giancarlo Tognoli & C.","Via Regia","16",38056,"Levico Terme","pharmacy","Ordinaria",NA,11.3005470633363,46.0113979272623
+"Farmacia Rigoni","Strada Cerilio Dellantonio Bora","2",38035,"Moena","pharmacy","Ordinaria",NA,11.6587751530946,46.3767863225875
+"Farmacia Crescini","Piazza Giovanni Serra","8",38057,"Pergine Valsugana","pharmacy","Ordinaria","Mo-Sa 08:30-12:00, Mo-Sa 15:00-19:00",11.2383046917462,46.0598822377558
+"Scaglia S.A.S. Di Scaglia Anna & C.","Piazza S. Giacomo","1",38086,"Pinzolo","pharmacy","Ordinaria",NA,10.7963137713744,46.2220374200605
+"Farmacia Covi Di Mabellini Dott.Ssa Fabiana &Amp; Mabellini Elena S.N.C.","Via Nazionale","3",38087,"Sella Giudicarie","pharmacy","Ordinaria",NA,10.6370184064172,45.9985303442461
+"Farmacia Vinotti Snc","Via Roma","1/A",38012,"Predaia","pharmacy","Ordinaria",NA,11.0867023825133,46.2645612724544
+"Farmacia Vinotti Snc","Via Roma","1A",38012,"Predaia","pharmacy","Ordinaria",NA,11.0867023825133,46.2645612724544
+"Farmacia Dall'Armi","Piazza Del Duomo","10",38122,"Trento","pharmacy","Ordinaria",NA,11.1219135842788,46.0676743902221
+"Parafarmacia E' Qui","Via Padova","5",38122,"Trento","pharmacy","Ordinaria",NA,10.8541456407738,45.8826227552707
+"Farmacia Santoni","Piazza Mario Pasi","20",38122,"Trento","pharmacy","Ordinaria",NA,11.1223980582822,46.0677921559617
+"Farmacia Giupponi Srl","Via Catoni","69",38123,"Trento","pharmacy","Ordinaria",NA,10.9749001,45.9933102
+"Baldrachi Lukas","Via E. Leonardi","29",38019,"Tuenno","pharmacy","Ordinaria",NA,10.9487329392243,46.2651735914533
+"Farmacia Gagliardi","Via De Gasperi","1",38075,"Fiave'","pharmacy","Ordinaria",NA,10.8423482796951,46.004623367618
+"Farmacia Brancaleoni","Via Trento","11/B",38097,"Zambana","pharmacy","Ordinaria",NA,11.097483018737,46.1522370644068
+"Farmacia Brancaleoni","Via Trento","11B",38097,"Zambana","pharmacy","Ordinaria",NA,11.097483018737,46.1522370644068
+"Teso Francesco","Via Paradiso","2",38050,"Telve","pharmacy","Ordinaria",NA,11.4642967434695,46.1396954319267
+"Farmacia Bolghera","Largo Medaglie D'Oro","8",38122,"Trento","pharmacy","Ordinaria",NA,11.1327619462801,46.0580396439812
+"Nardelli Dr. Gabriele","Strada Gardesana Occ.","9/B",38074,"Dro","pharmacy","Ordinaria",NA,10.9247729886099,45.9913596636596
+"Farmacia San Giovanni","Strada Neva","24",38036,"Pozza Di Fassa","pharmacy","Ordinaria","Mo-Sa 08:30-12:30, 15:30-19:30; Su 09:00-12:00, 16:00-19:00",11.6754116383324,46.4200600770156
+"Farmacia Trintinaglia","Via Vittorio Emanuele","91",38055,"Grigno","pharmacy","Ordinaria",NA,11.635857,46.016929
+"Comunale 1","Via Paoli","19",38068,"Rovereto","pharmacy","Ordinaria",NA,11.0402015076214,45.8937085302942
+"Darma Il Farmastore","Via Tamarisi","2",38123,"Trento","pharmacy","Ordinaria","Mo 14:30-20:00; Tu-Su 09:00-20:00",11.223444918524,46.068035985525
+"Cremonesi","Via Roma","17A",38041,"Albiano","pharmacy","Ordinaria",NA,11.2000600793698,46.1449671070267
+"Farmacia Pizzo Dr. Paolo Srl","Via Bellini","17",38057,"Pergine Valsugana","pharmacy","Ordinaria",NA,11.2398474,46.0616404
+"Rigon Luciana","-","-",38060,"Vallarsa","pharmacy","Ordinaria",NA,11.1199162694893,45.7836839764063
+"Farmacia Pavani","Viale Della Vittoria","42/L",38068,"Rovereto","pharmacy","Ordinaria",NA,11.0317654771857,45.8874533935421
+"Farmacia Cima D'Asta","Via Brigata Abruzzi","10/A",38050,"Pieve Tesino","pharmacy","Ordinaria",NA,11.6097662126501,46.0686047625162
+"Farmacia D'Andrea Dott.Ssa Valentina","Via Trento","5/A",38010,"Spormaggiore","pharmacy","Ordinaria",NA,11.0092429435392,46.204401180197
+"Di Segonzano Di Dr. Pierangelo Villaci","Fraz. Scancio","26",38047,"Segonzano","pharmacy","Ordinaria",NA,11.2831916275084,46.1927490800325
+"Ceschi Luca","Via G. Marconi","86",38020,"Livo","pharmacy","Ordinaria",NA,11.0070611985411,46.4223636612322
+"Val Di Rabbi","Via San Bernardo","127",38020,"Rabbi","pharmacy","Ordinaria",NA,10.8486303,46.3992056
+"Farmacia San Michele","Via Brennero","20/A",38010,"San Michele All'Adige","pharmacy","Ordinaria","Mo-Fr 08:30-12:00,15:00-19:00; Sa 08:30-12:00",11.1299107580966,46.1907029591745
+"Farmacia San Michele","Via Brennero","20A",38010,"San Michele All'Adige","pharmacy","Ordinaria","Mo-Fr 08:30-12:00,15:00-19:00; Sa 08:30-12:00",11.1299107580966,46.1907029591745
+"Serena Di Montagnin Elena","Via Di Mezzo","3",38080,"Bondone","pharmacy","Ordinaria",NA,10.5404626934837,45.8080332177553
+"Farmacia Valle Dei Mocheni","Località Pintarei","75",38050,"Sant'Orsola Terme","pharmacy","Ordinaria","Mo-Fr 08:30-12:00,15:00-19:00; Sa 08:30-12:00; Su off",11.3021323814983,46.1091823291086
+"Farmacia Dott. Barbacovi Giorgio","Piazza Cesare Battisti","4",38060,"Aldeno","pharmacy","Ordinaria","Mo-Fr 08:30-12:00, 15:30-19:00",11.0910786579792,45.9772355828176
+"Farmacia Redi","Via Nas","3",38062,"Arco","pharmacy","Ordinaria","Mo-Fr 08:15-19:30; Sa 08:30-19:00",10.8798826935632,45.9175235751617
+"Farmacia Morelli S.R.L.","Via Cesare Battisti","15",38042,"Baselga Di Pine'","pharmacy","Ordinaria",NA,11.2468391450306,46.1321200575374
+"Farmacia Centrale","Corso Ausugum","40",38051,"Borgo Valsugana","pharmacy","Ordinaria",NA,11.4577616922919,46.0539271470082
+"Ottaviani Franco","Via Giuseppe Garibaldi","9",38060,"Brentonico","pharmacy","Ordinaria",NA,10.9390077325141,45.8020613409721
+"Farmacia Maistri Elvio E Girardi Claudio & C. S.A.S.","Via Trozo Dei Cavai","8",38052,"Caldonazzo","pharmacy","Ordinaria",NA,11.2725313859021,45.9839520661247
+"Rigoni Cristiano","Via Dante Alighieri","12/A",38053,"Castello Tesino","pharmacy","Ordinaria",NA,11.6469032548419,46.1219023022185
+"Sartori & C. Snc","Via De Campi","3",38011,"Cavareno","pharmacy","Ordinaria",NA,11.1365971,46.4079192
+"Farmacia Paolo Folgaresi & C. S.N.C.","Via Don Negri","22",38073,"Cavedine","pharmacy","Ordinaria",NA,10.989954412224,45.9868409301662
+"Martini Giorgio","Via Iv Novembre","44",38034,"Cembra","pharmacy","Ordinaria",NA,11.2209905,46.1747528
+"Farmacia Betti S.A.S. Dihippo 156 Farma S.R.L.","Piazza Santa Maria","4",38045,"Civezzano","pharmacy","Ordinaria",NA,11.1823868,46.0899632
+"Farmacia De Maffei","Via Alcide Degasperi","30",38023,"Cles","pharmacy","Ordinaria","Mo-Sa 08:15-19:15",11.0330405163871,46.3630656500066
+"Farmacia Dott.Ssa Barbara Zontini & C. S.N.C.","Via Roma","43",38083,"Condino","pharmacy","Ordinaria",NA,10.5939868704181,45.8817539883688
+"Ceschinelli Dino","Via Roma","9",38085,"Pieve Di Bono","pharmacy","Ordinaria",NA,10.6651430913003,45.9415635716799
+"Farmacia Alla Madonna Sas Di Trotter Damiano, Lorenza &Amp; C.","Via Guadagnini","28",38054,"Primiero San Martino Di Castrozza","pharmacy","Ordinaria",NA,11.8292505,46.1765516
+"Diemme Farma Sas Di Carlo De Maffei & C.","Via Cesare Battisti","20",38013,"Fondo","pharmacy","Ordinaria",NA,11.1402654172457,46.4171162798013
+"Fanzago D.Ri Roberto E Diego Snc","Via Gionghi","99",38046,"Lavarone","pharmacy","Ordinaria",NA,11.2867907271599,45.9420649936859
+"De Prez","Via Dante","31",38056,"Levico Terme","pharmacy","Ordinaria",NA,11.3305984683628,45.9975203025033
+"Comano Terme Snc Di Betta Paola","Via Battisti","49",38070,"Comano Terme","pharmacy","Ordinaria",NA,10.8659923,46.024138
+"Tomasi Nicoletta","Piazza Dante","1",38027,"Male'","pharmacy","Ordinaria","Mo-Sa 08:30-12:30,15:30-19:30",10.9121688625783,46.3520986840754
+"Zanini","Piazza San Gottardo","13",38016,"Mezzocorona","pharmacy","Ordinaria","Mo-Fr 08:30-12:15,15:30-19:15;Sa 08:30-12:15",11.1188739709119,46.2146885294768
+"Campagnola","Via Alcide De Gasperi","19",38017,"Mezzolombardo","pharmacy","Ordinaria",NA,11.0913848489021,46.2129566606431
+"Montalbano Snc Di Dr. Kostner Francesco E Candioli Roberto","Via Malfatti","6",38065,"Mori","pharmacy","Ordinaria",NA,10.9517733419702,45.8566608968003
+"Gallina","Via Nazionale","48",38020,"Pellizzano","pharmacy","Ordinaria",NA,10.7572485769741,46.3113251675449
+"Farmacia Bottura","Via Cesare Battisti","26",38057,"Pergine Valsugana","pharmacy","Ordinaria",NA,11.2398474,46.0616404
+"A. Foletto Di Foletto A. & C.  Snc","Via Cassoni","3",38060,"Ledro","pharmacy","Ordinaria",NA,10.7313102,45.8896543
+"Farmacia","Via Molini","1",38030,"Giovo","pharmacy","Ordinaria",NA,11.1512536245166,46.1572920341694
+"Pasi Snc  Di Pasi Luisa & C.","Via Roma","1/C",38037,"Predazzo","pharmacy","Ordinaria",NA,11.602528688639,46.3116641911769
+"Farmasolis S.N.C. Di Tomasi Monica & C.","Via Brescia","82",38025,"Dimaro Folgarida","pharmacy","Ordinaria",NA,10.878091480855,46.3310783796587
+"Farmacia Molina Di Ledro","Via Maffei","3",38066,"Riva Del Garda","pharmacy","Ordinaria","Mo-Sa 08:00-12:00 15:00-19:00",10.7758557314671,45.8718746408313
+"Mutalipassi","Via Lutti","12",38066,"Riva Del Garda","pharmacy","Ordinaria",NA,10.8451645991614,45.8868603940582
+"S. Lucia Di Genem Dr. Kamal","Via Don Guetti","1",38050,"Roncegno","pharmacy","Ordinaria",NA,11.4093559,46.0510607
+"Santoni Dr. Giorgio & C. Snc","Piazza F. Filzi","21",38068,"Rovereto","pharmacy","Ordinaria",NA,11.0384953,45.8915375
+"Cobelli","Via Giuseppe Mazzini","8",38068,"Rovereto","pharmacy","Ordinaria",NA,11.0432392808925,45.8900994967206
+"Soave","Piazza Delle Erbe","17",38068,"Rovereto","pharmacy","Ordinaria",NA,11.0444616976513,45.8883663706013
+"Farmacia Barbacovi","Via Benacense","11/B",38068,"Rovereto","pharmacy","Ordinaria","Mo-Fr 08:00-12:30; 14:45-19:15; Sa 08:00-12:30",11.0397547561052,45.8830078199025
+"Farmacia Thaler","Via Dante","1/Bis",38068,"Rovereto","pharmacy","Ordinaria",NA,11.04034,45.88942
+"Cattani Paolo","Via S. Vigilio","83",38088,"Spiazzo","pharmacy","Ordinaria",NA,10.7373486216062,46.1014148698208
+"Farmacia Di Stenico E San Lorenzo Snc","Piazza Dante Alighieri","13",38070,"Stenico","pharmacy","Ordinaria",NA,10.8413250782721,46.0981455715646
+"Farmacia Fusi Srl","Via G. Garibaldi","125",38089,"Storo","pharmacy","Ordinaria",NA,10.5594192760137,45.8487404217364
+"Farmacia Borsato","Via Roma","29",38059,"Castel Ivano","pharmacy","Ordinaria",NA,11.5239853490662,46.0637580297833
+"Donati Bruno","Via Roma","21",38038,"Tesero","pharmacy","Ordinaria",NA,11.4636325431318,46.2891041386364
+"Boni Giulio & C. Snc","Viale Dante","42",38079,"Tione Di Trento","pharmacy","Ordinaria",NA,10.7245,46.03341
+"S. Bartolameo Dott. C. Bertolini & C. Snc","Viale Verona","92",38123,"Trento","pharmacy","Ordinaria",NA,11.1314631169961,46.0427575586414
+"Farmacia Grandi","Via Alessandro Manzoni","7/A",38122,"Trento","pharmacy","Ordinaria","Mo-Fr 08:00-13:00,15:00-19:00; Sa 08:30-12:30",11.1251915789719,46.0738198339908
+"Farmacia Grandi","Via Alessandro Manzoni","7A",38122,"Trento","pharmacy","Ordinaria","Mo-Fr 08:00-13:00,15:00-19:00; Sa 08:30-12:30",11.1251915789719,46.0738198339908
+"Farmacia Alla Madonna","Via Giannantonio Manci","42",38122,"Trento","pharmacy","Ordinaria","Mo-Sa 08:30-12:30,15:00-19:00",11.1230744778683,46.0698068302084
+"Farmacia Alla Madonna","Via Giannantonio Manci","42",38122,"Trento","pharmacy","Ordinaria","Mo-Sa 08:30-12:30,15:00-19:00",11.1230744778683,46.0698068302084
+"Farmacia Ai Solteri","Via Renato Lunelli","40",38121,"Trento","pharmacy","Ordinaria",NA,11.1176349579848,46.0923858333392
+"Santa Chiara Snc Dei Dott. Alessia Ed Edoardo Abbondi","Via Santa Croce","57",38122,"Trento","pharmacy","Ordinaria",NA,11.2950495625519,46.0125447976514
+"Farmacia Bretta Dott. Giorgio &Amp; C. Snc","Via Cima Tosa","49",38086,"Pinzolo","pharmacy","Ordinaria",NA,10.7963137713744,46.2220374200605
+"Farmacia Delle Dolomiti","Via Ponte Lambin","27A",38010,"Andalo","pharmacy","Ordinaria",NA,11.0014942179652,46.1634505421104
+"Farmacia San Rocco S.N.C. Di Dott. Alessandro Meo E Dott. Davide Schirru","Via Roma","1",38070,"Vezzano","pharmacy","Ordinaria",NA,10.9991219054545,46.0779043256191
+"De Probizer Paolo & C. Snc","Via Xxv Aprile","46",38060,"Villa Lagarina","pharmacy","Ordinaria",NA,11.0600981,45.9191875
+"Farmacia Ladina","Strèda Dolomites","77",38032,"Canazei","pharmacy","Ordinaria",NA,11.7687123627565,46.4776387226757
+"Chinaglia","Via Giacomo Matteotti","62",38069,"Nago-Torbole","pharmacy","Ordinaria","Mo-Sa 08:00-19:00",10.876517359439,45.87068793098
+"Fontana Marcella E C. Snc","Via Marco Pola","2",38121,"Trento","pharmacy","Ordinaria",NA,11.1128169933321,46.1077103208361
+"Farmacia San Lorenzo","Piazza General Antonio Cantore","1",38121,"Trento","pharmacy","Ordinaria","Mo-Sa 08:30-12:30,15:00-19:00",11.1191069878201,46.0769969943887
+"Farmacia Zonta Adriana & C. S.N.C.","Via Roma","72/A",38050,"Mezzano","pharmacy","Ordinaria",NA,11.805873,46.1545569
+"Farmacia Dr. Carla Bourlot","Via Delle Roge","9",38024,"Peio","pharmacy","Ordinaria",NA,10.6935362222096,46.3510071926441
+"Farmacia Ravina Srl","Via Herrsching","1",38123,"Trento","pharmacy","Ordinaria",NA,11.1117645926563,46.0622059167663
+"Diemme Farma Sas Di Carlo De Maffei & C.","Piazza Santa Croce","1",38010,"Predaia","pharmacy","Ordinaria",NA,11.1328072982685,46.349715476156
+"Manfredi Cristina","Via Della Fricca","12",38049,"Vigolo Vattaro","pharmacy","Ordinaria",NA,11.195213,46.004407
+"Zanella Claudia Domiziana","Piazza Vittorio Emanuele Iii","1",38050,"Canal San Bovo","pharmacy","Ordinaria",NA,11.7002338696905,46.1991541767805
+"Farmacia Ferri","Via Alla Formigheta","1",38121,"Trento","pharmacy","Ordinaria",NA,11.1316024776141,46.0893458846962
+"Trentini Angelo","Via Passo Rolle","161",38054,"Siror","pharmacy","Ordinaria",NA,11.789688409407,46.2492896751533
+"De Gerloni Dr. Pier Francesco","Localitã  Sopramonte","16",38123,"Trento","pharmacy","Ordinaria",NA,11.1117645926563,46.0622059167663
+"Farmacia San Giovanni","Strada Neva","24",38039,"Vigo Di Fassa","pharmacy","Ordinaria","Mo-Sa 08:30-12:30, 15:30-19:30; Su 09:00-12:00, 16:00-19:00",11.6754116383324,46.4200600770156
+"Dott. Elena Accorsi","Viale Degli Oleandri","15",38066,"Riva Del Garda","pharmacy","Ordinaria",NA,10.8442146780748,45.8997376795417
+"Vinante Giorgio E C. Snc","Via Latemar","1/A",38030,"Castello-Molina Di Fiemme","pharmacy","Ordinaria",NA,11.4320162612705,46.2817897601343
+"Vermiglio","Piazza Papa Giovanni Xxiii","-",38029,"Vermiglio","pharmacy","Ordinaria",NA,10.6463787491706,46.2696160884184
+"Val Di Gresta","Via A. Manzoni","5",38060,"Ronzo-Chienis","pharmacy","Ordinaria",NA,10.9525689,45.8916597
+"Farmacia Di Gardolo","Via Soprasasso","32/4",38121,"Trento","pharmacy","Ordinaria","Mo 15:00-19:00; Tu-Sa 09:00-12:00,15:00-19:00",11.1086199696646,46.1063999563501
+"Farmacia Margonari Ada","Piazza Guglielmo Marconi","24B",38018,"Molveno","pharmacy","Ordinaria","08:30-12:30,15:30-19:30",10.9662346526184,46.1425619173926
+"Farmacia","Piazza Guglielmo Marconi","24B",38018,"Molveno","pharmacy","Ordinaria",NA,10.9662346526184,46.1425619173926
+"Farmacia Monte Albano Sas Dott.Sse A. E V. Candioli & C.","Via Terra Nera","45/1B",38065,"Mori","pharmacy","Ordinaria",NA,10.9517733419702,45.8566608968003
+"Catanzaro Maria Grazia","Via Villa","27",38010,"Fai Della Paganella","pharmacy","Ordinaria",NA,11.0689304,46.1793313
+"Comunale San Giuseppe","Via Vittorio Veneto","39",38122,"Trento","pharmacy","Ordinaria",NA,11.1247846,46.05885165
+"Farmacia Barbacovi","Via Benacense","11/B",38068,"Rovereto","pharmacy","Ordinaria","Mo-Fr 08:00-12:30; 14:45-19:15; Sa 08:00-12:30",11.0397547561052,45.8830078199025
+"Comunale N.4 Clarina","Via Degasperi","-",38123,"Trento","pharmacy","Ordinaria",NA,11.184660339868,46.0908623121858
+"Comunale N.5 S. Dona'","Loc. San Donã","50",38122,"Trento","pharmacy","Ordinaria",NA,11.1117645926563,46.0622059167663
+"Farmacia Comunale Pio X","Via San Pio X","77",38122,"Trento","pharmacy","Ordinaria",NA,11.1206211786284,46.0535017654221
+"Comunale N.6 Povo","Piazza Manci","5",38123,"Trento","pharmacy","Ordinaria",NA,11.1140450714852,46.1385683241641
+"Farmacia Comunale","Via Delle Sugarine","30",38121,"Trento","pharmacy","Ordinaria","Mo-Fr 08:00-12:15, 15:00-19:00; Sa 08:00-12:15",11.1165085978363,46.1264000993315
+"Comunale N.8 Madonna Bianca","Piazzale Europa","8",38123,"Trento","pharmacy","Ordinaria",NA,11.1117645926563,46.0622059167663
+"Farmacia Comunale","Viale Trento","33/2",38068,"Rovereto","pharmacy","Ordinaria",NA,11.0419025349744,45.9013785209069
+"Farmacia Chinaglia","Via Stazione","6",38062,"Arco","pharmacy","Ordinaria",NA,10.8923289621385,45.8787400587364
+"Farmacia Comunale","Via Brescia","19/A",38122,"Trento","pharmacy","Ordinaria","Mo-Fr 08:30-19:00; Sa 08:30-12:00",11.1123089290703,46.0705723494253
+"Farmacia Comunale","Via Brescia","19A",38122,"Trento","pharmacy","Ordinaria","Mo-Fr 08:30-19:00; Sa 08:30-12:00",11.1124074164326,46.0706347946039
+"Comunale San Rocco","Via 3 Novembre","7",38060,"Volano","pharmacy","Ordinaria",NA,11.0940766642749,45.9331674745026
+"Farmacia Comunale San Giuseppe","Viale Trento","98",38066,"Riva Del Garda","pharmacy","Ordinaria",NA,10.8498633264424,45.8947927757645
+"Farmacia Comunale San Cristoforo","Viale Europa","10",38057,"Pergine Valsugana","pharmacy","Ordinaria",NA,11.2398474,46.0616404
+"Comunale N.2 Al S. Camillo","Via Giovannelli","5",38122,"Trento","pharmacy","Ordinaria",NA,11.4387214382326,46.2905400810553
+"Comunale Pietramurata","Via Borgo Nuovo","39",38070,"Dro","pharmacy","Ordinaria",NA,10.9416918996483,46.0166250533252
+"Farmacia Comunale S. Udalrico","Piazza Cesare Battisti","28",38015,"Lavis","pharmacy","Ordinaria",NA,11.1042541241409,46.1512831931641
+"Comunale G.P. Adami","Via 3 Novembre","10",38060,"Pomarolo","pharmacy","Ordinaria",NA,11.0636538484615,45.9293739971436
+"Dispensario Di Stenico Snc","-","-",38078,"San Lorenzo In Banale","pharmacy","Dispensario",NA,10.9092711,46.0767045
+"Farmacia Dott.Ssa Venezian","Via Luigi Negrelli","20/D",38062,"Arco","pharmacy","Ordinaria",NA,10.8653245850363,45.9186855583987
+"Farmacia Dott.Ssa Venezian","Via Luigi Negrelli","20D",38062,"Arco","pharmacy","Ordinaria",NA,10.8653245850363,45.9186855583987
+"Comunale N.4 Di Isera","Via C. Cavalieri","4/A",38060,"Isera","pharmacy","Ordinaria",NA,10.9979685227439,45.8939300176161
+"Farmacia Gallina","Via Quattro Novembre","48",38020,"Mezzana","pharmacy","Succursale",NA,10.8016005794264,46.3159015190396
+"Dispensario Dr.Ssa Gallina Franca","-","-",38020,"Mezzana","pharmacy","Dispensario Stagionale",NA,10.8013158403302,46.3237313532266
+"Dispensario Dr. Foletto Snc","Via Vittorio Emanuele","13",38060,"Ledro","pharmacy","Dispensario",NA,10.684473,45.894495
+"Dispensario Dr.Ssa Covi","Piazza Cesare Battisti","-",38081,"Breguzzo","pharmacy","Dispensario",NA,10.699332,46.0079083
+"Succursale Tomasi Monica","Piazzale Folgarida","-",38064,"Dimaro","pharmacy","Succursale",NA,10.8785019243833,46.2905812296433
+"Dispensario Dr. Cattani Paolo","Via Armando Diaz","1",83081,"Caderzone","pharmacy","Dispensario",NA,10.758036,46.13004
+"Farmacia Borsato","Via Roma","29",38052,"Ospedaletto","pharmacy","Dispensario",NA,11.5239853490662,46.0637580297833
+"Ladina (Succursale)","Via Dolomiti","44",38031,"Campitello Di Fassa","pharmacy","Succursale",NA,11.7109587382254,46.4904115339574
+"Dispensario Vinante Giorgio E C. Snc","Via Segherie","74",38030,"Castello-Molina Di Fiemme","pharmacy","Dispensario",NA,11.4210023943257,46.2723420099138
+"Dispensario Pasi","Piazza Iv Novembre","2",38030,"Ziano Di Fiemme","pharmacy","Dispensario",NA,11.5827165518511,46.2696363876654
+"Dispensario Rigoni S.R.L.","Via Paissan","25",38060,"Nomi","pharmacy","Dispensario",NA,11.071881,45.928599
+"Dispensario Stagionale","-","-",38010,"Cavedago","pharmacy","Dispensario Stagionale",NA,11.010115588658,46.1849438268682
+"Dispensario Dr. Zanini Snc","Piazza Unitã  D'Italia","10A",38030,"Rovere' Della Luna","pharmacy","Dispensario",NA,11.170036999747,46.2497503568464
+"Succursale Ascanio Gianluca","Via Nazionale","-",38020,"Vermiglio","pharmacy","Succursale",NA,10.585872,46.259867
+"Dispensario Dott.Ssa Trintinaglia Lucy","Via Nazionale","32",38055,"Grigno","pharmacy","Dispensario",NA,11.6331029084974,45.9942077675575
+"Dispensario Farmacia Cima D'Asta","Piazza Maggiore","3",38050,"Bieno","pharmacy","Dispensario",NA,11.5638552571326,46.0989757301504
+"Dispensario Farmacia Morelli S.R.L.","Via Verdi","35",38043,"Bedollo","pharmacy","Dispensario",NA,11.3034198,46.1618911
+"Dispensario Farmacia All'Angelo","Piazza Centrale","Snc",38010,"Campodenno","pharmacy","Dispensario",NA,11.0042197966811,46.248332022495
+"Dispensario Dr. Kostner Francesco","Via Vecchio Alveo","8",38060,"Rovereto","pharmacy","Dispensario",NA,11.0018249355173,45.8393356853709
+"Farmacie Comunali Spa","Via Asilo Pedrotti","18",38100,"Trento","pharmacy","Ordinaria",NA,11.1257667774255,46.0589218431499
+"Farmacia Comunale Cognola","Piazza Dell'Argentario","10",38121,"Trento","pharmacy","Ordinaria",NA,11.1419880747412,46.0767325453436
+"Farmacia Chinaglia","Via Stazione","6",38060,"Nago-Torbole","pharmacy","Dispensario",NA,10.8923289621385,45.8787400587364
+"Dispensario Farmaceutico Di Fornace","Via Del Borgolet","12/A",38040,"Fornace","pharmacy","Dispensario",NA,11.2064208000268,46.1231874045505
+"Dispensario Farmaceutico Farmacia Gagliardi","Via Roma","7",38071,"Bleggio Superiore","pharmacy","Dispensario",NA,10.8392640746034,46.0246451359095
+"Farmacia San Rocco","Via Iv Novembre","-",38010,"Nave San Rocco","pharmacy","Ordinaria",NA,11.110436,46.167287
+"La Farmacia Di Roncafort","Via Luigi Caneppele","31",38121,"Trento","pharmacy","Ordinaria","Mo, We, Fr 08:00-12:30, 15:00-19:15; Tu, Th 08:00-12:30, 14:00-19:15; Sa 08:30-12:30, 15:00-19:00",11.1020824204654,46.0984635513303
+"Ruperti Salvatore","Via D'Oltrefersina","133",38057,"Pergine Valsugana","pharmacy","Ordinaria",NA,11.21914735,46.08323575
+"Sarche","Via Garda","3",38076,"Madruzzo","pharmacy","Ordinaria",NA,10.9758140551811,46.0485028276484
+"Farmacia Comunale Castelnuovo","Piazza Municipio","13/B",38050,"Castelnuovo","pharmacy","Ordinaria",NA,11.494495,46.05225
+"Farmacia Di Carano Snc","Via Nazionale","22/A",38033,"Carano","pharmacy","Ordinaria",NA,11.406864080696,46.2983914049297
+"Comunale Tenno","Via Dei Laghi","4",38060,"Tenno","pharmacy","Ordinaria",NA,10.830151590822,45.9227632007897
+"Farmacie Comunali Spa","Via Roma","6/A",38060,"Besenello","pharmacy","Ordinaria",NA,11.1103068808492,45.9385840088118
+"Farmacia San Giorgio","Via Unione","82",38068,"Rovereto","pharmacy","Ordinaria",NA,11.0281745701378,45.8941620375507
+"Farmacia San Giorgio","Via Unione","82",38068,"Rovereto","pharmacy","Ordinaria","Sep-Apr Mo-Sa 08:00-20:00; May-Aug Mo-Fr 08:00-20:00; May-Aug Sa 08:00-13:00",11.0281745701378,45.8941620375507
+"Farmacia Campagnolo","Via Alle Sette Fontane","14",38123,"Trento","pharmacy","Ordinaria",NA,11.1055827870497,46.0167580164804
+"Comunale N. 5","Via Del Garda","175",38068,"Rovereto","pharmacy","Ordinaria",NA,11.024704,45.8727833
+"Igea","Via Milano","68",38122,"Trento","pharmacy","Ordinaria","Mo-Fr 08:30-12:30,15:00-19:00, Sa 08:30-12:30",11.1280487183066,46.0608377747176
+"Dispensario Di Nogaredo","Via San Biagio","4",38060,"Trento","pharmacy","Dispensario",NA,11.1217486,46.0747793
