@@ -110,7 +110,7 @@ Dentista Menoni,Via Castel Beseno,1,38060,Calliano,dentist,NA,11.0975066557039,4
 NA,NA,NA,NA,NA,doctors,NA,11.2205835882377,46.1752298820972
 Pronto Soccorso Ospedale Di Arco,NA,NA,NA,Arco,hospital,NA,10.8751139773907,45.9190769932769
 Pronto Soccorso Ospedale Di Fiemme,NA,NA,38033,Cavalese,hospital,NA,11.4558985628545,46.2883678891239
-Pronto Soccorso Ospedale "San Lorenzo",Corso Vicenza,9,38051,Borgo Valsugana,hospital,NA,11.4632510844993,46.0568307220865
+Pronto Soccorso Ospedale San Lorenzo,Corso Vicenza,9,38051,Borgo Valsugana,hospital,NA,11.4632510844993,46.0568307220865
 Pronto Soccorso Ospedale Tione Di Trento,NA,NA,NA,Tione Di Trento,hospital,NA,10.7245565562074,46.0422013673826
 Pronto Soccorso,Corso Verona,4,38068,Rovereto,hospital,NA,11.0401615298662,45.881173356574
 Guardia Medica,NA,NA,NA,NA,doctors,NA,10.8737397643654,46.0355170510588
@@ -225,7 +225,7 @@ Alp Trauma Clinic,Viale Rovereto,13B,38066,Riva Del Garda,clinic,NA,10.850771757
 Remondini,Via Santa Caterina,4B,38062,Arco,dentist,NA,10.8805063909784,45.9169719621138
 Fisiolab Trento,Corso Iii Novembre,72A,NA,Trento,NA,NA,11.1242191943847,46.0613655831604
 Ospedale San Camillo,NA,NA,NA,NA,hospital,NA,11.1319789781217,46.0649818424941
-Casa Di Cura "Villa Bianca",NA,NA,NA,NA,hospital,NA,11.1267251354262,46.0625489671815
+Casa Di Cura Villa Bianca,NA,NA,NA,NA,hospital,NA,11.1267251354262,46.0625489671815
 Progetto Salute,NA,NA,NA,NA,doctors,NA,11.1304229000574,46.0622704757898
 Centro Per I Servizi Sanitari,NA,NA,NA,NA,clinic,NA,11.1300005282796,46.0448049541463
 Apss Emergenza 118,NA,NA,NA,NA,doctors,NA,11.1314332725825,46.0570398232706
@@ -236,5 +236,5 @@ Studio Dentistico Dott. Paolo Rella,NA,NA,NA,NA,dentist,NA,11.0431097804884,45.8
 NA,NA,NA,NA,NA,doctors,NA,10.8435169684546,45.9061095185152
 Poliambulatorio,NA,NA,NA,NA,hospital,NA,11.8313846954972,46.178037618351
 Centro Sanitario Trentino,Via Alcide De Gasperi,75,38017,Mezzolombardo,doctors,NA,11.0938337895523,46.2108172636771
-Studio Cognola,Piazza Del "Tridente",12,38121,Trento,doctors,NA,11.1193293597113,46.0867971993982
-Studio Di Radiologia Digitale Odontoiatrica,Piazza Del "Tridente",4,38121,Trento,dentist,NA,11.1189906470041,46.0863922696559
+Studio Cognola,Piazza Del Tridente,12,38121,Trento,doctors,NA,11.1193293597113,46.0867971993982
+Studio Di Radiologia Digitale Odontoiatrica,Piazza Del Tridente,4,38121,Trento,dentist,NA,11.1189906470041,46.0863922696559
