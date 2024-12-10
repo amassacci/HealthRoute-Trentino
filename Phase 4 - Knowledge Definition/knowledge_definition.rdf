@@ -1,0 +1,842 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#isEtype -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#isEtype"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#cause_GID-100755 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#cause_GID-100755">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Event_GID-56"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ScheduleException_KGE24-4-0005"/>
+        <rdfs:comment xml:lang="en">Give rise to; cause to happen or occur, not always intentionally.</rdfs:comment>
+        <rdfs:label xml:lang="en">cause_GID-100755</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#delay_GID-94853 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#delay_GID-94853">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Event_GID-56"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:comment xml:lang="en">Cause to be slowed down or delayed.</rdfs:comment>
+        <rdfs:label xml:lang="en">delay_GID-94853</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#deviate_GID-102843 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#deviate_GID-102843">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Event_GID-56"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:comment xml:lang="en">Cause to turn away from a previous or expected course.</rdfs:comment>
+        <rdfs:label xml:lang="en">deviate_GID-102843</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#follow_GID-102467 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#follow_GID-102467">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:comment xml:lang="en">Travel along a certain course.</rdfs:comment>
+        <rdfs:label xml:lang="en">follow_GID-102467</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#follow_GID-104222 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#follow_GID-104222">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:comment xml:lang="en">Choose and follow; as of theories, ideas, policies, strategies or plans.</rdfs:comment>
+        <rdfs:label xml:lang="en">follow_GID-104222</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#happen_GID-94276 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#happen_GID-94276">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <rdfs:comment xml:lang="en">Come to pass.</rdfs:comment>
+        <rdfs:label xml:lang="en">happen_GID-94276</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#include_GID-105576 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#include_GID-105576">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <rdfs:comment xml:lang="en">Have as a part, be made up out of.</rdfs:comment>
+        <rdfs:label xml:lang="en">include_GID-105576</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#localized_GID-81950 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#localized_GID-81950">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518"/>
+        <rdfs:comment xml:lang="en">Confined or restricted to a particular location.</rdfs:comment>
+        <rdfs:label xml:lang="en">localized_GID-81950</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#nearest_GID-109080 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#nearest_GID-109080">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <rdfs:comment xml:lang="en">(superlative of `near&apos; or `close&apos;) within the shortest distance.</rdfs:comment>
+        <rdfs:label xml:lang="en">nearest_GID-109080</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#override_GID-1088 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#override_GID-1088">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ScheduleException_KGE24-4-0005"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:comment xml:lang="en">The act of nullifying; making null and void; counteracting or overriding the effect or force of something.</rdfs:comment>
+        <rdfs:label xml:lang="en">override_GID-1088</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#plan_GID-96049 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#plan_GID-96049">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Trip_GID-1484"/>
+        <rdfs:comment xml:lang="en">Make plans for something.</rdfs:comment>
+        <rdfs:label xml:lang="en">plan_GID-96049</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#scheduled_GID-87477 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#scheduled_GID-87477">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <rdfs:comment xml:lang="en">Planned or scheduled for some certain time or times.</rdfs:comment>
+        <rdfs:label xml:lang="en">scheduled_GID-87477</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_appointment_date_GID-73013 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_appointment_date_GID-73013">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The specified day of the month.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_appointment_date_GID-73013</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_appointment_place_GID-66454 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_appointment_place_GID-66454">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Proper or appropriate position or location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_appointment_place_GID-66454</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_appointment_time_GID-38632 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_appointment_time_GID-38632">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">An instance or single occasion for some event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_appointment_time_GID-38632</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_facility_legal_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_facility_legal_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The official name of the organization, e.g. the registered company name.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_facility_legal_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_facility_opening_hours -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_facility_opening_hours">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas &apos;,&apos; separating each day. Day or time ranges are specified using a hyphen &apos;-&apos;. Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. Times are specified using 24:00 format. For example, 3pm is specified as 15:00, 10am as 10:00.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_facility_opening_hours</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_facility_type_GID-31362 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_health_facility_type_GID-31362">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A subdivision of a particular kind of thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_facility_type_GID-31362</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_addr_housenumber_KGE24-4-0011 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_addr_housenumber_KGE24-4-0011">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A number identifying a building on a street, used in postal addresses.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_addr_housenumber_KGE24-4-0011</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_addr_postcode_GID-33635 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_addr_postcode_GID-33635">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A code of letters and digits added to a postal address to aid in the sorting of mail.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_addr_postcode_GID-33635</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_addr_street_GID-45008 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_addr_street_GID-45008">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The address where a person or organization can be found.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_addr_street_GID-45008</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_latitude_GID-45423 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_latitude_GID-45423">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">The angular distance between an imaginary line around a heavenly body parallel to its equator and the equator itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_latitude_GID-45423</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_longitude_GID-45429 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_longitude_GID-45429">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">The angular distance between a point on any meridian and the prime meridian at Greenwich.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_longitude_GID-45429</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_municipality_GID-45537 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_position_municipality_GID-45537">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An urban district having corporate status and powers of self-government.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_municipality_GID-45537</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_route_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_route_id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifies a route.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_route_id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_route_long_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_route_long_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Full name of a route. This name is generally more descriptive than the route_short_name and often includes the route&apos;s destination or stop.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_route_long_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_route_short_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_route_short_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Short name of a route. Often a short, abstract identifier (e.g., &quot;32&quot;, &quot;100X&quot;, &quot;Green&quot;) that riders use to identify a route.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_route_short_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_route_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_route_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">&quot;Indicates the type of transportation used on a route. Valid options are:
+
+0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area.
+1 - Subway, Metro. Any underground rail system within a metropolitan area.
+2 - Rail. Used for intercity or long-distance travel.
+3 - Bus. Used for short- and long-distance bus routes.
+4 - Ferry. Used for short- and long-distance boat service.
+5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco).
+6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables.
+7 - Funicular. Any rail system designed for steep inclines.
+11 - Trolleybus. Electric buses that draw power from overhead wires using poles.
+12 - Monorail. Railway in which the track consists of a single rail or a beam.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">has_route_type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_schedule_exception_date_GID-73013 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_schedule_exception_date_GID-73013">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ScheduleException_KGE24-4-0005"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The specified day of the month.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_schedule_exception_date_GID-73013</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_schedule_exception_type_GID-31362 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_schedule_exception_type_GID-31362">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ScheduleException_KGE24-4-0005"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A subdivision of a particular kind of thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_schedule_exception_type_GID-31362</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_stop_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_stop_id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifies the serviced stop. A stop may be serviced multiple times in the same trip, and multiple trips and routes may service the same stop.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_stop_lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_stop_lat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Latitude of the location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_lat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_stop_lon -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_stop_lon">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Longitude of the location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_lon</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_stop_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_stop_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the location. The stop_name should match the agency&apos;s rider-facing name for the location as printed on a timetable, published online, or represented on signage.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_trip_headsign -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_trip_headsign">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Text that appears on signage identifying the trip&apos;s destination to riders.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_trip_headsign</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_trip_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_trip_id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifies a trip.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_trip_id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_trip_stop_arrival_time_GID-73119 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_trip_stop_arrival_time_GID-73119">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time at which a public conveyance is scheduled to arrive at a given destination.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_trip_stop_arrival_time_GID-73119</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_trip_stop_departure_time_GID-73120 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_trip_stop_departure_time_GID-73120">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time at which a public conveyance is scheduled to depart from a given point of origin.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_trip_stop_departure_time_GID-73120</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_first_name_GID-33531 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_first_name_GID-33531">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name that precedes the surname.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_user_first_name_GID-33531</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_health_appointment_KGE24-4-0010 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_health_appointment_KGE24-4-0010">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">A scheduled meeting with a healthcare provider for consultation, treatment, or check-up.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_user_health_appointment_KGE24-4-0010</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_id_GID-38423 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_id_GID-38423">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A symbol that establishes the identity of the one bearing it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_user_id_GID-38423</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_surname_GID-33528 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_surname_GID-33528">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name used to identify the members of a family (as distinguished from each member&apos;s given name).</rdfs:comment>
+        <rdfs:label xml:lang="en">has_user_surname_GID-33528</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_type_GID-31362 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_user_type_GID-31362">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A subdivision of a particular kind of thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_user_type_GID-31362</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_weekly_schedule_GID-34204 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_weekly_schedule_GID-34204">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An ordered list of times at which things are planned to occur.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_weekly_schedule_GID-34204</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_weekly_schedule_end_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_weekly_schedule_end_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">End service day for the service interval. This service day is included in the interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_weekly_schedule_end_date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_weekly_schedule_start_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#has_weekly_schedule_start_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Start service day for the service interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_weekly_schedule_start_date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthAppointment"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#BusRoute_GID-45117 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#BusRoute_GID-45117">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">The route regularly followed by a passenger bus.</rdfs:comment>
+        <rdfs:label xml:lang="en">BusRoute_GID-45117</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#BusStop_GID-45118 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#BusStop_GID-45118">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A place on a bus route where buses stop to discharge and take on passengers.</rdfs:comment>
+        <rdfs:label xml:lang="en">BusStop_GID-45118</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Clinic_GID-16098 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Clinic_GID-16098">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A healthcare facility for outpatient care.</rdfs:comment>
+        <rdfs:label xml:lang="en">Clinic_GID-16098</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#DentalClinic_KGE24-4-0008 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#DentalClinic_KGE24-4-0008">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A facility where dental care services, such as checkups, cleanings, and treatments, are provided by dentists and oral health professionals.</rdfs:comment>
+        <rdfs:label xml:lang="en">DentalClinic_KGE24-4-0008</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">The ultimate user for which something is intended.</rdfs:comment>
+        <rdfs:label xml:lang="en">EndUser_GID-49456</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Event_GID-56 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Event_GID-56">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">Something that happens at a given place and time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event_GID-56</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthAppointment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthAppointment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A scheduled meeting with a healthcare provider for consultation, treatment, or check-up.</rdfs:comment>
+        <rdfs:label xml:lang="en">HealthAppointment_KGE24-4-0001</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">Building where medicine is practiced.</rdfs:comment>
+        <rdfs:label xml:lang="en">HealthFacility_GID-20121</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthcareProfessional_KGE24-4-0009 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthcareProfessional_KGE24-4-0009">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A trained individual licensed to provide medical, nursing, or therapeutic care to patients.</rdfs:comment>
+        <rdfs:label xml:lang="en">HealthcareProfessional_KGE24-4-0009</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Hospital_GID-18969 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Hospital_GID-18969">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A health facility where patients receive treatment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hospital_GID-18969</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Patient_GID-51562 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Patient_GID-51562">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#EndUser_GID-49456"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A person who requires medical care.</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient_GID-51562</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Pharmacy_GID-17277 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Pharmacy_GID-17277">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A retail shop where medicine and other articles are sold.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pharmacy_GID-17277</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#PhysicalTherapyCenter_KGE24-4-0007 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#PhysicalTherapyCenter_KGE24-4-0007">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#HealthFacility_GID-20121"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A facility where patients receive treatment to restore movement, reduce pain, and improve physical function.</rdfs:comment>
+        <rdfs:label xml:lang="en">PhysicalTherapyCenter_KGE24-4-0007</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Position_GID-27518">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">The spatial property of a place where or way in which something is situated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Position_GID-27518</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">An established line of travel or access.</rdfs:comment>
+        <rdfs:label xml:lang="en">Route_GID-45485</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ScheduleException_KGE24-4-0005 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ScheduleException_KGE24-4-0005">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ServiceRule_KGE24-4-0006"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">An instance that does not conform to a schedule.</rdfs:comment>
+        <rdfs:label xml:lang="en">ScheduleException_KGE24-4-0005</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ServiceRule_KGE24-4-0006 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ServiceRule_KGE24-4-0006">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A regulation that defines public transport schedules.</rdfs:comment>
+        <rdfs:label xml:lang="en">ServiceRule_KGE24-4-0006</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A brief stay in the course of a journey.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop_GID-5348</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#TrainRoute_KGE24-4-0002 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#TrainRoute_KGE24-4-0002">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Route_GID-45485"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">The route regularly followed by a passenger train.</rdfs:comment>
+        <rdfs:label xml:lang="en">TrainRoute_KGE24-4-0002</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#TrainStop_KGE24-4-0003 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#TrainStop_KGE24-4-0003">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Stop_GID-5348"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A place on a train route where trainss stop to discharge and take on passengers.</rdfs:comment>
+        <rdfs:label xml:lang="en">TrainStop_KGE24-4-0003</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Trip_GID-1484 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Trip_GID-1484">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#Entity_GID-1"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">A journey for some purpose (usually including the return).</rdfs:comment>
+        <rdfs:label xml:lang="en">Trip_GID-1484</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#WeeklySchedule_KGE24-4-0004 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#WeeklySchedule_KGE24-4-0004">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alice/ontologies/2024/11/untitled-ontology-2#ServiceRule_KGE24-4-0006"/>
+        <untitled-ontology-2:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-2:isEtype>
+        <rdfs:comment xml:lang="en">An ordered timetable outlining activities or operations for each day of the week.</rdfs:comment>
+        <rdfs:label xml:lang="en">WeeklySchedule_KGE24-4-0004</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
