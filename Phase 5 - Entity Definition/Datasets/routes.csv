@@ -1,0 +1,168 @@
+id,route_short_name,route_long_name,route_type
+route-urb-396,3,Cortesano Gardolo P.Dante Villazzano 3,3
+route-urb-400,5,Piazza Dante P.Fiera Povo Oltrecastello,3
+route-urb-402,7,Canova Melta Piazza Dante Gocciadoro,3
+route-urb-404,8,Centochiavi Piazza Dante Mattarello,3
+route-urb-406,9,P.Dante S.Donà Cognola Villamontagna,3
+route-urb-408,10,P.Dante Martignano Cognola / Montevaccino,3
+route-urb-411,12,P.Dante Via Ghiaie Ravina Romagnano,3
+route-urb-415,14,P.Dante Via Sanseverino Belvedere Ravina,3
+route-urb-425,11,Piazza Dante Via Brennero Gardolo Spini,3
+route-urb-466,13,P.Dante Rosmini S.Rocco Povo Polo Soc.,3
+route-urb-478,15,Piazza Dante Interporto Spini Di Gardolo,3
+route-urb-484,16,Centochiavi Martignano Cognola Povo,3
+route-urb-512,7,Moietto Rosmini Campana Dei Caduti,3
+route-urb-531,Fu,Funivia Trento Sardagna,5
+route-urb-533,C,Rsa "S.Bart." "Angeli Custodi" Laste,3
+route-urb-535,5/,P.Dante P.Fiera Università Mesiano Povo,3
+route-urb-536,1,Ospedale P.Dante Sopramonte,3
+route-urb-538,2,Piedic. Stazione Osp.S.Chiara Regione Piedic.,3
+route-urb-539,4,Gardolo Roncafort Stazione V.Deg. Mad.Bianca,3
+route-urb-541,6,Vela P.Dante Villazzano Grotta,3
+route-urb-562,A,Brione Cesari Ospedale Podesta' Brione,3
+route-urb-563,B,Ossario Osp. S.Giorgio Osp. Ossario,3
+route-urb-566,AB,Via Magazol S.Giorgio Cornacalda,3
+route-urb-568,G,Gardolo Gardolo Di Mezzo E Spini,3
+route-urb-570,CM,Povo Borino Celva Passo Cimirlo,3
+route-urb-578,1,(Volano) Bettini Staz. Lizzana Marco,3
+route-urb-580,6,Costa Corso Rosmini S.Giorgio/Ospedale,3
+route-urb-582,2,Nomi Villa Lagarina Stazione Mori,3
+route-urb-590,3,03 Peders. Brione Stazione Isera (Lenzima),3
+route-urb-592,4,Villa Lag. Brione Staz. Isera Lenzima,3
+route-urb-594,5,Ospedale Stazione Isera Villa Lagar.,3
+route-urb-598,V,Volano Besenello Calliano Nomi,3
+route-urb-601,P,Castellano Molini Villa Lagarina,3
+route-urb-602,S,Savignano Pomarolo,3
+route-urb-607,L1,01 Lavis Pressano Nave S.Felice Sorni,3
+route-urb-610,L3,03 Lavis Stazione Fs,3
+route-urb-612,L4,04 Lavis Zona Industriale Lavis,3
+route-urb-613,L2,02 Lavis Pressano Masi Sp.131 Sorni,3
+route-urb-614,A,P.Dante Ospedale Fersina Clarina P.Dante,3
+route-urb-615,M,Martignano Montevaccino,3
+route-urb-617,P,Centochiavi Martignano Cognola Povo,3
+route-urb-621,N,Zuffo Via Rosmini Italcementi,3
+route-urb-623,19,Stazione Buc M.Baldo Muse Regione,3
+route-urb-629,17,P.Dante V.Bolzano Lavis Lavs Ftm,3
+route-ext-1,B101,Cavalese-Predazzo-Moena-Canazei-Penia,3
+route-ext-3,B102,Trento -  Cembra - Capriana - Cavalese,3
+route-ext-7,B114,Casatta di Valfloriana - Palu' - Sicina,3
+route-ext-55,B104,Trento-S.Michele a/A-Salorno-Egna-Ora-Cavalese,3
+route-ext-60,B105,Verla - Valternigo - Palu' di Giovo,3
+route-ext-63,B121,Montesover - Sover,3
+route-ext-65,B109,Cavalese - Masi di Cavalese,3
+route-ext-67,B111,Cavalese - Carano - Villaggio Veronza,3
+route-ext-69,B402,Trento - Nogarè - Baselga di Pinè -Montesover,3
+route-ext-71,B201,Trento-Vezzano-Sarche-Tione,3
+route-ext-73,B216,Tione-Bolbeno-Ragoli-Montagne,3
+route-ext-76,B202,Trento-Sardagna-Candriai-Vaneze-Vason-Viote,3
+route-ext-78,B203,Vezzano-Ciago-Ranzo-Margone,3
+route-ext-80,B206,Trento-Cadine-Sopramonte-Terlago-MTerlago,3
+route-ext-84,B429,Centrale - Regnana,3
+route-ext-86,B408,Borgo Valsugana - Olle,3
+route-ext-90,B415,Levico Terme - Barco - S.Giuliana - Lochere,3
+route-ext-92,B431,Baselga di Pinè - S.Mauro,3
+route-ext-94,B413,Brusago-Valcava,3
+route-ext-96,B428,Bedollo-Svaldi,3
+route-ext-98,B410,Borgo Valsugana - Tezze - Primolano,3
+route-ext-102,B501,S.Martino di Castrozza-Fiera di Primiero-Feltre,3
+route-ext-106,B504,Canal S.Bovo - Ronco Fosse - Ronco Chiesa,3
+route-ext-108,B512,Trento-Borgo Valsugana-Arten-Feltre,3
+route-ext-110,B301,Trento-Besenello-Calliano-Rovereto,3
+route-ext-116,B506,Fiera di Primiero-Imer-Canal S.Bovo-Caoria,3
+route-ext-117,B112,Cavalese - Daiano - Varena,3
+route-ext-120,B103,Trento - Civezzano - Sover - Cavalese,3
+route-ext-123,B514,Trento-Borgo V.-Arten-Fiera di P.-S. Martino C.,3
+route-ext-130,B122,Predazzo-P.sso Rolle-Fiera di P.,3
+route-ext-132,B409,Borgo Valsugana -Roncegno Terme -Ronchi,3
+route-ext-134,B205,Trento-Vezzano-Sarche-Dro-Arco-Riva,3
+route-ext-136,B113,Cavalese - Daiano - Carano - Tesero - Cavalese,3
+route-ext-138,B404,Baselga di Pinè - Faida  - Montagnaga,3
+route-ext-151,B116,Trento - Civezzano - S.Agnese - Bosco,3
+route-ext-153,B211,Riva del Garda-Tenno-Fiave'-Ponte Arche,3
+route-ext-155,B210,Ponte Arche-S.Croce-Cavrasto-Bivedo,3
+route-ext-157,B215,Tione-Pieve di Bono-Storo-Baitoni-Ponte Caffaro,3
+route-ext-159,B209,Ponte Arche-Lundo,3
+route-ext-161,B208,Ponte Arche-S.Lorenzo in B.-Molveno,3
+route-ext-164,B213,Pieve di Bono-Castel Condino-Por,3
+route-ext-167,B212,Pieve di Bono-Praso-Daone,3
+route-ext-169,B406,Borgo Valsugana -Carzano -Strigno -Samone,3
+route-ext-171,B214,Riva-Pregasina-Bezzecca-Storo-Pieve di Bono,3
+route-ext-175,B204,Trento-Vezzano Apt-Vigo Cavedine-Riva del Garda,3
+route-ext-177,B418,Pergine-Kamauz-Frassilongo-S.Felice F.-Hacleri,3
+route-ext-179,B417,Pergine -Canezza -Viarago -S.Orsola -Palù,3
+route-ext-181,B302,Trento -Ravina -Mattarello -Aldeno -Garniga Terme,3
+route-ext-184,B407,Borgo Valsugana - Telve - Torcegno,3
+route-ext-186,B303,Trento-V.Vattaro-Centa-Carbonare-Lavarone-Luserna,3
+route-ext-188,B423,Pergine Vals.-Ischia-Tenna-Levico Terme,3
+route-ext-194,B311,Rovereto-Villa-Nomi-Aldeno,3
+route-ext-196,B306,Rovereto-Calliano-Folgaria-Lavarone,3
+route-ext-198,B315,Rovereto-Terragnolo-Serrada-Folgaria,3
+route-ext-200,B307,Rovereto-Mori-Chizzola-Cornè-Ala-Avio,3
+route-ext-203,B314,Rovereto-Riva-Obra di Vallarsa-Ometto,3
+route-ext-215,B312,Rovereto-Pozzacchio-Raossi-P.Vallarsa-P.Fugazze,3
+route-ext-220,B310,Rovereto-Mori-S.Felice-Ronzo Chienis,3
+route-ext-227,B507,Caoria-Canal S.Bovo-Feltre,3
+route-ext-229,B230,Trento-Ciago-Monte Terlago-Ranzo-Margone,3
+route-ext-231,B305,Rovereto-Mori-Brentonico-Saccone,3
+route-ext-233,B319,Besagno-Crosano-Cornè-Saccone,3
+route-ext-235,B318,Valle S.Felice-Manzano-Nomesino,3
+route-ext-300,B115,Pergine - Civezzano,3
+route-ext-309,B425,Pergine Vals.-Masetti-Assizzi-Vignola-Falesina,3
+route-ext-311,B511,Siror - Fiera di Primiero - Imer - Masi Imer,3
+route-ext-316,B123,Moena-Passo  S.Pellegrino-Falcade,3
+route-ext-322,B218,Vigo Cavedine - Masi di Vigo Cavedine,3
+route-ext-324,B640,Malè - Rabbi Bagni - Somrabbi,3
+route-ext-326,B642,Malè - Folgarida - Madonna di Campiglio,3
+route-ext-328,B644,Pellizzano - Menas,3
+route-ext-330,B641,Malè - Bolentina,3
+route-ext-332,B646,Malè-Mezzana-Fucine-Vermiglio-Passo Tonale,3
+route-ext-334,B643,Malè - Mezzana - Marilleva 1400,3
+route-ext-336,B645,Malè-Mezzana-Fucine-Cogolo-Peio,3
+route-ext-340,B107,Mezzolombardo - Roverè della Luna,3
+route-ext-343,B106,Mezzocorona Ferrovia - S.Michele - Faedo Pineta,3
+route-ext-345,B611,Trento-Mezzocorona-Fai d/Paganella-Andalo-Molveno,3
+route-ext-352,R35,FERROVIA TRENTO - MALE' - MEZZANA,2
+route-ext-354,B624,Cles - Mechel,3
+route-ext-357,B634,Cles - Livo - Bresimo - Lanza di Rumo,3
+route-ext-364,B632,Cles - Revò - Castelfondo - Fondo,3
+route-ext-366,B620,Mezzolombardo-Campodenno-Denno-Cles,3
+route-ext-368,B627,Cles - Dermulo - Coredo - Smarano - Sfruz,3
+route-ext-371,B631,Fondo - Tret,3
+route-ext-375,B630,Cles -Dermulo -Dambel -Don -Fondo -P.Mendola,3
+route-ext-378,B633,Cles - Mostizzolo - Cis,3
+route-ext-395,B615,Mezzolombardo - Vigo di Ton -  Toss,3
+route-ext-397,B623,Cles - Pavillo - Tuenno - Nanno - Portolo,3
+route-ext-401,B625,Mollaro - Priò - Vervò - Tres,3
+route-ext-417,B863,Linea 3 integrata:Nago-Torbole-Riva-Arco-Bolognano,3
+route-ext-420,B861,Linea 1: Riva -Varone -Arco -S.Giorgio-Brione-Riva,3
+route-ext-423,B862,Linea 2: Riva-Brione-S.Giorgio-Arco-Varone-Riva,3
+route-ext-494,B403,Trento - Pergine - Baselga di Pinè - Montesover,3
+route-ext-503,B335,Rovereto-Ala-Masi d'Avio-Avio-Rovereto,3
+route-ext-507,B334,Rovereto-Ala-Sabbionara-Avio-Masi-Rovereto,3
+route-ext-520,B401,Trento-Pergine V.-Levico T.-Borgo V.,3
+route-ext-522,B405,Borgo V.- Strigno - Castello Tesino,3
+route-ext-526,B329,Pergine-Calceranica-Bosentino-V.Vattaro,3
+route-ext-549,B461,Linea 1 Pergine Valsugana - Madrano - Nogarè,3
+route-ext-551,B462,Linea 2 Pergine-Zivignago-Canezza-Viarago-Serso,3
+route-ext-552,B466,Linea 6 Pergine Valsugana-Costasavina-Roncogno,3
+route-ext-554,B464,Linea 4 Pergine Valsugana - Ischia,3
+route-ext-556,B463,Linea 3 Pergine Valsugana-Masetti-Assizzi-Zava,3
+route-ext-562,B465,Linea 5 Pergine V-Susà-S.Vito-Canale-S.Caterina,3
+route-ext-580,B336,Ala-Ronchi di Ala-Ponzolotti,3
+route-ext-604,B120,Cavalese Autostazione - Ospedale,3
+route-ext-618,B503,Caoria-Imer-Fiera di Primiero-Voltago-Agordo,3
+route-ext-634,B332,Rovereto-Mori-Riva-Arco-Bolognano,3
+route-ext-636,B231,Tione-Pinzolo-Madonna di C.-C.C.Magno,3
+route-ext-638,B140,AAM: Ora-S.Lugano-Castello di Fiemme-Cavalese,3
+route-ext-640,B468,Linea 8: Pergine I.-Ospedale Villa Rosa-Zivignago,3
+route-ext-647,B511,Siror - Fiera  P. - Imer - Canal S.B.,3
+route-ext-665,B221,Riva del Garda-Deva-Pranzo-Campi,3
+route-ext-672,B869,Riva del Garda-Deva-Pranzo-Campi,3
+route-ext-687,B261,SU Vallelaghi: Terlago-M.Terlago-Ciago-Lon-Vezzano,3
+route-ext-691,R25,Trento-Bassano Trentino Trasporti Spa,2
+route-ext-693,R26,Trento-Borgo Trentino Trasporti Spa,2
+route-ext-695,R25,Servizi Trenitalia - Andata Tn-Bassano,2
+route-ext-696,R26,Servizi Trenitalia - AndataTn-Borgo,2
+route-ext-703,B621,Trento-Lavis-Zambana-Nave S.Rocco-Mezzolombardo,3
+route-ext-713,B601,Trento-Dermulo-Cles-Malè,3
+route-ext-717,B450,Servizio sostitutivo treno-Andata,3

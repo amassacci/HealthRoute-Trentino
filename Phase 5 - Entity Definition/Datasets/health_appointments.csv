@@ -1,0 +1,7 @@
+health_appointment_id,place,place_name,appointment_date,appointment_time
+health-appointment-1,osm-health-point-220,Casa Di Cura Villa Bianca,2025-01-20,10:00
+health-appointment-2,osm-health-point-322,A.P.S.P. Civica di Trento,2025-01-20,12:00
+health-appointment-3,osm-health-point-220,Casa Di Cura Villa Bianca,2024-12-17,11:00
+health-appointment-4,osm-health-point-134,Presidio Ospedaliero Santa Chiara,2024-11-13,09:00
+health-appointment-5,osm-health-point-134,Presidio Ospedaliero Santa Chiara,2025-02-13,10:00
+health-appointment-6,osm-health-point-8,Ospedale Santa Maria Del Carmine,2025-04-16,16:30
