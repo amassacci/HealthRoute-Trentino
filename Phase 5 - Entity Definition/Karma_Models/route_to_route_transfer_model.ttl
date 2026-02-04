@@ -1,0 +1,247 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns2: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix terms1: <http://vocab.gtfs.org/terms#> .
+@prefix HealthRoute-Trentino: <http://knowdive.disi.unitn.it/HealthRoute-Trentino#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix knowdive: <http://knowdive.disi.unitn.it/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1jb8ucnlbx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "route_transfer_all_OD_no_duplicates.csv" ;
+	km-dev:modelPublicationTime "1764458127019"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"transfer_id\"}],[{\"columnName\":\"from_route\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"transfer_id\"}],[{\"columnName\":\"from_route\"}]]" ;
+	km-dev:hasModelLabel "route_transfer_all_OD_no_duplicates.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"transfer_id\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-00211\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"transfer_id\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"transfer_id\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"from_route\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#Route_GID-45485\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#Route_GID-454851\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"from_route\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"from_route\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-00211\",
+                    \"edgeId\": \"http://knowdive.disi.unitn.it/etype#has_route_transfer_KGE24-4-0022\",
+                    \"edgeTargetUri\": \"http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021\",
+                    \"edgeSourceId\": \"http://knowdive.disi.unitn.it/etype#Route_GID-454851\",
+                    \"edgeSourceUri\": \"http://knowdive.disi.unitn.it/etype#Route_GID-45485\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_e7a616f3-eec5-4d42-b89b-260f20533124 a rr:TriplesMap .
+
+_:node1jb8ucnlbx1 km-dev:hasTriplesMap km-dev:TriplesMap_e7a616f3-eec5-4d42-b89b-260f20533124 .
+
+km-dev:TriplesMap_e7a616f3-eec5-4d42-b89b-260f20533124 km-dev:isPartOfMapping _:node1jb8ucnlbx1 .
+
+_:node1jb8ucnlbx2 rr:tableName "route_transfer_all_OD_no_duplicates.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1jb8ucnlbx1 .
+
+_:node1jb8ucnlbx1 km-dev:hasLogicalTable _:node1jb8ucnlbx2 .
+
+km-dev:TriplesMap_e7a616f3-eec5-4d42-b89b-260f20533124 rr:logicalTable _:node1jb8ucnlbx2 ;
+	rr:subjectMap _:node1jb8ucnlbx3 .
+
+_:node1jb8ucnlbx1 km-dev:hasSubjectMap _:node1jb8ucnlbx3 .
+
+_:node1jb8ucnlbx3 km-dev:isPartOfMapping _:node1jb8ucnlbx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-00211" ;
+	rr:class <http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021> ;
+	rr:template "{transfer_id}" .
+
+km-dev:TriplesMap_0c37cf3d-2afb-4097-addd-fc9ea7d842eb a rr:TriplesMap .
+
+_:node1jb8ucnlbx1 km-dev:hasTriplesMap km-dev:TriplesMap_0c37cf3d-2afb-4097-addd-fc9ea7d842eb .
+
+km-dev:TriplesMap_0c37cf3d-2afb-4097-addd-fc9ea7d842eb km-dev:isPartOfMapping _:node1jb8ucnlbx1 .
+
+_:node1jb8ucnlbx4 rr:tableName "route_transfer_all_OD_no_duplicates.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1jb8ucnlbx1 .
+
+_:node1jb8ucnlbx1 km-dev:hasLogicalTable _:node1jb8ucnlbx4 .
+
+km-dev:TriplesMap_0c37cf3d-2afb-4097-addd-fc9ea7d842eb rr:logicalTable _:node1jb8ucnlbx4 ;
+	rr:subjectMap _:node1jb8ucnlbx5 .
+
+_:node1jb8ucnlbx1 km-dev:hasSubjectMap _:node1jb8ucnlbx5 .
+
+_:node1jb8ucnlbx5 km-dev:isPartOfMapping _:node1jb8ucnlbx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.unitn.it/etype#Route_GID-454851" ;
+	rr:class <http://knowdive.disi.unitn.it/etype#Route_GID-45485> ;
+	rr:template "{from_route}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_0587f324-3f01-41ce-8a2d-c8ee16fa3c4a rr:predicate <http://knowdive.disi.unitn.it/etype#has_route_transfer_KGE24-4-0022> .
+
+km-dev:RefObjectMap_44e4b189-f8bd-42f3-8d97-525fd331cfac a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_e7a616f3-eec5-4d42-b89b-260f20533124 ;
+	km-dev:isPartOfMapping _:node1jb8ucnlbx1 .
+
+_:node1jb8ucnlbx1 km-dev:hasObjectMap km-dev:RefObjectMap_44e4b189-f8bd-42f3-8d97-525fd331cfac .
+
+km-dev:PredicateObjectMap_0587f324-3f01-41ce-8a2d-c8ee16fa3c4a rr:objectMap km-dev:RefObjectMap_44e4b189-f8bd-42f3-8d97-525fd331cfac .
+
+km-dev:TriplesMap_0c37cf3d-2afb-4097-addd-fc9ea7d842eb rr:predicateObjectMap km-dev:PredicateObjectMap_0587f324-3f01-41ce-8a2d-c8ee16fa3c4a .
+
+km-dev:PredicateObjectMap_0587f324-3f01-41ce-8a2d-c8ee16fa3c4a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1jb8ucnlbx1 .
+
+_:node1jb8ucnlbx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0587f324-3f01-41ce-8a2d-c8ee16fa3c4a .

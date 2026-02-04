@@ -1,0 +1,472 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns2: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix terms1: <http://vocab.gtfs.org/terms#> .
+@prefix HealthRoute-Trentino: <http://knowdive.disi.unitn.it/HealthRoute-Trentino#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix knowdive: <http://knowdive.disi.unitn.it/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1ij0jj81mx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "health_appointments.csv" ;
+	km-dev:modelPublicationTime "1738408566839"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"place\"}],[{\"columnName\":\"health_appointment_id\"}],[{\"columnName\":\"appointment_date\"}],[{\"columnName\":\"place_name\"}],[{\"columnName\":\"appointment_time\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"place\"}],[{\"columnName\":\"health_appointment_id\"}],[{\"columnName\":\"appointment_date\"}],[{\"columnName\":\"place_name\"}],[{\"columnName\":\"appointment_time\"}]]" ;
+	km-dev:hasModelLabel "health_appointments.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"health_appointment_id\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment1\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"health_appointment_id\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"health_appointment_id\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"place_name\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_health_appointment_place_GID-66454\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment/HealthAppointment1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"place_name\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"place_name\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"place\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#HealthFacility_GID-201211\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"place\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"place\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"appointment_date\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_health_appointment_date_GID-73013\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment/HealthAppointment1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"appointment_date\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"appointment_date\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"appointment_time\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_health_appointment_time_GID-38632\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment/HealthAppointment1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"appointment_time\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"appointment_time\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://knowdive.disi.unitn.it/etype#HealthFacility_GID-201211\",
+                    \"edgeId\": \"http://knowdive.disi.unitn.it/etype#take_place_at_KGE24-4-0012\",
+                    \"edgeTargetUri\": \"http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121\",
+                    \"edgeSourceId\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment1\",
+                    \"edgeSourceUri\": \"http://knowdive.disi.unitn.it/etype#HealthAppointment\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_e0325c1e-703c-428a-8d34-ee01353e4fb2 a rr:TriplesMap .
+
+_:node1ij0jj81mx1 km-dev:hasTriplesMap km-dev:TriplesMap_e0325c1e-703c-428a-8d34-ee01353e4fb2 .
+
+km-dev:TriplesMap_e0325c1e-703c-428a-8d34-ee01353e4fb2 km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx2 rr:tableName "health_appointments.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasLogicalTable _:node1ij0jj81mx2 .
+
+km-dev:TriplesMap_e0325c1e-703c-428a-8d34-ee01353e4fb2 rr:logicalTable _:node1ij0jj81mx2 ;
+	rr:subjectMap _:node1ij0jj81mx3 .
+
+_:node1ij0jj81mx1 km-dev:hasSubjectMap _:node1ij0jj81mx3 .
+
+_:node1ij0jj81mx3 km-dev:isPartOfMapping _:node1ij0jj81mx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.unitn.it/etype#HealthAppointment1" ;
+	rr:class <http://knowdive.disi.unitn.it/etype#HealthAppointment> ;
+	rr:template "{health_appointment_id}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_ef7a65b1-bf5a-4acd-b503-a50702da416d rr:predicate <http://knowdive.disi.unitn.it/etype#take_place_at_KGE24-4-0012> .
+
+km-dev:RefObjectMap_586e7277-5cc6-4f7a-aecd-7c239af62704 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_fcc3fb46-a101-4bbd-8788-bec70c9ae2d7 ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasObjectMap km-dev:RefObjectMap_586e7277-5cc6-4f7a-aecd-7c239af62704 .
+
+km-dev:PredicateObjectMap_ef7a65b1-bf5a-4acd-b503-a50702da416d rr:objectMap km-dev:RefObjectMap_586e7277-5cc6-4f7a-aecd-7c239af62704 .
+
+km-dev:TriplesMap_e0325c1e-703c-428a-8d34-ee01353e4fb2 rr:predicateObjectMap km-dev:PredicateObjectMap_ef7a65b1-bf5a-4acd-b503-a50702da416d .
+
+km-dev:PredicateObjectMap_ef7a65b1-bf5a-4acd-b503-a50702da416d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ef7a65b1-bf5a-4acd-b503-a50702da416d .
+
+km-dev:PredicateObjectMap_75f57d1d-2c3c-4114-b99d-e728a82b66f5 rr:predicate <http://knowdive.disi.unitn.it/etype#has_health_appointment_date_GID-73013> .
+
+_:node1ij0jj81mx4 rr:column "appointment_date" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasObjectMap _:node1ij0jj81mx4 .
+
+km-dev:PredicateObjectMap_75f57d1d-2c3c-4114-b99d-e728a82b66f5 rr:objectMap _:node1ij0jj81mx4 .
+
+km-dev:TriplesMap_e0325c1e-703c-428a-8d34-ee01353e4fb2 rr:predicateObjectMap km-dev:PredicateObjectMap_75f57d1d-2c3c-4114-b99d-e728a82b66f5 .
+
+km-dev:PredicateObjectMap_75f57d1d-2c3c-4114-b99d-e728a82b66f5 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_75f57d1d-2c3c-4114-b99d-e728a82b66f5 .
+
+km-dev:PredicateObjectMap_3d0f72d9-709d-407e-8f1c-21d7e2e8bfc7 rr:predicate <http://knowdive.disi.unitn.it/etype#has_health_appointment_place_GID-66454> .
+
+_:node1ij0jj81mx5 rr:column "place_name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasObjectMap _:node1ij0jj81mx5 .
+
+km-dev:PredicateObjectMap_3d0f72d9-709d-407e-8f1c-21d7e2e8bfc7 rr:objectMap _:node1ij0jj81mx5 .
+
+km-dev:TriplesMap_e0325c1e-703c-428a-8d34-ee01353e4fb2 rr:predicateObjectMap km-dev:PredicateObjectMap_3d0f72d9-709d-407e-8f1c-21d7e2e8bfc7 .
+
+km-dev:PredicateObjectMap_3d0f72d9-709d-407e-8f1c-21d7e2e8bfc7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3d0f72d9-709d-407e-8f1c-21d7e2e8bfc7 .
+
+km-dev:PredicateObjectMap_3db5a8be-0042-4113-9d83-6f08afdc28d8 rr:predicate <http://knowdive.disi.unitn.it/etype#has_health_appointment_time_GID-38632> .
+
+_:node1ij0jj81mx6 rr:column "appointment_time" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasObjectMap _:node1ij0jj81mx6 .
+
+km-dev:PredicateObjectMap_3db5a8be-0042-4113-9d83-6f08afdc28d8 rr:objectMap _:node1ij0jj81mx6 .
+
+km-dev:TriplesMap_e0325c1e-703c-428a-8d34-ee01353e4fb2 rr:predicateObjectMap km-dev:PredicateObjectMap_3db5a8be-0042-4113-9d83-6f08afdc28d8 .
+
+km-dev:PredicateObjectMap_3db5a8be-0042-4113-9d83-6f08afdc28d8 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3db5a8be-0042-4113-9d83-6f08afdc28d8 .
+
+km-dev:TriplesMap_fcc3fb46-a101-4bbd-8788-bec70c9ae2d7 a rr:TriplesMap .
+
+_:node1ij0jj81mx1 km-dev:hasTriplesMap km-dev:TriplesMap_fcc3fb46-a101-4bbd-8788-bec70c9ae2d7 .
+
+km-dev:TriplesMap_fcc3fb46-a101-4bbd-8788-bec70c9ae2d7 km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx7 rr:tableName "health_appointments.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ij0jj81mx1 .
+
+_:node1ij0jj81mx1 km-dev:hasLogicalTable _:node1ij0jj81mx7 .
+
+km-dev:TriplesMap_fcc3fb46-a101-4bbd-8788-bec70c9ae2d7 rr:logicalTable _:node1ij0jj81mx7 ;
+	rr:subjectMap _:node1ij0jj81mx8 .
+
+_:node1ij0jj81mx1 km-dev:hasSubjectMap _:node1ij0jj81mx8 .
+
+_:node1ij0jj81mx8 km-dev:isPartOfMapping _:node1ij0jj81mx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.unitn.it/etype#HealthFacility_GID-201211" ;
+	rr:class <http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121> ;
+	rr:template "{place}" .

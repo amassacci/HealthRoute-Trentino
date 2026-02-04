@@ -1,0 +1,337 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns2: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix terms1: <http://vocab.gtfs.org/terms#> .
+@prefix HealthRoute-Trentino: <http://knowdive.disi.unitn.it/HealthRoute-Trentino#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix knowdive: <http://knowdive.disi.unitn.it/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1ij74rdg6x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "stops.csv" ;
+	km-dev:modelPublicationTime "1738627986950"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"stop_lat\"}],[{\"columnName\":\"stop_name\"}],[{\"columnName\":\"id\"}],[{\"columnName\":\"stop_lon\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"stop_lat\"}],[{\"columnName\":\"stop_name\"}],[{\"columnName\":\"id\"}],[{\"columnName\":\"stop_lon\"}]]" ;
+	km-dev:hasModelLabel "stops.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"id\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-45118\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-451181\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"id\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"id\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"stop_name\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-45118\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-451181\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_stop_name\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-45118/BusStop_GID-451181\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"stop_name\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"stop_name\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"stop_lat\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-45118\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-451181\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_stop_lat\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-45118/BusStop_GID-451181\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"stop_lat\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"stop_lat\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"stop_lon\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-45118\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-451181\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_stop_lon\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#BusStop_GID-45118/BusStop_GID-451181\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"stop_lon\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"stop_lon\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    }
+]""" .
+
+km-dev:TriplesMap_f1f8660c-9ba2-48fe-8a86-904c817c1c8f a rr:TriplesMap .
+
+_:node1ij74rdg6x1 km-dev:hasTriplesMap km-dev:TriplesMap_f1f8660c-9ba2-48fe-8a86-904c817c1c8f .
+
+km-dev:TriplesMap_f1f8660c-9ba2-48fe-8a86-904c817c1c8f km-dev:isPartOfMapping _:node1ij74rdg6x1 .
+
+_:node1ij74rdg6x2 rr:tableName "stops.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ij74rdg6x1 .
+
+_:node1ij74rdg6x1 km-dev:hasLogicalTable _:node1ij74rdg6x2 .
+
+km-dev:TriplesMap_f1f8660c-9ba2-48fe-8a86-904c817c1c8f rr:logicalTable _:node1ij74rdg6x2 ;
+	rr:subjectMap _:node1ij74rdg6x3 .
+
+_:node1ij74rdg6x1 km-dev:hasSubjectMap _:node1ij74rdg6x3 .
+
+_:node1ij74rdg6x3 km-dev:isPartOfMapping _:node1ij74rdg6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.unitn.it/etype#BusStop_GID-451181" ;
+	rr:class <http://knowdive.disi.unitn.it/etype#BusStop_GID-45118> ;
+	rr:template "{id}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_c86f8758-192d-42e1-9bde-854971c1f52d rr:predicate <http://knowdive.disi.unitn.it/etype#has_stop_lat> .
+
+_:node1ij74rdg6x4 rr:column "stop_lat" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ij74rdg6x1 .
+
+_:node1ij74rdg6x1 km-dev:hasObjectMap _:node1ij74rdg6x4 .
+
+km-dev:PredicateObjectMap_c86f8758-192d-42e1-9bde-854971c1f52d rr:objectMap _:node1ij74rdg6x4 .
+
+km-dev:TriplesMap_f1f8660c-9ba2-48fe-8a86-904c817c1c8f rr:predicateObjectMap km-dev:PredicateObjectMap_c86f8758-192d-42e1-9bde-854971c1f52d .
+
+km-dev:PredicateObjectMap_c86f8758-192d-42e1-9bde-854971c1f52d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ij74rdg6x1 .
+
+_:node1ij74rdg6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c86f8758-192d-42e1-9bde-854971c1f52d .
+
+km-dev:PredicateObjectMap_d5560da9-5934-4dcc-aef8-9f8b3ba49446 rr:predicate <http://knowdive.disi.unitn.it/etype#has_stop_name> .
+
+_:node1ij74rdg6x5 rr:column "stop_name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ij74rdg6x1 .
+
+_:node1ij74rdg6x1 km-dev:hasObjectMap _:node1ij74rdg6x5 .
+
+km-dev:PredicateObjectMap_d5560da9-5934-4dcc-aef8-9f8b3ba49446 rr:objectMap _:node1ij74rdg6x5 .
+
+km-dev:TriplesMap_f1f8660c-9ba2-48fe-8a86-904c817c1c8f rr:predicateObjectMap km-dev:PredicateObjectMap_d5560da9-5934-4dcc-aef8-9f8b3ba49446 .
+
+km-dev:PredicateObjectMap_d5560da9-5934-4dcc-aef8-9f8b3ba49446 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ij74rdg6x1 .
+
+_:node1ij74rdg6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d5560da9-5934-4dcc-aef8-9f8b3ba49446 .
+
+km-dev:PredicateObjectMap_93b90687-1222-4d4b-9661-d60fe7969111 rr:predicate <http://knowdive.disi.unitn.it/etype#has_stop_lon> .
+
+_:node1ij74rdg6x6 rr:column "stop_lon" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ij74rdg6x1 .
+
+_:node1ij74rdg6x1 km-dev:hasObjectMap _:node1ij74rdg6x6 .
+
+km-dev:PredicateObjectMap_93b90687-1222-4d4b-9661-d60fe7969111 rr:objectMap _:node1ij74rdg6x6 .
+
+km-dev:TriplesMap_f1f8660c-9ba2-48fe-8a86-904c817c1c8f rr:predicateObjectMap km-dev:PredicateObjectMap_93b90687-1222-4d4b-9661-d60fe7969111 .
+
+km-dev:PredicateObjectMap_93b90687-1222-4d4b-9661-d60fe7969111 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ij74rdg6x1 .
+
+_:node1ij74rdg6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_93b90687-1222-4d4b-9661-d60fe7969111 .
