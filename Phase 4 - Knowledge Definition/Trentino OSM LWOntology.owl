@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#"
+     xml:base="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#bus_station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#bus_station">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#transport"/>
+        <rdfs:comment xml:lang="en">A large bus station with multiple platforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">bus_station</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#bus_stop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#bus_stop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#transport"/>
+        <rdfs:comment xml:lang="en">A bus stop.</rdfs:comment>
+        <rdfs:label xml:lang="en">bus_stop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#clinic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#clinic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#health"/>
+        <rdfs:comment xml:lang="en">A medical centre that does not admit inpatients.</rdfs:comment>
+        <rdfs:label xml:lang="en">clinic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#dentist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#dentist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#health"/>
+        <rdfs:comment xml:lang="en">A place as dentist&apos;s practices.</rdfs:comment>
+        <rdfs:label xml:lang="en">dentist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#doctors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#doctors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#health"/>
+        <rdfs:comment xml:lang="en">A place as medical practices.</rdfs:comment>
+        <rdfs:label xml:lang="en">doctor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#health">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#pois"/>
+        <rdfs:comment xml:lang="en">A point of interest about health.</rdfs:comment>
+        <rdfs:label xml:lang="en">health</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#hospital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#health"/>
+        <rdfs:comment xml:lang="en">A hospital.</rdfs:comment>
+        <rdfs:label xml:lang="en">hospital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#openstreetmap_place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#openstreetmap_place">
+        <rdfs:comment xml:lang="en">A place from the OpenStreetMap.</rdfs:comment>
+        <rdfs:label xml:lang="en">osm_place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#pharmacy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#pharmacy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#health"/>
+        <rdfs:comment xml:lang="en">A pharmacy.</rdfs:comment>
+        <rdfs:label xml:lang="en">pharmacy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_bus_station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_bus_station">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#bus_station"/>
+        <rdfs:comment xml:lang="en">A bus station as a point place.</rdfs:comment>
+        <rdfs:label xml:lang="en">point_bus_station</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_bus_stop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_bus_stop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#bus_stop"/>
+        <rdfs:comment xml:lang="en">A bus stop as a point place.</rdfs:comment>
+        <rdfs:label xml:lang="en">point_bus_stop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_clinic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_clinic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#clinic"/>
+        <rdfs:comment xml:lang="en">A clinic as a point place.</rdfs:comment>
+        <rdfs:label xml:lang="en">point_clinic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_dentist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_dentist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#dentist"/>
+        <rdfs:comment xml:lang="en">A point place as dentists&apos; practices.</rdfs:comment>
+        <rdfs:label xml:lang="en">point_dentist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_doctor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#doctors"/>
+        <rdfs:comment xml:lang="en">A point place as doctors&apos; practices.</rdfs:comment>
+        <rdfs:label xml:lang="en">point_doctor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_hospital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#hospital"/>
+        <rdfs:comment xml:lang="en">A hospital as a point place.</rdfs:comment>
+        <rdfs:label xml:lang="en">point_hospital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_pharmacy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_pharmacy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#pharmacy"/>
+        <rdfs:comment xml:lang="en">A pharmacy as a point place.</rdfs:comment>
+        <rdfs:label xml:lang="en">point_pharmacy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#pois -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#pois">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#openstreetmap_place"/>
+        <rdfs:comment xml:lang="en">A place as point of Interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">point_of_interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_bus_station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_bus_station">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#bus_station"/>
+        <rdfs:comment xml:lang="en">A bus station as a polygon place.</rdfs:comment>
+        <rdfs:label xml:lang="en">polygon_bus_station</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_bus_stop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_bus_stop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#bus_stop"/>
+        <rdfs:comment xml:lang="en">A bus stop as a polygon place.</rdfs:comment>
+        <rdfs:label xml:lang="en">polygon_bus_stop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_clinic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_clinic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#clinic"/>
+        <rdfs:comment xml:lang="en">A clinic as a polygon place.</rdfs:comment>
+        <rdfs:label xml:lang="en">polygon_clinic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_dentist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_dentist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#dentist"/>
+        <rdfs:comment xml:lang="en">A polygon place as dentists&apos; practices.</rdfs:comment>
+        <rdfs:label xml:lang="en">polygon_dentist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_doctor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#doctors"/>
+        <rdfs:comment xml:lang="en">A polygon place as doctors&apos; practices.</rdfs:comment>
+        <rdfs:label xml:lang="en">polygon_doctor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_hospital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#hospital"/>
+        <rdfs:comment xml:lang="en">A hospital as a polygon place.</rdfs:comment>
+        <rdfs:label xml:lang="en">polygon_hospital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_pharmacy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_pharmacy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#pharmacy"/>
+        <rdfs:comment xml:lang="en">A pharmacy as a polygon place.</rdfs:comment>
+        <rdfs:label xml:lang="en">polygon_pharmacy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#transport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#openstreetmap_place"/>
+        <rdfs:comment xml:lang="en">A transport related place, such as parking lot, petrol (gas) station, ...</rdfs:comment>
+        <rdfs:label xml:lang="en">transport</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

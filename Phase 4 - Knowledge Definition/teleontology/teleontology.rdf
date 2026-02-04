@@ -1,0 +1,960 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://knowdive.disi.unitn.it/"
+     xml:base="http://knowdive.disi.unitn.it/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:ns2="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:terms1="http://vocab.gtfs.org/terms#"
+     xmlns:knowdive="http://knowdive.disi.unitn.it/#">
+    <owl:Ontology rdf:about="http://knowdive.disi.unitn.it/">
+        <owl:imports rdf:resource="http://knowdive.disi.unitn.it/General-Transit-Feed-Specification"/>
+        <owl:imports rdf:resource="http://knowdive.disi.unitn.it/Trentino-OSM-LWOntology"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/#isEtype -->
+
+    <owl:AnnotationProperty rdf:about="http://knowdive.disi.unitn.it/#isEtype"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#follow_GID-102467 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#follow_GID-102467">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#Route_GID-45485"/>
+        <rdfs:comment xml:lang="en">Travel along a certain course.</rdfs:comment>
+        <rdfs:label xml:lang="en">follow_GID-102467</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#follow_schedule_KGE24-4-0013 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#follow_schedule_KGE24-4-0013">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:comment xml:lang="en">Adheres to a predefined timetable.</rdfs:comment>
+        <rdfs:label xml:lang="en">follow_schedule_KGE24-4-0013</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_GID-103527 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_GID-103527">
+        <rdfs:domain rdf:resource="http://vocab.gtfs.org/terms#Stop"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#StopTime"/>
+        <rdfs:comment xml:lang="en">Have or possess, either in a concrete or an abstract sense.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_GID-103527</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_end_position_KGE24-4-0017 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_end_position_KGE24-4-0017">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:label xml:lang="en">has_end_position_KGE24-4-0017</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_opening_interval_KGE24-4-0020 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_opening_interval_KGE24-4-0020">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#schema:OpeningHours"/>
+        <rdfs:comment xml:lang="en">Indicates the time interval during which an entity (e.g., a pharmacy) is open or available.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_opening_interval_KGE24-4-0020</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_position_GID-85982 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_position_GID-85982">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#Position_GID-27518"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:comment xml:lang="en">Situated in a particular spot or position.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_GID-85982</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_route_transfer_KGE24-4-0022 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_route_transfer_KGE24-4-0022">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021"/>
+        <rdfs:label xml:lang="en">has_route_transfer_KGE24-4-0022</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_start_position_KGE24-4-0016 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_start_position_KGE24-4-0016">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:label xml:lang="en">has_start_position_KGE24-4-0016</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_transport_option_KGE24-4-0018 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_transport_option_KGE24-4-0018">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#TransportOption_KGE24-4-0017"/>
+        <rdfs:label xml:lang="en">has_transport_option_KGE24-4-0018</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#include_GID-105576 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#include_GID-105576">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#Stop_GID-5348"/>
+        <rdfs:comment xml:lang="en">Have as a part, be made up out of.</rdfs:comment>
+        <rdfs:label xml:lang="en">include_GID-105576</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#near_GID-76467 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#near_GID-76467">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#Position_GID-27518"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:comment xml:lang="en">Not far distant in time or space or degree or circumstances.</rdfs:comment>
+        <rdfs:label xml:lang="en">near_GID-76467</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#operates_at_KGE24-4-0019 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#operates_at_KGE24-4-0019">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#TransportOption_KGE24-4-0017"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#Stop_GID-5348"/>
+        <rdfs:comment xml:lang="en">Connects the transport type with its physical location.</rdfs:comment>
+        <rdfs:label xml:lang="en">operates_at_KGE24-4-0019</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#override_GID-1088 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#override_GID-1088">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#ScheduleException_KGE24-4-0005"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:comment xml:lang="en">The act of nullifying; making null and void; counteracting or overriding the effect or force of something.</rdfs:comment>
+        <rdfs:label xml:lang="en">override_GID-1088</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#plan_GID-96049 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#plan_GID-96049">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#Trip_GID-1484"/>
+        <rdfs:comment xml:lang="en">Make plans for something.</rdfs:comment>
+        <rdfs:label xml:lang="en">plan_GID-96049</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#schedule_GID-95928 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#schedule_GID-95928">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#HealthAppointment"/>
+        <rdfs:comment xml:lang="en">Plan for an activity or event.</rdfs:comment>
+        <rdfs:label xml:lang="en">schedule_GID-95928</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#take_place_at_KGE24-4-0012 -->
+
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#take_place_at_KGE24-4-0012">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121"/>
+        <rdfs:comment xml:lang="en">The specific location where a medical consultation, check-up, or treatment occurs.</rdfs:comment>
+        <rdfs:label xml:lang="en">take_place_at_KGE24-4-0012</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_health_appointment_date_GID-73013 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_health_appointment_date_GID-73013">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The specified day of the month.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_appointment_date_GID-73013</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_health_appointment_place_GID-66454 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_health_appointment_place_GID-66454">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Proper or appropriate position or location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_appointment_place_GID-66454</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_health_appointment_time_GID-38632 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_health_appointment_time_GID-38632">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#HealthAppointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">An instance or single occasion for some event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_appointment_time_GID-38632</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_health_facility_legal_name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_health_facility_legal_name">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The official name of the organization, e.g. the registered company name.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_facility_legal_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_health_facility_type_GID-31362 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_health_facility_type_GID-31362">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A subdivision of a particular kind of thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_health_facility_type_GID-31362</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_opening_hours_end_time -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_opening_hours_end_time">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#schema:OpeningHours"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">has_opening_hours_end_time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_opening_hours_start_time -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_opening_hours_start_time">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#schema:OpeningHours"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">has_opening_hours_start_time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_opening_hours_weekday -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_opening_hours_weekday">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#schema:OpeningHours"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has_opening_hours_weekday</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_position_addr_housenumber_KGE24-4-0011 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_position_addr_housenumber_KGE24-4-0011">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Position_GID-27518"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A number identifying a building on a street, used in postal addresses.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_addr_housenumber_KGE24-4-0011</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_position_addr_postcode_GID-33635 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_position_addr_postcode_GID-33635">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Position_GID-27518"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A code of letters and digits added to a postal address to aid in the sorting of mail.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_addr_postcode_GID-33635</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_position_addr_street_GID-45008 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_position_addr_street_GID-45008">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Position_GID-27518"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The address where a person or organization can be found.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_addr_street_GID-45008</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_position_latitude_GID-45423 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_position_latitude_GID-45423">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Position_GID-27518"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">The angular distance between an imaginary line around a heavenly body parallel to its equator and the equator itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_latitude_GID-45423</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_position_longitude_GID-45429 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_position_longitude_GID-45429">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Position_GID-27518"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">The angular distance between a point on any meridian and the prime meridian at Greenwich.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_longitude_GID-45429</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_position_municipality_GID-45537 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_position_municipality_GID-45537">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Position_GID-27518"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An urban district having corporate status and powers of self-government.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_position_municipality_GID-45537</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_route_long_name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_route_long_name">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Full name of a route. This name is generally more descriptive than the route_short_name and often includes the route&apos;s destination or stop.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_route_long_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_route_short_name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_route_short_name">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Short name of a route. Often a short, abstract identifier (e.g., &quot;32&quot;, &quot;100X&quot;, &quot;Green&quot;) that riders use to identify a route.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_route_short_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_route_type -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_route_type">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Route_GID-45485"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">&quot;Indicates the type of transportation used on a route. Valid options are:
+
+0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area.
+1 - Subway, Metro. Any underground rail system within a metropolitan area.
+2 - Rail. Used for intercity or long-distance travel.
+3 - Bus. Used for short- and long-distance bus routes.
+4 - Ferry. Used for short- and long-distance boat service.
+5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco).
+6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables.
+7 - Funicular. Any rail system designed for steep inclines.
+11 - Trolleybus. Electric buses that draw power from overhead wires using poles.
+12 - Monorail. Railway in which the track consists of a single rail or a beam.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">has_route_type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_schedule_exception_date_GID-73013 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_schedule_exception_date_GID-73013">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#ScheduleException_KGE24-4-0005"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The specified day of the month.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_schedule_exception_date_GID-73013</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_schedule_exception_type_GID-31362 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_schedule_exception_type_GID-31362">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#ScheduleException_KGE24-4-0005"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A subdivision of a particular kind of thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_schedule_exception_type_GID-31362</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_stop_lat -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_stop_lat">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Latitude of the location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_lat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_stop_lon -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_stop_lon">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Longitude of the location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_lon</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_stop_name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_stop_name">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Stop_GID-5348"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the location. The stop_name should match the agency&apos;s rider-facing name for the location as printed on a timetable, published online, or represented on signage.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_stop_time_arrival_time_GID-73119 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_stop_time_arrival_time_GID-73119">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StopTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time at which a public conveyance is scheduled to arrive at a given destination.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_time_arrival_time_GID-73119</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_stop_time_departure_time_GID-73120 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_stop_time_departure_time_GID-73120">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StopTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time at which a public conveyance is scheduled to depart from a given point of origin.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_time_departure_time_GID-73120</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_stop_time_stop_sequence -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_stop_time_stop_sequence">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#StopTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Order of stops for a particular trip. The values must increase along the trip but do not need to be consecutive.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_time_stop_sequence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_stop_walking_distance_time_KGE24-4-016 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_stop_walking_distance_time_KGE24-4-016">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#TransportOption_KGE24-4-0017"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Distance and estimated walking time from a given location to a nearby bus stop.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_stop_walking_distance_time_KGE24-4-016</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_transfer_from_route -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_transfer_from_route">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has_transfer_from_route</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_transfer_from_stop -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_transfer_from_stop">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has_transfer_from_stop</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_transfer_to_route -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_transfer_to_route">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has_transfer_to_route</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_transfer_to_stop -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_transfer_to_stop">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has_transfer_to_stop</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_transfer_walking_distance -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_transfer_walking_distance">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has_transfer_walking_distance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_trip_direction -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_trip_direction">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Indicates the direction of travel for a trip. Valid options are: 
+0 - Travel in one direction (e.g. out-bound travel). 
+1 - Travel in the opposite direction (e.g. inbound travel).</rdfs:comment>
+        <rdfs:label xml:lang="en">has_trip_direction</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_trip_headsign -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_trip_headsign">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#Trip_GID-1484"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Text that appears on signage identifying the trip&apos;s destination to riders.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_trip_headsign</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_user_first_name_GID-33531 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_user_first_name_GID-33531">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name that precedes the surname.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_user_first_name_GID-33531</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_user_health_appointment_KGE24-4-0010 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_user_health_appointment_KGE24-4-0010">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A scheduled meeting with a healthcare provider for consultation, treatment, or check-up.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_user_health_appointment_KGE24-4-0010</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_user_type_GID-31362 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_user_type_GID-31362">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A subdivision of a particular kind of thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_user_type_GID-31362</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_weekly_schedule_GID-34204 -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_weekly_schedule_GID-34204">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An ordered list of times at which things are planned to occur.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_weekly_schedule_GID-34204</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_weekly_schedule_end_date -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_weekly_schedule_end_date">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">End service day for the service interval. This service day is included in the interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_weekly_schedule_end_date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#has_weekly_schedule_start_date -->
+
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_weekly_schedule_start_date">
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#WeeklySchedule_KGE24-4-0004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Start service day for the service interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">has_weekly_schedule_start_date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/Entity_GID-1 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#BusRoute_GID-45117 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#BusRoute_GID-45117">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/etype#Route_GID-45485"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">The route regularly followed by a passenger bus.</rdfs:comment>
+        <rdfs:label xml:lang="en">BusRoute_GID-45117</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#BusStop_GID-45118 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#BusStop_GID-45118">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/etype#Stop_GID-5348"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A place on a bus route where buses stop to discharge and take on passengers.</rdfs:comment>
+        <rdfs:label xml:lang="en">BusStop_GID-45118</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#EndPosition_KGE24-4-0015">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A defined final location at which an event, activity, or process concludes.</rdfs:comment>
+        <rdfs:label xml:lang="en">EndPosition_KGE24-4-0015</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#EndUser_GID-49456 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#EndUser_GID-49456">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">The ultimate user for which something is intended.</rdfs:comment>
+        <rdfs:label xml:lang="en">EndUser_GID-49456</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#HealthAppointment -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#HealthAppointment">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A scheduled meeting with a healthcare provider for consultation, treatment, or check-up.</rdfs:comment>
+        <rdfs:label xml:lang="en">HealthAppointment_KGE24-4-0001</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#HealthFacility_GID-20121">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">Building where medicine is practiced.</rdfs:comment>
+        <rdfs:label xml:lang="en">HealthFacility_GID-20121</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#Position_GID-27518 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#Position_GID-27518">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">The spatial property of a place where or way in which something is situated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Position_GID-27518</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#RouteTransfer_KGE24-4-0021">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A transfer opportunity between two public transport routes. It encodes the possibility for a passenger to switch from one route to another, including the walking path and associated metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">RouteTransfer_KGE24-4-0021</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#Route_GID-45485 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#Route_GID-45485">
+        <rdfs:subClassOf rdf:resource="http://vocab.gtfs.org/terms#gtfs_Route"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">An established line of travel or access.</rdfs:comment>
+        <rdfs:label xml:lang="en">Route_GID-45485</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#ScheduleException_KGE24-4-0005 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#ScheduleException_KGE24-4-0005">
+        <rdfs:subClassOf rdf:resource="http://vocab.gtfs.org/terms#CalendarRule"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">An instance that does not conform to a schedule.</rdfs:comment>
+        <rdfs:label xml:lang="en">ScheduleException_KGE24-4-0005</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#ServiceRule_KGE24-4-0006 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#ServiceRule_KGE24-4-0006">
+        <owl:equivalentClass rdf:resource="http://vocab.gtfs.org/terms#ServiceRule"/>
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A regulation that defines public transport schedules.</rdfs:comment>
+        <rdfs:label xml:lang="en">ServiceRule_KGE24-4-0006</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#StartPosition_KGE24-4-0014">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A defined beginning location from which an event, activity, or process is initiated.</rdfs:comment>
+        <rdfs:label xml:lang="en">StartPosition_KGE24-4-0014</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#StopTime -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#StopTime">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">Describes a stop time as part of a trip</rdfs:comment>
+        <rdfs:label xml:lang="en">gtfs:StopTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#Stop_GID-5348 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#Stop_GID-5348">
+        <rdfs:subClassOf rdf:resource="http://vocab.gtfs.org/terms#Stop"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A brief stay in the course of a journey.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop_GID-5348</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#TrainRoute_KGE24-4-0002 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#TrainRoute_KGE24-4-0002">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/etype#Route_GID-45485"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">The route regularly followed by a passenger train.</rdfs:comment>
+        <rdfs:label xml:lang="en">TrainRoute_KGE24-4-0002</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#TrainStop_KGE24-4-0003 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#TrainStop_KGE24-4-0003">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/etype#Stop_GID-5348"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A place on a train route where trainss stop to discharge and take on passengers.</rdfs:comment>
+        <rdfs:label xml:lang="en">TrainStop_KGE24-4-0003</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#TransportOption_KGE24-4-0017 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#TransportOption_KGE24-4-0017">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:label xml:lang="en">TransportOption_KGE24-4-0017</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#Trip_GID-1484 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#Trip_GID-1484">
+        <owl:equivalentClass rdf:resource="http://vocab.gtfs.org/terms#Trip"/>
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">A journey for some purpose (usually including the return).</rdfs:comment>
+        <rdfs:label xml:lang="en">Trip_GID-1484</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#WeeklySchedule_KGE24-4-0004 -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#WeeklySchedule_KGE24-4-0004">
+        <rdfs:subClassOf rdf:resource="http://vocab.gtfs.org/terms#CalendarRule"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">An ordered timetable outlining activities or operations for each day of the week.</rdfs:comment>
+        <rdfs:label xml:lang="en">WeeklySchedule_KGE24-4-0004</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowdive.disi.unitn.it/etype#schema:OpeningHours -->
+
+    <owl:Class rdf:about="http://knowdive.disi.unitn.it/etype#schema:OpeningHours">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+        <knowdive:isEtype rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</knowdive:isEtype>
+        <rdfs:comment xml:lang="en">The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas &apos;,&apos; separating each day. Day or time ranges are specified using a hyphen &apos;-&apos;. Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. Times are specified using 24:00 format. For example, 3pm is specified as 15:00, 10am as 10:00.</rdfs:comment>
+        <rdfs:label xml:lang="en">schema:OpeningHours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.gtfs.org/terms#ServiceRule -->
+
+    <rdf:Description rdf:about="http://vocab.gtfs.org/terms#ServiceRule">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.gtfs.org/terms#Stop -->
+
+    <rdf:Description rdf:about="http://vocab.gtfs.org/terms#Stop">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.gtfs.org/terms#Trip -->
+
+    <rdf:Description rdf:about="http://vocab.gtfs.org/terms#Trip">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.gtfs.org/terms#gtfs_Route -->
+
+    <rdf:Description rdf:about="http://vocab.gtfs.org/terms#gtfs_Route">
+        <rdfs:subClassOf rdf:resource="http://knowdive.disi.unitn.it/Entity_GID-1"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
