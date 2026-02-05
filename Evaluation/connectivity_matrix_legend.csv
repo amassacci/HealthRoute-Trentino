@@ -1,0 +1,24 @@
+,EndUser_GID-49456,StartPosition_KGE24-4-0014,EndPosition_KGE24-4-0015,HealthFacility_GID-20121,"HealthAppointment
+",Position_GID-27518,BusRoute_GID-45117,TrainRoute_KGE24-4-0002,Trip_GID-1484,BusStop_GID-45118,TrainStop_KGE24-4-0003,"StopTime
+",WeeklySchedule_KGE24-4-0004,ScheduleException_KGE24-4-0005,TransportOption_KGE24-4-0017,RouteTransfer_KGE24-4-0021,"OpeningHours
+"
+EndUser_GID-49456,has_user_first_name_GID-33531 | has_user_type_GID-31362,has_start_position_KGE24-4-0016,has_end_position_KGE24-4-0017,,schedule_GID-95928,,,,,,,,,,,,
+StartPosition_KGE24-4-0014,,has_position_addr_street_GID-45008 | has_position_addr_housenumber_KGE24-4-0011 | has_position_addr_postcode_GID-33635 | has_position_municipality_GID-45537 | has_position_latitude_GID-45423 | has_position_longitude_GID-45429,,,,,,,,has_stop_from | has_stop_to,has_stop_from | has_stop_to,,,,has_transport_option_KGE24-4-0018,,
+EndPosition_KGE24-4-0015,,,has_position_addr_street_GID-45008 | has_position_addr_housenumber_KGE24-4-0011 | has_position_addr_postcode_GID-33635 | has_position_municipality_GID-45537 | has_position_latitude_GID-45423 | has_position_longitude_GID-45429,,,,,,,has_stop_from | has_stop_to,has_stop_from | has_stop_to,,,,has_transport_option_KGE24-4-0018,,
+HealthFacility_GID-20121,,,,has_health_facility_legal_name | has_health_facility_type_GID-31362,,has_position_GID-85982,,,,,,,,,,,has_opening_interval_KGE24-4-0020
+"HealthAppointment
+",,,,take_place_at_KGE24-4-0012,has_health_appointment_date_GID-73013 | has_health_appointment_place_GID-66454 | has_health_appointment_time_GID-38632,,,,,,,,,,,,
+Position_GID-27518,,,,,,has_position_addr_street_GID-45008 | has_position_addr_housenumber_KGE24-4-0011 | has_position_addr_postcode_GID-33635 | has_position_municipality_GID-45537 | has_position_latitude_GID-45423 | has_position_longitude_GID-45429,,,,,,,,,has_transport_option_KGE24-4-0018,,
+BusRoute_GID-45117,,,,,,,has_route_type | has_route_short_name | has_route_long_name,,,,,,,,,has_route_transfer_KGE24-4-0022,
+TrainRoute_KGE24-4-0002,,,,,,,,has_route_type | has_route_short_name | has_route_long_name,,,,,,,,has_route_transfer_KGE24-4-0022,
+Trip_GID-1484,,,,,,,follow_GID-102467,follow_GID-102467,has_trip_direction | has_trip_headsign,include_GID-105576,include_GID-105576,has_GID-103527,follow_schedule_KGE24-4-0013,,,,
+BusStop_GID-45118,,,,,,,,,,has_stop_name | has_stop_lat | has_stop_lon,,has_GID-103527,,,,,
+TrainStop_KGE24-4-0003,,,,,,,,,,,has_stop_name | has_stop_lat | has_stop_lon,has_GID-103527,,,,,
+"StopTime
+",,,,,,,,,,,,has_stop_time_stop_sequence | has_stop_time_arrival_time_GID-73119 | has_stop_time_departure_time_GID-73120,,,,,
+WeeklySchedule_KGE24-4-0004,,,,,,,,,,,,,has_weekly_schedule_GID-34204 | has_weekly_schedule_start_date | has_weekly_schedule_end_date,,,,
+ScheduleException_KGE24-4-0005,,,,,,,,,,,,,override_GID-1088,has_schedule_exception_date_GID-73013 | has_schedule_exception_type_GID-31362,,,
+TransportOption_KGE24-4-0017,,,,,,,,,,operates_at_KGE24-4-0019,operates_at_KGE24-4-0019,,,,has_stop_walking_distance_time_KGE24-4-016,,
+RouteTransfer_KGE24-4-0021,,,,,,,,,,,,,,,,has_transfer_from_route | has_transfer_from_stop | has_transfer_to_route | has_transfer_to_stop | has_transfer_walking_distance,
+"OpeningHours
+",,,,,,,,,,,,,,,,,has_opening_hours_start_time | has_opening_hours_end_time | has_opening_hours_weekday

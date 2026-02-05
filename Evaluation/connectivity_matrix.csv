@@ -1,0 +1,24 @@
+,EndUser_GID-49456,StartPosition_KGE24-4-0014,EndPosition_KGE24-4-0015,HealthFacility_GID-20121,"HealthAppointment
+",Position_GID-27518,BusRoute_GID-45117,TrainRoute_KGE24-4-0002,Trip_GID-1484,BusStop_GID-45118,TrainStop_KGE24-4-0003,"StopTime
+",WeeklySchedule_KGE24-4-0004,ScheduleException_KGE24-4-0005,TransportOption_KGE24-4-0017,RouteTransfer_KGE24-4-0021,"OpeningHours
+"
+EndUser_GID-49456,1|1,1,1,,0.67,,,,,,,,,,,,
+StartPosition_KGE24-4-0014,,1|1|1|1|1|1,,,,,,,,0.57|0.14 tot:0.355,0.14,,,,1,,
+EndPosition_KGE24-4-0015,,,1|1|1|1|1|1,,,,,,,0.14|0.71 tot:0.425,0.14,,,,1,,
+HealthFacility_GID-20121,,,,1|1,,1,,,,,,,,,,,0.11
+"HealthAppointment
+",,,,1,1|1|1,,,,,,,,,,,,
+Position_GID-27518,,,,,,1|1|1|1|1|1,,,,,,,,,0.87,,
+BusRoute_GID-45117,,,,,,,1|1|1,,,,,,,,,0.73,
+TrainRoute_KGE24-4-0002,,,,,,,,1|1|1,,,,,,,,0.5,
+Trip_GID-1484,,,,,,,0.988,0.012,1|1,0.988,0.012,1,1,,,,
+BusStop_GID-45118,,,,,,,,,,1|1|1,,1,,,,,
+TrainStop_KGE24-4-0003,,,,,,,,,,,1|1|1,1,,,,,
+"StopTime
+",,,,,,,,,,,,1|1|1,,,,,
+WeeklySchedule_KGE24-4-0004,,,,,,,,,,,,,1|1|1,,,,
+ScheduleException_KGE24-4-0005,,,,,,,,,,,,,1,1|1,,,
+TransportOption_KGE24-4-0017,,,,,,,,,,0.99,0.01,,,,1,,
+RouteTransfer_KGE24-4-0021,,,,,,,,,,,,,,,,1|1|1|1|1,
+"OpeningHours
+",,,,,,,,,,,,,,,,,1|1|1
