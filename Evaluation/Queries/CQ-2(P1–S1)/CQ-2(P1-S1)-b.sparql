@@ -1,0 +1,27 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX src: <http://localhost:8080/source/>
+
+SELECT ?stop ?health_facility ?legal_name ?position ?access_distance
+
+WHERE {
+  ?health_facility etype:has_position_GID-85982 ?position .
+  ?position etype:has_transport_option_KGE24-4-0018 ?transport_option .
+  ?transport_option etype:operates_at_KGE24-4-0019 ?stop ;
+                    etype:has_stop_walking_distance_time_KGE24-4-016 ?access_distance .
+  FILTER(CONTAINS(STR(?stop), "stop-urb-404"))
+    
+  ?health_facility etype:has_health_facility_type_GID-31362 ?type ;
+                   etype:has_health_facility_legal_name ?legal_name .
+  FILTER (?type = "pharmacy") 
+    
+  # --- Keep only if distance is less than 500 meters ---
+  BIND(REPLACE(?access_distance, "^\\(([^,]+),.*$", "$1") AS ?distance)
+  BIND(xsd:decimal(STRBEFORE(?distance, " ")) AS ?distance_value)
+  FILTER(?distance_value < 0.5)
+    
+  BIND (xsd:integer(REPLACE(?access_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?access_minutes)
+  
+}
+ORDER BY ?access_minutes
