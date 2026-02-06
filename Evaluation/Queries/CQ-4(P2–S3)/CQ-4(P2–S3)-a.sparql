@@ -1,0 +1,46 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX src: <http://localhost:8080/source/>
+
+SELECT DISTINCT ?start_point ?health_facility ?legal_name ?position ?access_minutes ?day ?interval_start ?interval_end
+
+WHERE {
+  VALUES ?username { "Riccardo" }
+  VALUES ?start_point_addr_street { "Via Roberto da Sanseverino" }
+  VALUES ?end_point_addr_street   { "Via Giuseppe Grazioli" }
+  BIND("16:30" AS ?query_time)
+  BIND("Saturday" AS ?day)
+
+  ?user etype:has_user_first_name_GID-33531 ?username ;
+        etype:has_start_position_KGE24-4-0016 ?start_point ;
+        etype:has_end_position_KGE24-4-0017   ?end_point .
+
+  ?start_point etype:has_position_addr_street_GID-45008 ?start_point_addr_street ;
+    		   etype:has_transport_option_KGE24-4-0018 ?start_point_transport_option .
+
+  ?start_point_transport_option etype:operates_at_KGE24-4-0019 ?A_stop ;
+                                etype:has_stop_walking_distance_time_KGE24-4-016 ?start_point_to_Astop_distance .
+    
+  ## Health facilities near the stop
+  ?health_facility etype:has_position_GID-85982 ?position .
+  ?position etype:has_transport_option_KGE24-4-0018 ?transport_option .
+  ?transport_option etype:operates_at_KGE24-4-0019 ?A_stop ;
+                    etype:has_stop_walking_distance_time_KGE24-4-016 ?pharm_to_Astop_distance .
+    
+  ?health_facility etype:has_health_facility_type_GID-31362 ?type ;
+                   etype:has_health_facility_legal_name ?legal_name ;
+                   etype:has_opening_interval_KGE24-4-0020 ?opening_interval .
+  ?opening_interval etype:has_opening_hours_weekday ?day ;
+                    etype:has_opening_hours_start_time ?interval_start ;
+                    etype:has_opening_hours_end_time ?interval_end .
+  FILTER (?type = "pharmacy")
+  FILTER ( (?interval_start <= ?query_time && ?interval_end >= ?query_time) )
+    
+  BIND (xsd:integer(REPLACE(?start_point_to_Astop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?start_point_to_Astop_distance_minutes)
+  BIND (xsd:integer(REPLACE(?pharm_to_Astop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?pharm_to_Astop_distance_minutes)
+  BIND (ABS(?pharm_to_Astop_distance_minutes + ?start_point_to_Astop_distance_minutes) AS ?access_minutes_value)
+  BIND (CONCAT(STR(?access_minutes_value), " min") AS ?access_minutes)
+    
+ }
+ORDER BY ?access_minutes
+LIMIT 1

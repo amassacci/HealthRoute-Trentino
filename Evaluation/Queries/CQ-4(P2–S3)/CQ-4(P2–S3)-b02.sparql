@@ -1,0 +1,212 @@
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX src: <http://localhost:8080/source/>
+
+SELECT DISTINCT (?datetime AS ?DateTime)
+           (?weekday_name AS ?WeekDay)
+           ?C ?B
+           (?trip AS ?CB_Trip)
+           (?route AS ?CB_Route)
+           (?route_name AS ?BusNumber)
+           ?C_stop ?C_stop_name ?C_to_Cstop_distance
+           ?B_stop ?B_stop_name ?B_to_Bstop_distance
+           (?C_stop_departure_time AS ?DepartureTime)
+           (?B_stop_arrival_time AS ?ArrivalTime)
+           ((xsd:integer(?B_stop_sequence) - xsd:integer(?C_stop_sequence)) AS ?StopCount)
+        
+    WHERE {
+      ### Parameters
+      BIND ("2024-12-08T17:00:00"^^xsd:dateTime AS ?datetime)
+            
+            
+      BIND(xsd:integer(spif:dateFormat(?datetime, "u")) AS ?weekday)  # 1..7 (Mon..Sun)
+      VALUES (?weekday ?weekday_name) {
+        (1 "Monday")
+        (2 "Tuesday")
+        (3 "Wednesday")
+        (4 "Thursday")
+        (5 "Friday")
+        (6 "Saturday")
+        (7 "Sunday")
+      }  
+    
+    
+      ## Get the minimum total walk time for each route+trip
+      {
+        SELECT ?user ?route ?trip (MIN(?total_walk_time) AS ?CB_walk_time)
+        WHERE {
+          VALUES ?username { "Riccardo" }
+          VALUES ?C { "Farmacia Alla Madonna" }
+                    
+          ?user etype:has_user_first_name_GID-33531 ?username .
+          ?user etype:has_end_position_KGE24-4-0017 ?B .
+    
+          ?B etype:has_transport_option_KGE24-4-0018 ?B_transport_option .
+          ?B_transport_option etype:operates_at_KGE24-4-0019 ?B_stop ;
+                              etype:has_stop_walking_distance_time_KGE24-4-016 ?B_to_Bstop_distance .
+    
+          ?health_facility etype:has_health_facility_legal_name ?C .
+          ?health_facility etype:has_position_GID-85982 ?position .
+          ?position etype:has_transport_option_KGE24-4-0018 ?C_transport_option .
+          ?C_transport_option etype:operates_at_KGE24-4-0019 ?C_stop ;
+                              etype:has_stop_walking_distance_time_KGE24-4-016 ?C_to_Cstop_distance .
+
+          ?trip etype:include_GID-105576 ?C_stop ;
+                etype:include_GID-105576 ?B_stop ;
+                etype:follow_GID-102467 ?route .
+          
+          FILTER(?C_stop = src:stop-urb-443)
+          FILTER(?B_stop = src:stop-urb-410)
+
+          BIND (xsd:integer(REPLACE(?C_to_Cstop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?C_to_Cstop_minutes)
+          BIND (xsd:integer(REPLACE(?B_to_Bstop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?B_to_Bstop_minutes)
+          BIND (?C_to_Cstop_minutes + ?B_to_Bstop_minutes AS ?total_walk_time)
+        }
+        GROUP BY ?route ?trip ?user
+      }
+
+      ## Now match the actual rows that have that minimum time 
+      VALUES ?username { "Riccardo" }
+      VALUES ?C { "Farmacia Alla Madonna" }
+
+      ?user etype:has_user_first_name_GID-33531 ?username .
+      ?user etype:has_end_position_KGE24-4-0017 ?B .
+    
+      ?B etype:has_transport_option_KGE24-4-0018 ?B_transport_option .
+      ?B_transport_option etype:operates_at_KGE24-4-0019 ?B_stop ;
+                          etype:has_stop_walking_distance_time_KGE24-4-016 ?B_to_Bstop_distance .
+    
+      ?health_facility etype:has_health_facility_legal_name ?C .
+      ?health_facility etype:has_position_GID-85982 ?position .
+      ?position etype:has_transport_option_KGE24-4-0018 ?C_transport_option .
+      ?C_transport_option etype:operates_at_KGE24-4-0019 ?C_stop ;
+                          etype:has_stop_walking_distance_time_KGE24-4-016 ?C_to_Cstop_distance .
+
+      ?trip etype:include_GID-105576 ?C_stop ;
+            etype:include_GID-105576 ?B_stop ;
+            etype:follow_GID-102467 ?route .
+  
+      FILTER(?C_stop = src:stop-urb-443)
+      FILTER(?B_stop = src:stop-urb-410)
+      ?route etype:has_route_short_name ?route_name .
+
+      BIND (xsd:integer(REPLACE(?C_to_Cstop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?C_to_Cstop_minutes)
+      BIND (xsd:integer(REPLACE(?B_to_Bstop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?B_to_Bstop_minutes)
+      BIND (?C_to_Cstop_minutes + ?B_to_Bstop_minutes AS ?total_walk_time)
+     
+      # Keep only the rows with the minimal walk time per route/trip
+      FILTER (?total_walk_time = ?CB_walk_time)
+    
+      ?B_stop etype:has_stop_name ?B_stop_name .
+      ?C_stop etype:has_stop_name ?C_stop_name .
+    
+      ?trip etype:follow_schedule_KGE24-4-0013 ?trip_ws .
+      ?trip_ws etype:has_weekly_schedule_GID-34204 ?weekly_schedule ;
+                  etype:has_weekly_schedule_start_date ?trip_ws_start_date ;
+                  etype:has_weekly_schedule_end_date ?trip_ws_end_date .
+      
+      OPTIONAL {
+        ?trip_ex etype:override_GID-1088 ?trip_ws ;
+                 etype:has_schedule_exception_date_GID-73013 ?trip_ex_date ;
+                 etype:has_schedule_exception_type_GID-31362 ?trip_ex_type .
+        FILTER (?trip_ex_date = spif:dateFormat(?datetime, "yyyy-MM-dd"))  
+      }
+
+      FILTER (
+        IF(BOUND(?trip_ex),
+          (?trip_ex_type = "1") || !(?trip_ex_type = "2"),
+          IF(BOUND(?trip_ws),
+            (xsd:date(?datetime) >= spif:parseDate(?trip_ws_start_date, "yyyy-MM-dd")) &&
+            (xsd:date(?datetime) <= spif:parseDate(?trip_ws_end_date, "yyyy-MM-dd")) &&
+            (
+              (?weekday_name = "Monday" && SUBSTR(?weekly_schedule, 1, 1) = "1") || 
+              (?weekday_name = "Tuesday" && SUBSTR(?weekly_schedule, 2, 1) = "1" ) ||
+              (?weekday_name = "Wednesday" && SUBSTR(?weekly_schedule, 3, 1) = "1" ) ||
+              (?weekday_name = "Thursday" && SUBSTR(?weekly_schedule, 4, 1) = "1" ) ||
+              (?weekday_name = "Friday" && SUBSTR(?weekly_schedule, 5, 1) = "1" ) ||
+              (?weekday_name = "Saturday" && SUBSTR(?weekly_schedule, 6, 1) = "1" ) ||
+              (?weekday_name = "Sunday" && SUBSTR(?weekly_schedule, 7, 1) = "1" )
+            ),
+            "false"^^xsd:boolean
+          )
+        )
+      )
+
+      OPTIONAL {
+        ?C_stop etype:has_GID-103527 ?C_stop_time .
+        ?trip etype:has_GID-103527 ?C_stop_time .
+        ?C_stop_time etype:has_stop_time_stop_sequence ?C_stop_sequence ;
+                     etype:has_stop_time_departure_time_GID-73120 ?C_stop_departure_time .
+      }
+      
+      OPTIONAL {
+        ?B_stop etype:has_GID-103527 ?B_stop_time .
+        ?trip etype:has_GID-103527 ?B_stop_time .
+        ?B_stop_time etype:has_stop_time_stop_sequence ?B_stop_sequence ;
+                               etype:has_stop_time_arrival_time_GID-73119 ?B_stop_arrival_time ;
+                               etype:has_stop_time_departure_time_GID-73120 ?B_stop_departure_time .
+      }
+      
+      FILTER (xsd:integer(?C_stop_sequence) < xsd:integer(?B_stop_sequence))
+      
+      # --- Time difference calculation ---
+      BIND(SUBSTR(STR(?datetime), 12, 8) AS ?time)
+      BIND(
+        xsd:integer(SUBSTR(?time, 1, 2)) * 3600 +
+        xsd:integer(SUBSTR(?time, 4, 2)) * 60 +
+        xsd:integer(SUBSTR(?time, 7, 2))
+        AS ?seconds
+      )
+
+      BIND(
+        xsd:integer(SUBSTR(STR(?C_stop_departure_time), 1, 2)) * 3600 +
+        xsd:integer(SUBSTR(STR(?C_stop_departure_time), 4, 2)) * 60 +
+        xsd:integer(SUBSTR(STR(?C_stop_departure_time), 7, 2))
+        AS ?C_stop_departure_time_seconds
+      )
+            
+      # --- Keep only if departure time is later ---
+      FILTER(?C_stop_departure_time_seconds > ?seconds)
+  
+            
+      BIND(?CB_walk_time * 60 AS ?CB_walk_time_seconds)
+      BIND(ABS(?seconds - ?C_stop_departure_time_seconds) AS ?time_diff)
+      
+      # --- Keep only if departure time is later than access time---
+      BIND (xsd:integer(REPLACE(?C_to_Cstop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1"))* 60 AS ?C_to_Cstop_seconds)
+      FILTER(?time_diff > ?C_to_Cstop_seconds)
+        
+        
+      # convert time_diff to minutes
+      BIND( xsd:integer(FLOOR(?time_diff / 3600)) AS ?hours )
+      BIND( ?time_diff - (?hours * 3600) AS ?remSec )
+      BIND( xsd:integer(FLOOR(?remSec / 60)) AS ?minutes )
+      # HH:MM string
+      BIND(
+        CONCAT( STR(?hours), ":", IF(?minutes < 10, CONCAT("0", STR(?minutes)), STR(?minutes)) )
+        AS ?time_diff_formatted
+      )
+    
+      # compute travel time
+      BIND(
+        xsd:integer(SUBSTR(STR(?B_stop_departure_time), 1, 2)) * 3600 +
+        xsd:integer(SUBSTR(STR(?B_stop_departure_time), 4, 2)) * 60 +
+        xsd:integer(SUBSTR(STR(?B_stop_departure_time), 7, 2))
+        AS ?B_stop_departure_time_seconds
+      )
+    
+      BIND((?B_stop_departure_time_seconds - ?C_stop_departure_time_seconds) AS ?travel_time_seconds)
+      
+      # convert to HH:MM string
+      BIND( xsd:integer(FLOOR(?travel_time_seconds / 3600)) AS ?h )
+      BIND( ?travel_time_seconds - (?h * 3600) AS ?sec )
+      BIND( xsd:integer(FLOOR(?sec / 60)) AS ?min )
+      # HH:MM string
+      BIND(
+        CONCAT( STR(?h), ":", IF(?min < 10, CONCAT("0", STR(?min)), STR(?min)) )
+        AS ?travel_time_formatted
+      )
+ 
+    }
+LIMIT 1
