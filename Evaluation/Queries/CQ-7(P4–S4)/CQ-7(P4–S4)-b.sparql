@@ -1,0 +1,158 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX src: <http://localhost:8080/source/>
+PREFIX p4trips: <http://example.org/p4trips#>
+PREFIX spif: <http://spinrdf.org/spif#>
+
+    SELECT ?datetime ?A_stop ?A_stop_name
+           ?trip ?route ?bus_name ?time_until_departure
+           ?A_stop_departure_time
+        
+     
+    WHERE {
+      ### Parameters
+      BIND ("2024-10-10T07:11:00"^^xsd:dateTime AS ?datetime)
+      BIND ("Via Benedetto Giovanelli" as ?start_point_addr_street)
+      BIND ("Viale degli Olmi" as ?end_point_addr_street)
+            
+            
+      BIND(xsd:integer(spif:dateFormat(?datetime, "u")) AS ?weekday)  # 1..7 (Mon..Sun)
+      VALUES (?weekday ?weekday_name) {
+        (1 "Monday")
+        (2 "Tuesday")
+        (3 "Wednesday")
+        (4 "Thursday")
+        (5 "Friday")
+        (6 "Saturday")
+        (7 "Sunday")
+      }
+
+      
+      GRAPH <http://views/P4Trips> {
+        ?user p4trips:has_start_end_segment ?start_end_segment .
+        ?start_end_segment p4trips:has_total_walk_time ?total_walk_time ;
+                           p4trips:has_access_distance ?start_point_to_Astop_distance ;  #from origin to first stop
+                           p4trips:has_egress_distance ?Bstop_to_end_point_distance ;  #from last stop to destination
+                           p4trips:has_trip ?trip .
+        ?trip p4trips:follow_GID-102467 ?route .
+        
+        ?user p4trips:has_start_position_KGE24-4-0016 ?start_point ;
+              p4trips:has_end_position_KGE24-4-0017 ?end_point .
+        ?start_point p4trips:has_position_addr_street_GID-45008 ?start_point_addr_street .
+        ?end_point p4trips:has_position_addr_street_GID-45008 ?end_point_addr_street .
+                  
+        ?start_point p4trips:has_stop_from ?A_stop .
+        ?end_point p4trips:has_stop_to ?B_stop .
+        ?start_end_segment p4trips:has_start ?A_stop ;
+                           p4trips:has_end ?B_stop .
+        ?trip p4trips:include_GID-105576 ?A_stop ;
+              p4trips:include_GID-105576 ?B_stop .
+      }
+      
+      FILTER(?A_stop = src:stop-urb-277)
+    
+      ?A_stop etype:has_stop_name ?A_stop_name .
+      ?B_stop etype:has_stop_name ?B_stop_name .
+      ?route etype:has_route_short_name ?bus_name .
+
+      ?trip etype:follow_schedule_KGE24-4-0013 ?trip_ws .
+      ?trip_ws etype:has_weekly_schedule_GID-34204 ?weekly_schedule ;
+               etype:has_weekly_schedule_start_date ?trip_ws_start_date ;
+               etype:has_weekly_schedule_end_date ?trip_ws_end_date .
+      
+      OPTIONAL {
+        ?trip_ex etype:override_GID-1088 ?trip_ws ;
+                 etype:has_schedule_exception_date_GID-73013 ?trip_ex_date ;
+                 etype:has_schedule_exception_type_GID-31362 ?trip_ex_type .
+        FILTER (?trip_ex_date = spif:dateFormat(?datetime, "yyyy-MM-dd"))  
+      }
+
+      FILTER (
+        IF(BOUND(?trip_ex),
+          (?trip_ex_type = "1") || !(?trip_ex_type = "2"),
+          IF(BOUND(?trip_ws),
+            (xsd:date(?datetime) >= spif:parseDate(?trip_ws_start_date, "yyyy-MM-dd")) &&
+            (xsd:date(?datetime) <= spif:parseDate(?trip_ws_end_date, "yyyy-MM-dd")) &&
+            (
+              (?weekday_name = "Monday" && SUBSTR(?weekly_schedule, 1, 1) = "1") || 
+              (?weekday_name = "Tuesday" && SUBSTR(?weekly_schedule, 2, 1) = "1" ) ||
+              (?weekday_name = "Wednesday" && SUBSTR(?weekly_schedule, 3, 1) = "1" ) ||
+              (?weekday_name = "Thursday" && SUBSTR(?weekly_schedule, 4, 1) = "1" ) ||
+              (?weekday_name = "Friday" && SUBSTR(?weekly_schedule, 5, 1) = "1" ) ||
+              (?weekday_name = "Saturday" && SUBSTR(?weekly_schedule, 6, 1) = "1" ) ||
+              (?weekday_name = "Sunday" && SUBSTR(?weekly_schedule, 7, 1) = "1" )
+            ),
+            "false"^^xsd:boolean
+          )
+        )
+      )
+
+      OPTIONAL {
+        ?A_stop etype:has_GID-103527 ?A_stop_time .
+        ?trip etype:has_GID-103527 ?A_stop_time .
+        ?A_stop_time etype:has_stop_time_stop_sequence ?A_stop_sequence ;
+                          etype:has_stop_time_arrival_time_GID-73119 ?A_stop_arrival_time ;
+                          etype:has_stop_time_departure_time_GID-73120 ?A_stop_departure_time .
+      }
+      
+      OPTIONAL {
+        ?B_stop etype:has_GID-103527 ?B_stop_time .
+        ?trip etype:has_GID-103527 ?B_stop_time .
+        ?B_stop_time etype:has_stop_time_stop_sequence ?B_stop_sequence ;
+                               etype:has_stop_time_arrival_time_GID-73119 ?B_stop_arrival_time ;
+                               etype:has_stop_time_departure_time_GID-73120 ?B_stop_departure_time .
+      }
+      
+      FILTER (xsd:integer(?A_stop_sequence) < xsd:integer(?B_stop_sequence))
+      
+      # --- Time difference calculation ---
+      BIND(SUBSTR(STR(?datetime), 12, 8) AS ?time)
+      BIND(
+        xsd:integer(SUBSTR(?time, 1, 2)) * 3600 +
+        xsd:integer(SUBSTR(?time, 4, 2)) * 60 +
+        xsd:integer(SUBSTR(?time, 7, 2))
+        AS ?seconds
+      )
+
+      BIND(
+        xsd:integer(SUBSTR(STR(?A_stop_departure_time), 1, 2)) * 3600 +
+        xsd:integer(SUBSTR(STR(?A_stop_departure_time), 4, 2)) * 60 +
+        xsd:integer(SUBSTR(STR(?A_stop_departure_time), 7, 2))
+        AS ?A_stop_departure_time_seconds
+      )
+            
+      # --- Keep only if departure time is later ---
+      FILTER(?A_stop_departure_time_seconds > ?seconds)
+      
+      FILTER(?A_stop_departure_time_seconds < (?seconds + 3600))
+  
+            
+      BIND(ABS(?seconds - ?A_stop_departure_time_seconds) AS ?time_diff)
+    
+      BIND(
+        xsd:integer(SUBSTR(STR(?B_stop_arrival_time), 1, 2)) * 3600 +
+        xsd:integer(SUBSTR(STR(?B_stop_arrival_time), 4, 2)) * 60 +
+        xsd:integer(SUBSTR(STR(?B_stop_arrival_time), 7, 2))
+        AS ?B_stop_arrival_time_seconds
+      )
+      BIND (xsd:integer(REPLACE(?Bstop_to_end_point_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1"))* 60 AS ?Bstop_to_end_point_distance_seconds)
+      BIND(?B_stop_arrival_time_seconds + ?Bstop_to_end_point_distance_seconds AS ?score)
+      
+      # --- Keep only if departure time is later than access time---
+      BIND (xsd:integer(REPLACE(?start_point_to_Astop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1"))* 60 AS ?start_point_to_Astop_distance_seconds)
+      FILTER(?time_diff > ?start_point_to_Astop_distance_seconds)
+        
+        
+      # convert time_diff to minutes
+      BIND( xsd:integer(FLOOR(?time_diff / 3600)) AS ?hours )
+      BIND( ?time_diff - (?hours * 3600) AS ?remSec )
+      BIND( xsd:integer(FLOOR(?remSec / 60)) AS ?minutes )
+      # HH:MM string
+      BIND(
+        CONCAT( STR(?hours), ":", IF(?minutes < 10, CONCAT("0", STR(?minutes)), STR(?minutes)) )
+        AS ?time_until_departure
+      )
+ 
+    }
+    ORDER BY ?start_point_to_Astop_distance_seconds ?A_stop_departure_time_seconds
+    LIMIT 1

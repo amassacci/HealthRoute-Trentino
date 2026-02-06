@@ -1,0 +1,1 @@
+`CQ-7(P4–S4)-INSERT.sparql` was used to create the `P4Trips.brf` subgraph which is required to run the other queries in this folder.
