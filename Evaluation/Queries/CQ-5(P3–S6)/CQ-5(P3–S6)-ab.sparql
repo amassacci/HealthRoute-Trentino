@@ -1,0 +1,248 @@
+############################################################
+# PREFIXES
+# Namespaces for entity types, project-specific properties,
+# SPARQL functions, datatypes, and source IRIs
+############################################################
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX p3s6triples: <http://example.org/p3trips#>
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX src: <http://localhost:8080/source/>
+
+############################################################
+# FINAL JOURNEY OPTIMIZATION (Trip 2)
+# This query operates on the subgraph created in Phase 1.
+# It optimizes the second leg, destination access, and
+# selects the earliest-arriving feasible journey.
+############################################################
+SELECT DISTINCT
+  ?datetime ?weekday_name ?start_point ?end_point ?trip1 ?route1
+  ?A_stop ?A_stop_name ?B_stop ?B_stop_name ?A_stop_departure_time ?B_stop_arrival_time
+  ?route_transfer ?Bstop_to_Cstop_distance ?trip2 ?route2 ?route_name2
+  ?C_stop ?C_stop_name ?D_stop ?D_stop_name ?C_stop_departure_time ?D_stop_arrival_time ?Dstop_to_end_point_distance ?travel_time
+
+WHERE {
+
+  ##########################################################
+  # STEP 2 — Retrieve candidate journeys from the subgraph
+  # This block reuses the materialized Trip 1 and transfer
+  # combinations and attaches Trip 2 information.
+  ##########################################################
+  GRAPH <http://views/P3-S6_Triples> {
+
+    ?user p3s6triples:has_start_position_KGE24-4-0016 ?start_point ;
+          p3s6triples:has_end_position_KGE24-4-0017 ?end_point .
+
+    ?trip1 p3s6triples:follow_GID-102467 ?route1 ;
+           p3s6triples:include_GID-105576 ?A_stop ;
+           p3s6triples:include_GID-105576 ?B_stop ;
+           p3s6triples:trip_departure_time ?A_stop_departure_time ;
+           p3s6triples:trip_arrival_time ?B_stop_arrival_time .
+
+    ?A_stop p3s6triples:has_stop_time_departure_time_GID-73120 ?A_stop_departure_time .
+    ?B_stop p3s6triples:has_stop_time_arrival_time_GID-73119   ?B_stop_arrival_time .
+
+    ?trip2 p3s6triples:include_GID-105576 ?C_stop ;
+           p3s6triples:include_GID-105576 ?D_stop ;
+           p3s6triples:follow_GID-102467 ?route2 .
+
+    ?A_stop p3s6triples:walking_distance_from_start ?start_point_to_Astop_distance .
+    ?D_stop p3s6triples:walking_distance_to_end ?Dstop_to_end_point_distance .
+
+    ?route1 p3s6triples:has_route_transfer_KGE24-4-0022 ?route_transfer .
+
+    ?route_transfer p3s6triples:has_transfer_from_route ?route1 ;
+                    p3s6triples:has_transfer_to_route ?route2 ;
+                    p3s6triples:has_transfer_from_stop ?B_stop ;
+                    p3s6triples:has_transfer_to_stop   ?C_stop ;
+                    p3s6triples:has_transfer_walking_distance ?Bstop_to_Cstop_distance .
+  }
+
+  FILTER(CONTAINS(STR(?trip1), "substitute-bus"))
+
+  BIND ("2024-11-04T07:30:00"^^xsd:dateTime AS ?datetime)
+  BIND(xsd:integer(spif:dateFormat(?datetime, "u")) AS ?weekday)
+  VALUES (?weekday ?weekday_name) {
+    (1 "Monday")  (2 "Tuesday") (3 "Wednesday")
+    (4 "Thursday") (5 "Friday") (6 "Saturday") (7 "Sunday")
+  }  
+    
+  ?A_stop etype:has_stop_name ?A_stop_name .
+  ?B_stop etype:has_stop_name ?B_stop_name .
+  ?C_stop etype:has_stop_name ?C_stop_name .
+  ?D_stop etype:has_stop_name ?D_stop_name .
+
+  ##########################################################
+  # STEP 3 — Weekly schedule and exception validation
+  # Ensure Trip 2 operates on the selected date
+  ##########################################################
+
+  ?trip2 etype:follow_schedule_KGE24-4-0013 ?trip2_ws .
+  ?trip2_ws etype:has_weekly_schedule_GID-34204 ?weekly_schedule2 ;
+            etype:has_weekly_schedule_start_date ?trip2_ws_start_date ;
+            etype:has_weekly_schedule_end_date   ?trip2_ws_end_date .
+
+  OPTIONAL {
+    ?trip2_ex etype:override_GID-1088 ?trip2_ws ;
+              etype:has_schedule_exception_date_GID-73013 ?trip2_ex_date ;
+              etype:has_schedule_exception_type_GID-31362 ?trip2_ex_type .
+    FILTER (?trip2_ex_date = spif:dateFormat(?datetime, "yyyy-MM-dd"))  
+  }
+
+  FILTER (
+    IF(BOUND(?trip2_ex),
+      (?trip2_ex_type = "1") || !(?trip2_ex_type = "2"),
+      IF(BOUND(?trip2_ws),
+         (xsd:date(?datetime) >= spif:parseDate(?trip2_ws_start_date, "yyyy-MM-dd")) &&
+         (xsd:date(?datetime) <= spif:parseDate(?trip2_ws_end_date, "yyyy-MM-dd")) &&
+         (
+           (?weekday_name = "Monday"    && SUBSTR(?weekly_schedule2, 1, 1) = "1") || 
+           (?weekday_name = "Tuesday"   && SUBSTR(?weekly_schedule2, 2, 1) = "1") ||
+           (?weekday_name = "Wednesday" && SUBSTR(?weekly_schedule2, 3, 1) = "1") ||
+           (?weekday_name = "Thursday"  && SUBSTR(?weekly_schedule2, 4, 1) = "1") ||
+           (?weekday_name = "Friday"    && SUBSTR(?weekly_schedule2, 5, 1) = "1") ||
+           (?weekday_name = "Saturday"  && SUBSTR(?weekly_schedule2, 6, 1) = "1") ||
+           (?weekday_name = "Sunday"    && SUBSTR(?weekly_schedule2, 7, 1) = "1")
+         ),
+         "false"^^xsd:boolean
+      )
+    )
+  )
+
+
+  OPTIONAL {
+    ?C_stop etype:has_GID-103527 ?C_stop_time .
+    ?trip2  etype:has_GID-103527 ?C_stop_time .
+    ?C_stop_time etype:has_stop_time_stop_sequence ?C_stop_sequence ;
+                 etype:has_stop_time_departure_time_GID-73120 ?C_stop_departure_time .
+  }
+
+  OPTIONAL {
+    ?D_stop etype:has_GID-103527 ?D_stop_time .
+    ?trip2  etype:has_GID-103527 ?D_stop_time .
+    ?D_stop_time etype:has_stop_time_stop_sequence ?D_stop_sequence ;
+                 etype:has_stop_time_arrival_time_GID-73119 ?D_stop_arrival_time .
+  }
+
+  FILTER(xsd:integer(?C_stop_sequence) < xsd:integer(?D_stop_sequence)) 
+ 
+
+  ##########################################################
+  # STEP 4 — Transfer time feasibility (B → C)
+  ##########################################################
+    
+  BIND(SUBSTR(STR(?datetime), 12, 8) AS ?time)
+  BIND(
+    xsd:integer(SUBSTR(?time, 1, 2)) * 3600 +
+    xsd:integer(SUBSTR(?time, 4, 2)) * 60 +
+    xsd:integer(SUBSTR(?time, 7, 2))
+    AS ?seconds
+  )
+    
+  BIND(
+    xsd:integer(SUBSTR(STR(?A_stop_departure_time), 1, 2)) * 3600 +
+    xsd:integer(SUBSTR(STR(?A_stop_departure_time), 4, 2)) * 60 +
+    xsd:integer(SUBSTR(STR(?A_stop_departure_time), 7, 2))
+    AS ?A_stop_departure_time_seconds
+  )
+  
+  FILTER(?A_stop_departure_time_seconds > ?seconds)
+    
+    
+  BIND(
+    xsd:integer(SUBSTR(STR(?B_stop_arrival_time), 1, 2)) * 3600 +
+    xsd:integer(SUBSTR(STR(?B_stop_arrival_time), 4, 2)) * 60 +
+    xsd:integer(SUBSTR(STR(?B_stop_arrival_time), 7, 2))
+    AS ?B_stop_arrival_time_seconds
+  )
+
+  BIND(
+    xsd:integer(SUBSTR(STR(?C_stop_departure_time), 1, 2)) * 3600 +
+    xsd:integer(SUBSTR(STR(?C_stop_departure_time), 4, 2)) * 60 +
+    xsd:integer(SUBSTR(STR(?C_stop_departure_time), 7, 2))
+    AS ?C_stop_departure_time_seconds
+  )
+  
+  FILTER(?C_stop_departure_time_seconds > ?B_stop_arrival_time_seconds)
+  FILTER(?C_stop_departure_time_seconds < (?B_stop_arrival_time_seconds + 3600))
+    
+  BIND(ABS(?B_stop_arrival_time_seconds - ?C_stop_departure_time_seconds) AS ?time_diff)
+
+  BIND (xsd:integer(REPLACE(?Bstop_to_Cstop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) * 60 AS ?Bstop_to_Cstop_seconds)
+  FILTER(?time_diff > ?Bstop_to_Cstop_seconds)
+  
+  BIND(
+    xsd:integer(SUBSTR(STR(?D_stop_arrival_time), 1, 2)) * 3600 +
+    xsd:integer(SUBSTR(STR(?D_stop_arrival_time), 4, 2)) * 60 +
+    xsd:integer(SUBSTR(STR(?D_stop_arrival_time), 7, 2))
+    AS ?D_stop_arrival_time_seconds
+  )
+
+
+  ### ============================================================
+  ### Minimum D_stop distance per user/route2/trip2
+  ### ============================================================
+  {
+    SELECT DISTINCT ?username ?route2 ?route_name2 ?trip2 (MIN(?Dstop_to_end_point_minutes) AS ?Dstop_to_end_point_min_distance)
+    WHERE {
+      VALUES ?username { "Elena" }
+      VALUES ?end_point_addr_street { "Largo Medaglie D'Oro" }
+
+      ?user etype:has_user_first_name_GID-33531 ?username ;
+            etype:has_end_position_KGE24-4-0017 ?end_point .
+
+      ?end_point etype:has_position_addr_street_GID-45008 ?end_point_addr_street ;
+                 etype:has_transport_option_KGE24-4-0018 ?end_point_transport_option .
+
+      ?end_point_transport_option etype:operates_at_KGE24-4-0019 ?D_stop ;
+                                  etype:has_stop_walking_distance_time_KGE24-4-016 ?Dstop_to_end_point_distance .
+
+      BIND(xsd:integer(REPLACE(?Dstop_to_end_point_distance,".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?Dstop_to_end_point_minutes)
+
+      ?trip2 etype:include_GID-105576 ?D_stop ;
+             etype:follow_GID-102467 ?route2 .
+      ?route2 etype:has_route_short_name ?route_name2 .
+    }
+    GROUP BY ?username ?route2 ?route_name2 ?trip2
+  }
+
+  BIND(xsd:integer(REPLACE(?Dstop_to_end_point_distance,".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?Dstop_to_end_point_minutes)
+  BIND(xsd:integer(REPLACE(?Dstop_to_end_point_distance,".*\\(.*?, ([0-9]+) min\\)", "$1")) * 60 AS ?Dstop_to_end_point_seconds)
+  FILTER(?Dstop_to_end_point_minutes = ?Dstop_to_end_point_min_distance)
+
+    
+  ### ============================================================
+  ### Minimum B → C distance per trip2
+  ### ============================================================
+  {
+    SELECT ?trip2 (MIN(?dist_seconds) AS ?min_BC_distance)
+    WHERE {
+      ?route_transfer p3s6triples:has_transfer_from_stop ?B_stop ;
+                      p3s6triples:has_transfer_to_stop   ?C_stop ;
+                      p3s6triples:has_transfer_to_route  ?route2 ;
+                      p3s6triples:has_transfer_walking_distance ?dist .
+
+      ?route2 ^p3s6triples:follow_GID-102467 ?trip2 .
+            
+      BIND (xsd:integer(REPLACE(?dist, ".*\\(.*?, ([0-9]+) min\\)", "$1")) * 60 AS ?dist_seconds)
+    }
+    GROUP BY ?trip2
+  }
+
+  FILTER(?Bstop_to_Cstop_seconds = ?min_BC_distance)
+    
+  BIND(((?D_stop_arrival_time_seconds - ?A_stop_departure_time_seconds) + ?Dstop_to_end_point_seconds) AS ?travel_time_seconds)
+      
+  # convert to HH:MM string
+  BIND( xsd:integer(FLOOR(?travel_time_seconds / 3600)) AS ?h )
+  BIND( ?travel_time_seconds - (?h * 3600) AS ?sec )
+  BIND( xsd:integer(FLOOR(?sec / 60)) AS ?min )
+  # HH:MM string
+  BIND(
+    CONCAT( STR(?h), ":", IF(?min < 10, CONCAT("0", STR(?min)), STR(?min)), " min" )
+    AS ?travel_time
+  )
+}
+
+ORDER BY ?D_stop_arrival_time
+LIMIT 1

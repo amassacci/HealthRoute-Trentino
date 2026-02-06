@@ -1,0 +1,1 @@
+`CQ-5(P3–S6)-INSERT.sparql` was used to create the `P3-S6_Triples.brf` subgraph which is required to run the other queries in this folder.

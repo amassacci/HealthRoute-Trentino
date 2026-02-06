@@ -1,0 +1,228 @@
+############################################################
+# PREFIXES
+# Define namespaces for entity types, project-specific
+# properties, SPARQL functions, datatypes, and source IRIs
+############################################################
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX p3s6triples: <http://example.org/p3trips#>
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX src: <http://localhost:8080/source/>
+
+
+############################################################
+# SUBGRAPH CONSTRUCTION (Trip 1 optimization)
+# This INSERT stores feasible first-leg trips and
+# validated transfers into a dedicated subgraph.
+############################################################
+INSERT {
+  GRAPH <http://views/P3-S6_Triples> {
+    ?user p3s6triples:has_start_position_KGE24-4-0016 ?start_point .
+    ?user p3s6triples:has_end_position_KGE24-4-0017 ?end_point .
+    ?trip1 p3s6triples:follow_GID-102467 ?route1 .
+    ?trip1 p3s6triples:include_GID-105576 ?A_stop .
+    ?trip1 p3s6triples:include_GID-105576 ?B_stop .
+    ?trip1 p3s6triples:trip_departure_time ?A_stop_departure_time .
+    ?trip1 p3s6triples:trip_arrival_time ?B_stop_arrival_time .
+    ?trip2 p3s6triples:include_GID-105576 ?C_stop .
+    ?trip2 p3s6triples:include_GID-105576 ?D_stop .
+    ?trip2 p3s6triples:follow_GID-102467 ?route2 .
+    ?A_stop p3s6triples:walking_distance_from_start ?start_point_to_Astop_distance .
+    ?D_stop p3s6triples:walking_distance_to_end ?Dstop_to_end_point_distance .
+    ?route1 p3s6triples:has_route_transfer_KGE24-4-0022 ?route_transfer .
+    ?route_transfer p3s6triples:has_transfer_from_route ?route1 .
+    ?route_transfer p3s6triples:has_transfer_to_route ?route2 .
+    ?route_transfer p3s6triples:has_transfer_from_stop ?B_stop .
+    ?route_transfer p3s6triples:has_transfer_to_stop ?C_stop .
+    ?route_transfer p3s6triples:has_transfer_walking_distance ?Bstop_to_Cstop_distance .
+    ?A_stop p3s6triples:has_stop_time_departure_time_GID-73120 ?A_stop_departure_time .
+    ?B_stop p3s6triples:has_stop_time_arrival_time_GID-73119   ?B_stop_arrival_time .
+  }
+}
+WHERE {
+
+  ##########################################################
+  # STEP 1 — Time context initialization
+  # Fix the reference datetime and derive the weekday
+  ##########################################################
+  BIND ("2024-11-04T07:30:00"^^xsd:dateTime AS ?datetime)
+  BIND(xsd:integer(spif:dateFormat(?datetime, "u")) AS ?weekday)
+  VALUES (?weekday ?weekday_name) {
+    (1 "Monday")
+    (2 "Tuesday")
+    (3 "Wednesday")
+    (4 "Thursday")
+    (5 "Friday")
+    (6 "Saturday")
+    (7 "Sunday")
+  }
+
+  ##########################################################
+  # STEP 2 — Identify the closest feasible access stop (A)
+  ##########################################################
+  {
+    SELECT ?user ?route1 ?route_name1 ?trip1 ?route_transfer ?B_stop (MIN(?start_point_to_Astop_distance_minutes) AS ?start_point_to_Astop_min_distance)
+    WHERE {
+
+      VALUES ?username { "Elena" }
+      VALUES ?start_point { "ViaStazione-1-38057-PergineValsugana" }
+      VALUES ?end_point_addr_street   { "Largo Medaglie D'Oro" }
+
+      ?user etype:has_user_first_name_GID-33531 ?username .
+
+      ?start_point_transport_option etype:operates_at_KGE24-4-0019 ?A_stop ;
+                                    etype:has_stop_walking_distance_time_KGE24-4-016 ?start_point_to_Astop_distance .
+
+      BIND(xsd:integer(REPLACE(?start_point_to_Astop_distance,".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?start_point_to_Astop_distance_minutes)
+      
+      FILTER(?A_stop = src:stop-train-1009)
+
+      ?trip1 etype:include_GID-105576 ?A_stop ;
+             etype:follow_GID-102467 ?route1 .
+
+      ?route1 etype:has_route_transfer_KGE24-4-0022 ?route_transfer ;
+              etype:has_route_short_name ?route_name1 .
+
+      ?route_transfer etype:has_transfer_to_route ?to_route ;
+                      etype:has_transfer_to_stop  ?to_stop ;
+                      etype:has_transfer_from_stop ?from_stop ;
+                      etype:has_transfer_walking_distance ?Bstop_to_Cstop_distance .
+
+      BIND(IRI(CONCAT("http://localhost:8080/source/", ?from_stop)) AS ?B_stop)
+      ?trip1 etype:include_GID-105576 ?B_stop .
+
+    }
+    GROUP BY ?user ?route1 ?route_name1 ?trip1 ?route_transfer ?B_stop
+  }
+
+  ### =========================================
+  ### STEP 2 — Filter only the minimal access stop A
+  ### =========================================    
+  VALUES ?username { "Elena" }
+  VALUES ?start_point { "ViaStazione-1-38057-PergineValsugana" }
+  VALUES ?end_point_addr_street   { "Largo Medaglie D'Oro" }
+
+  ?user etype:has_user_first_name_GID-33531 ?username ;
+        etype:has_end_position_KGE24-4-0017   ?end_point .
+
+  ?start_point_transport_option etype:operates_at_KGE24-4-0019 ?A_stop ;
+                                etype:has_stop_walking_distance_time_KGE24-4-016 ?start_point_to_Astop_distance .
+
+  BIND(xsd:integer(REPLACE(?start_point_to_Astop_distance,".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?start_point_to_Astop_distance_minutes)
+  
+  FILTER(?A_stop = src:stop-train-1009)
+
+  FILTER(?start_point_to_Astop_distance_minutes = ?start_point_to_Astop_min_distance)
+ 
+
+  ##########################################################
+  # STEP 3 — Weekly schedule and exception validation
+  # Ensure Trip 1 operates on the selected date
+  ##########################################################
+  ?trip1 etype:follow_schedule_KGE24-4-0013 ?trip1_ws .
+  ?trip1_ws etype:has_weekly_schedule_GID-34204 ?weekly_schedule1 ;
+            etype:has_weekly_schedule_start_date ?trip1_ws_start_date ;
+            etype:has_weekly_schedule_end_date   ?trip1_ws_end_date .
+
+  OPTIONAL {
+    ?trip1_ex etype:override_GID-1088 ?trip1_ws ;
+              etype:has_schedule_exception_date_GID-73013 ?trip1_ex_date ;
+              etype:has_schedule_exception_type_GID-31362 ?trip1_ex_type .
+    FILTER (?trip1_ex_date = spif:dateFormat(?datetime, "yyyy-MM-dd"))  
+  }
+
+  FILTER (
+    IF(BOUND(?trip1_ex),
+      (?trip1_ex_type = "1") || !(?trip1_ex_type = "2"),
+      IF(BOUND(?trip1_ws),
+         (xsd:date(?datetime) >= spif:parseDate(?trip1_ws_start_date, "yyyy-MM-dd")) &&
+         (xsd:date(?datetime) <= spif:parseDate(?trip1_ws_end_date, "yyyy-MM-dd")) &&
+         (
+           (?weekday_name = "Monday"    && SUBSTR(?weekly_schedule1, 1, 1) = "1") || 
+           (?weekday_name = "Tuesday"   && SUBSTR(?weekly_schedule1, 2, 1) = "1") ||
+           (?weekday_name = "Wednesday" && SUBSTR(?weekly_schedule1, 3, 1) = "1") ||
+           (?weekday_name = "Thursday"  && SUBSTR(?weekly_schedule1, 4, 1) = "1") ||
+           (?weekday_name = "Friday"    && SUBSTR(?weekly_schedule1, 5, 1) = "1") ||
+           (?weekday_name = "Saturday"  && SUBSTR(?weekly_schedule1, 6, 1) = "1") ||
+           (?weekday_name = "Sunday"    && SUBSTR(?weekly_schedule1, 7, 1) = "1")
+         ),
+         "false"^^xsd:boolean
+      )
+    )
+  )
+
+
+  OPTIONAL {
+    ?A_stop etype:has_GID-103527 ?A_stop_time .
+    ?trip1  etype:has_GID-103527 ?A_stop_time .
+    ?A_stop_time etype:has_stop_time_stop_sequence ?A_stop_sequence ;
+                 etype:has_stop_time_departure_time_GID-73120 ?A_stop_departure_time .
+  }
+
+  OPTIONAL {
+    ?B_stop etype:has_GID-103527 ?B_stop_time .
+    ?trip1  etype:has_GID-103527 ?B_stop_time .
+    ?B_stop_time etype:has_stop_time_stop_sequence ?B_stop_sequence ;
+                 etype:has_stop_time_arrival_time_GID-73119 ?B_stop_arrival_time ;
+                 etype:has_stop_time_departure_time_GID-73120 ?B_stop_departure_time .
+  }
+ 
+  # Ensure A occurs before B and departure is reachable
+  FILTER(xsd:integer(?A_stop_sequence) < xsd:integer(?B_stop_sequence)) 
+
+  BIND(SUBSTR(STR(?datetime), 12, 8) AS ?time)
+  BIND(
+    xsd:integer(SUBSTR(?time, 1, 2)) * 3600 +
+    xsd:integer(SUBSTR(?time, 4, 2)) * 60 +
+    xsd:integer(SUBSTR(?time, 7, 2))
+    AS ?seconds
+  )
+
+  BIND(
+    xsd:integer(SUBSTR(STR(?A_stop_departure_time), 1, 2)) * 3600 +
+    xsd:integer(SUBSTR(STR(?A_stop_departure_time), 4, 2)) * 60 +
+    xsd:integer(SUBSTR(STR(?A_stop_departure_time), 7, 2))
+    AS ?A_stop_departure_time_seconds
+  )
+
+  FILTER(?A_stop_departure_time_seconds > ?seconds)
+  FILTER(?A_stop_departure_time_seconds < (?seconds + 7200))
+
+  BIND(ABS(?seconds - ?A_stop_departure_time_seconds) AS ?time_diff)
+  BIND (xsd:integer(REPLACE(?start_point_to_Astop_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) * 60 AS ?start_point_to_Astop_seconds)
+  FILTER(?time_diff > ?start_point_to_Astop_seconds)
+
+    
+  ##########################################################
+  # STEP 4 — Retrieve allowed transfers (B → C)
+  ##########################################################
+
+  ?route_transfer etype:has_transfer_from_route ?from_route ;
+                  etype:has_transfer_to_route ?to_route ;
+                  etype:has_transfer_to_stop  ?to_stop ;
+                  etype:has_transfer_from_stop ?from_stop ;
+                  etype:has_transfer_walking_distance ?Bstop_to_Cstop_distance .
+  
+  FILTER(STRAFTER(STR(?route1), "http://localhost:8080/source/") = ?from_route)
+  FILTER(STRAFTER(STR(?B_stop), "http://localhost:8080/source/") = ?from_stop)
+  BIND( IRI(CONCAT("http://localhost:8080/source/", ?to_stop)) AS ?C_stop )
+
+  ?trip2 etype:include_GID-105576 ?C_stop .  
+    
+  OPTIONAL {
+    ?end_point etype:has_position_addr_street_GID-45008 ?end_point_addr_street ;
+    		   etype:has_transport_option_KGE24-4-0018 ?end_point_transport_option .
+    ?end_point_transport_option etype:operates_at_KGE24-4-0019 ?D_stop ;
+                                etype:has_stop_walking_distance_time_KGE24-4-016 ?Dstop_to_end_point_distance .
+        
+    ?trip2 etype:include_GID-105576 ?D_stop ;
+           etype:follow_GID-102467 ?route2 .
+    ?route2 etype:has_route_short_name ?route_name2 .
+
+    BIND(xsd:integer(REPLACE(?Dstop_to_end_point_distance,".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?Dstop_to_end_point_minutes)
+        
+  }
+    
+  FILTER(STRAFTER(STR(?route2), "http://localhost:8080/source/") = ?to_route)
+   
+}

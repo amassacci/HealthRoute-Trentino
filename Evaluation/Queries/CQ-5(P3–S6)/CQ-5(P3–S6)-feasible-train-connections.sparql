@@ -1,0 +1,86 @@
+############################################################
+# PREFIXES
+# Namespaces for entity types, project-specific properties,
+# SPARQL functions, datatypes, and source IRIs
+############################################################
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX p3s6triples: <http://example.org/p3trips#>
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX src: <http://localhost:8080/source/>
+
+############################################################
+# FINAL JOURNEY OPTIMIZATION (Trip 2)
+# This query operates on the subgraph created in Phase 1.
+# It optimizes the second leg, destination access, and
+# selects the earliest-arriving feasible journey.
+############################################################
+SELECT DISTINCT
+  ?datetime ?weekday_name ?start_point ?end_point ?trip1 ?route1
+  ?A_stop ?A_stop_name ?B_stop ?B_stop_name ?A_stop_departure_time ?B_stop_arrival_time
+
+WHERE {
+
+  ##########################################################
+  # STEP 1 — Limit the number of candidate transfers
+  # To reduce the join space, only the transfers with the
+  # smallest walking distances are considered.
+  ##########################################################
+  {
+    SELECT DISTINCT ?route_transfer
+    WHERE {
+      GRAPH <http://views/P3-S6_Triples> {
+        ?route_transfer p3s6triples:has_transfer_walking_distance ?anyDist .
+      }
+    }
+    ORDER BY xsd:integer(REPLACE(?anyDist,".*\\(.*?, ([0-9]+) min\\)","$1"))
+    LIMIT 5
+  }
+
+  ##########################################################
+  # STEP 2 — Retrieve candidate journeys from the subgraph
+  # This block reuses the materialized Trip 1 and transfer
+  # combinations and attaches Trip 2 information.
+  ##########################################################
+  GRAPH <http://views/P3-S6_Triples> {
+
+    ?user p3s6triples:has_start_position_KGE24-4-0016 ?start_point ;
+          p3s6triples:has_end_position_KGE24-4-0017 ?end_point .
+
+    ?trip1 p3s6triples:follow_GID-102467 ?route1 ;
+           p3s6triples:include_GID-105576 ?A_stop ;
+           p3s6triples:include_GID-105576 ?B_stop ;
+           p3s6triples:trip_departure_time ?A_stop_departure_time ;
+           p3s6triples:trip_arrival_time ?B_stop_arrival_time .
+
+    ?A_stop p3s6triples:has_stop_time_departure_time_GID-73120 ?A_stop_departure_time .
+    ?B_stop p3s6triples:has_stop_time_arrival_time_GID-73119   ?B_stop_arrival_time .
+
+    ?trip2 p3s6triples:include_GID-105576 ?C_stop ;
+           p3s6triples:include_GID-105576 ?D_stop ;
+           p3s6triples:follow_GID-102467 ?route2 .
+
+    ?A_stop p3s6triples:walking_distance_from_start ?start_point_to_Astop_distance .
+    ?D_stop p3s6triples:walking_distance_to_end ?Dstop_to_end_point_distance .
+
+    ?route1 p3s6triples:has_route_transfer_KGE24-4-0022 ?route_transfer .
+
+    ?route_transfer p3s6triples:has_transfer_from_route ?route1 ;
+                    p3s6triples:has_transfer_to_route ?route2 ;
+                    p3s6triples:has_transfer_from_stop ?B_stop ;
+                    p3s6triples:has_transfer_to_stop   ?C_stop ;
+                    p3s6triples:has_transfer_walking_distance ?Bstop_to_Cstop_distance .
+  }
+
+  FILTER(!CONTAINS(STR(?trip1), "substitute-bus"))
+
+  BIND ("2024-11-04T07:30:00"^^xsd:dateTime AS ?datetime)
+  BIND(xsd:integer(spif:dateFormat(?datetime, "u")) AS ?weekday)
+  VALUES (?weekday ?weekday_name) {
+    (1 "Monday")  (2 "Tuesday") (3 "Wednesday")
+    (4 "Thursday") (5 "Friday") (6 "Saturday") (7 "Sunday")
+  }  
+    
+  ?A_stop etype:has_stop_name ?A_stop_name .
+  ?B_stop etype:has_stop_name ?B_stop_name .
+}
