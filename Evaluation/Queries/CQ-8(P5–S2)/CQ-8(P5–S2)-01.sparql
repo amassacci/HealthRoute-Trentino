@@ -1,0 +1,21 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX src: <http://localhost:8080/source/>
+
+SELECT ?health_facility ?position ?legal_name ?day ?interval_start ?interval_end
+
+WHERE {
+  BIND("01:00" AS ?query_time)
+    
+  ?health_facility etype:has_position_GID-85982 ?position ;
+                   etype:has_health_facility_type_GID-31362 ?type ;
+                   etype:has_health_facility_legal_name ?legal_name ;
+                   etype:has_opening_interval_KGE24-4-0020 ?opening_interval .
+  ?opening_interval etype:has_opening_hours_weekday ?day ;
+                    etype:has_opening_hours_start_time ?interval_start ;
+                    etype:has_opening_hours_end_time ?interval_end .
+  FILTER (?type = "pharmacy") 
+
+  FILTER ( (?interval_start <= ?query_time && ?interval_end >= ?query_time) )
+    
+}
