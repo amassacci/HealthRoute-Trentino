@@ -1,0 +1,44 @@
+Name,Description,Keyword,URL,Publisher,Creator,Owner,Language,Size,Domain,FileFormat
+calendar_dates.csv,Defines service exceptions for specific dates in the public transport schedules,Calendar Dates,https://github.com/R-R-Onzi/TTT_KGE/blob/main/Phase%205%20-%20Data%20Definition/R2RML-karma/bus_stop_results.csv-model.ttl,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+calendar.csv,"Describes regular weekly service availability for public transport trips, including start and end dates",Calendar,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+dati_salute_gov_it_farmacie_trentino_with_nearby_stops_transport_option.csv,Lists pharmacies in Trentino enriched with nearby public transport stops,Pharmacies,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health,csv
+health_appointments.csv,"Contains scheduled healthcare appointments associated with users, including location and timing information",Health Appointments,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health,csv
+pharmacies_opening_hours.csv,Provides opening days and hours for pharmacies,Pharmacies Opening Hours,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health,csv
+route_transfer_all_OD_no_duplicates.csv,Defines allowed transfers between different transport routes,Route Transfer,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+routes.csv,Describes urban public transport routes,Routes,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+stop_times.csv,Specifies arrival and departure times of trips at each stop for urban transport services,Stop Times,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+stops.csv,Contains information about urban transport stops,Stops,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+train_calendar.csv,Defines regular service schedules for train trips,Train Calendar,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+train_routes.csv,"Describes railway routes, including route identifiers and names",Train Routes,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+train_stop_times.csv,Specifies arrival and departure times of train trips at railway stations,Train Stop Times,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+train_stops.csv,"Contains information about railway stations, including identifiers and locations",Train Stops,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+train_trips.csv,Lists train trips and their association with routes and service calendars,Train Trips,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+transport_option_a.csv,Represents transport options associated with user start locations and nearby access stops,Transport Option (a),,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+transport_option_b.csv,Represents transport options associated with user destination locations and nearby exit stops,Transport Option (b),,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+trips.csv,Lists urban transport trips and their associations with routes and calendars,Trips,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,csv
+users_end_position.csv,Describes users’ destination locations,Users End Position,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health and Public Transport,csv
+users_start_position.csv,Describes users’ starting locations,Users Start Position,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health and Public Transport,csv
+users_with_nearby_stops.csv,Links users’ locations to nearby transport stops with walking distance information,Users nearby Stops,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health and Public Transport,csv
+calendar_dates_model.ttl,Karma RDF model for calendar_dates.csv,Calendar Dates Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+calendar_model.ttl,Karma RDF model for calendar.csv,Calendar Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+dati_salute_gov_it_farmacie_trentino_with_nearby_stops_transport_option_model.ttl,Karma RDF model for dati_salute_gov_it_farmacie_trentino_with_nearby_stops_transport_option.csv,Pharmacies Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health,ttl
+health_appointments_model.ttl,Karma RDF model for health_appointments.csv,Health Appointments Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health,ttl
+pharmacies_opening_hours_model.ttl,Karma RDF model for pharmacies_opening_hours.csv,Pharmacies Opening Hours Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health,ttl
+route_to_route_transfer_model.ttl,Karma RDF model for route_transfer_all_OD_no_duplicates.csv,Route-Route Transfer Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+route_transfer_all_OD_no_duplicates_model.ttl,Karma RDF model for route_transfer_all_OD_no_duplicates.csv,Route Transfer Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+routes_model.ttl,Karma RDF model for routes.csv,Routes Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+stop_times_model.ttl,Karma RDF model for stop_times.csv,Stop Times Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+stops_model.ttl,Karma RDF model for stops.csv,Stops Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+train_calendar_model.ttl,Karma RDF model for train_calendar.csv,Train Calendar Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+train_routes_model.ttl,Karma RDF model for train_routes.csv,Train Routes Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+train_stop_times_model.ttl,Karma RDF model for train_stop_times.csv,Train Stop Times Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+train_stops_model.ttl,Karma RDF model for train_stops.csv,Train Stops Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+train_trips_model.ttl,Karma RDF model for train_trips.csv,Train Trips Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+transport_option_a_model.ttl,Karma RDF model for transport_option_a.csv,Transport Option (a) Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+transport_option_b_model.ttl,Karma RDF model for transport_option_b.csv,Transport Option (b) Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+trips_model.ttl,Karma RDF model for trips.csv,Trips Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+users_end_position_model.ttl,Karma RDF model for users_end_position.csv,Users End Position Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Public Transport,ttl
+users_start_position_model.ttl,Karma RDF model for users_start_position.csv,Users Start Position Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health and Public Transport,ttl
+users_with_nearby_stops_a_model.ttl,Karma RDF model (a) for users_with_nearby_stops.csv,Users nearby Stops (a) Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health and Public Transport,ttl
+users_with_nearby_stops_b_model.ttl,Karma RDF model (b) for users_with_nearby_stops.csv,Users nearby Stops (b) Karma Model,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health and Public Transport,ttl
+KG.ttl,The final KG,KG,,Massacci Alice,Massacci Alice,Massacci Alice,English,,Health and Public Transport,ttl

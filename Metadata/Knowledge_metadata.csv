@@ -1,0 +1,3 @@
+DatLicense,DatURL,DatKeyword,DatPublisher,DatCreator,DatOwner,DatLanguage,DatSize,DatName,DatPublication,DatDescription,DatDomain,DatFileFormat
+CC0 1.0 DEED,https://github.com/amassacci/HealthRoute-Trentino/blob/main/Phase%203%20-%20Language%20Definition/Language_Resources.csv,"Teleontology, HealthRoute-Trentino",Massacci Alice,Massacci Alice,Massacci Alice,English,47.5 KB,teleontology.rdf,2026-02-03,"The Teleontology file contains entity types, data properties,
+and object properties within the HealthRoute-Trentino",Transport-Health,RDF
