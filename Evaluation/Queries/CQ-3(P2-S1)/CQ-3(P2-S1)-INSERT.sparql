@@ -1,0 +1,99 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX src: <http://localhost:8080/source/>
+PREFIX p2trips: <http://example.org/p2trips#>
+
+INSERT {
+  GRAPH <http://views/P2Trips> {
+     ?user p2trips:has_start_position_KGE24-4-0016 ?start_point ;
+           p2trips:has_end_position_KGE24-4-0017 ?end_point .
+     ?start_point p2trips:has_position_addr_street_GID-45008 ?start_point_addr_street .
+     ?end_point p2trips:has_position_addr_street_GID-45008 ?end_point_addr_street .
+  
+     ?start_point p2trips:has_stop_from ?A_stop .
+     ?end_point p2trips:has_stop_to ?B_stop .
+
+     ?user p2trips:has_start_end_segment ?start_end_segment .
+     ?start_end_segment p2trips:has_start ?A_stop ;
+                        p2trips:has_end ?B_stop ;
+                        p2trips:has_trip ?trip ;
+                        p2trips:has_total_walk_time ?min_walk_time ;
+                        p2trips:has_access_distance ?Astop_to_start_point_distance ;  #from origin to first stop
+                        p2trips:has_egress_distance ?Bstop_to_end_point_distance .    #from last stop to destination
+
+     ?trip p2trips:include_GID-105576 ?A_stop ;
+           p2trips:include_GID-105576 ?B_stop ;
+           p2trips:follow_GID-102467 ?route .
+     ?route p2trips:has_route_short_name ?route_name .
+  }
+}
+
+WHERE {
+
+  ## Get the minimum total walk time for each route+trip
+  {
+    SELECT ?user ?route ?trip (MIN(?total_walk_time) AS ?min_walk_time)
+    WHERE {
+      VALUES ?username { "Riccardo" }
+      ?user etype:has_user_first_name_GID-33531 ?username .
+      ?user etype:has_start_position_KGE24-4-0016 ?start_point .
+      ?user etype:has_end_position_KGE24-4-0017 ?end_point .
+
+      ?start_point etype:has_transport_option_KGE24-4-0018 ?transport_option_from .
+      ?transport_option_from etype:operates_at_KGE24-4-0019 ?A_stop ;
+                             etype:has_stop_walking_distance_time_KGE24-4-016 ?Astop_to_start_point_distance .
+
+      ?end_point etype:has_transport_option_KGE24-4-0018 ?transport_option_to .
+      ?transport_option_to etype:operates_at_KGE24-4-0019 ?B_stop ;
+                           etype:has_stop_walking_distance_time_KGE24-4-016 ?Bstop_to_end_point_distance .
+
+      ?trip etype:include_GID-105576 ?A_stop ;
+            etype:include_GID-105576 ?B_stop ;
+            etype:follow_GID-102467 ?route .
+      FILTER (?A_stop != ?B_stop)
+
+      # Compute ?total_walk_time as sum of ?Astop_to_start_point_distance + ?Bstop_to_end_point_distance
+      BIND (xsd:integer(REPLACE(?Astop_to_start_point_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?minutes_from)
+      BIND (xsd:integer(REPLACE(?Bstop_to_end_point_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?minutes_to)
+      BIND (?minutes_from + ?minutes_to AS ?total_walk_time)
+    }
+    GROUP BY ?route ?trip ?user
+  }
+
+  ## Now match the actual rows that have that minimum time
+  VALUES ?username { "Riccardo" }
+
+  ?user etype:has_user_first_name_GID-33531 ?username .
+  ?user etype:has_start_position_KGE24-4-0016 ?start_point .
+  ?user etype:has_end_position_KGE24-4-0017 ?end_point .
+  ?start_point etype:has_position_addr_street_GID-45008 ?start_point_addr_street .
+  ?end_point etype:has_position_addr_street_GID-45008 ?end_point_addr_street .
+
+  ?start_point etype:has_transport_option_KGE24-4-0018 ?transport_option_from .
+  ?transport_option_from etype:operates_at_KGE24-4-0019 ?A_stop ;
+                         etype:has_stop_walking_distance_time_KGE24-4-016 ?Astop_to_start_point_distance .
+
+  ?end_point etype:has_transport_option_KGE24-4-0018 ?transport_option_to .
+  ?transport_option_to etype:operates_at_KGE24-4-0019 ?B_stop ;
+                       etype:has_stop_walking_distance_time_KGE24-4-016 ?Bstop_to_end_point_distance .
+
+  ?trip etype:include_GID-105576 ?A_stop ;
+        etype:include_GID-105576 ?B_stop ;
+        etype:follow_GID-102467 ?route .
+
+  FILTER (?A_stop != ?B_stop)
+  
+  ?route etype:has_route_short_name ?route_name .
+
+  BIND (xsd:integer(REPLACE(?Astop_to_start_point_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?minutes_from)
+  BIND (xsd:integer(REPLACE(?Bstop_to_end_point_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?minutes_to)
+  BIND (?minutes_from + ?minutes_to AS ?total_walk_time)
+
+  # Keep only the rows with the minimal walk time per route/trip
+  FILTER (?total_walk_time = ?min_walk_time)
+
+  # Build a unique IRI for the stop pair
+  BIND(REPLACE(STR(?A_stop), ".*/", "") AS ?from_id)
+  BIND(REPLACE(STR(?B_stop), ".*/", "") AS ?to_id)
+  BIND(IRI(CONCAT("http://example.org/p2trips#", ?from_id, "-", ?to_id)) AS ?start_end_segment)
+}

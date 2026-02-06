@@ -1,0 +1,1 @@
+`CQ-3(P2-S1)-INSERT.sparql` was used to create the `P2Trips.brf` subgraph which is required to run the other queries in this folder.

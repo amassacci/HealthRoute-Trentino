@@ -1,0 +1,54 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX src: <http://localhost:8080/source/>
+
+SELECT ?stop_sequence ?stop (COUNT(?health_facility) AS ?num_pharmacies)
+
+WHERE {
+  BIND(src:trip-urb-0004200792024090920250612 AS ?trip)
+    
+  ## Reference stops
+  ?start_stop etype:has_GID-103527 ?start_stop_time .
+  ?trip etype:has_GID-103527 ?start_stop_time .
+  ?start_stop_time etype:has_stop_time_stop_sequence ?seq_start .
+  FILTER(?start_stop = src:stop-urb-410)
+
+  ?end_stop etype:has_GID-103527 ?end_stop_time .
+  ?trip etype:has_GID-103527 ?end_stop_time .
+  ?end_stop_time etype:has_stop_time_stop_sequence ?seq_end .
+  FILTER(?end_stop = src:stop-urb-284)
+
+  
+  ?trip etype:follow_GID-102467 ?route .
+  
+  ## All stops in the trip
+  ?stop etype:has_GID-103527 ?stop_time ;
+        a etype:BusStop_GID-45118 .
+  ?trip etype:has_GID-103527 ?stop_time .
+  ?stop_time etype:has_stop_time_stop_sequence ?stop_sequence ;
+             etype:has_stop_time_arrival_time_GID-73119 ?stop_arrival_time ;
+             etype:has_stop_time_departure_time_GID-73120 ?stop_departure_time .
+  # Keep only stops between the reference stops
+  FILTER(
+      (?stop_sequence >= ?seq_start && ?stop_sequence <= ?seq_end) ||
+      (?stop_sequence >= ?seq_end && ?stop_sequence <= ?seq_start)
+  )
+
+      
+  ## Health facilities near the stop
+  ?health_facility etype:has_position_GID-85982 ?position .
+  ?position etype:has_transport_option_KGE24-4-0018 ?transport_option .
+  ?transport_option etype:operates_at_KGE24-4-0019 ?stop ;
+                    etype:has_stop_walking_distance_time_KGE24-4-016 ?access_distance .
+    
+  ?health_facility etype:has_health_facility_type_GID-31362 ?type ;
+                   etype:has_health_facility_legal_name ?legal_name .
+  FILTER (?type = "pharmacy") 
+    
+  # --- Keep only if walking distance is less than 5 min ---
+  BIND (xsd:integer(REPLACE(?access_distance, ".*\\(.*?, ([0-9]+) min\\)", "$1")) AS ?access_minutes)
+  FILTER(?access_minutes <= 5)
+    
+}
+ GROUP BY ?trip ?route ?stop ?stop_sequence
